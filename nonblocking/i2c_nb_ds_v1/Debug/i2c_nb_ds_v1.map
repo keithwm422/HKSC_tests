@@ -1,0 +1,1946 @@
+Archive member included to satisfy reference by file (symbol)
+
+/home/mcbride.342/workspace_v11/tivac_EK-TM4C123GXL_core/Debug/libtivac_EK-TM4C123GXL_core.a(startup_gcc.o)
+                              (ResetISR)
+/home/mcbride.342/workspace_v11/tivac_EK-TM4C123GXL_core/Debug/libtivac_EK-TM4C123GXL_core.a(WInterrupts.o)
+                              /home/mcbride.342/workspace_v11/tivac_EK-TM4C123GXL_core/Debug/libtivac_EK-TM4C123GXL_core.a(startup_gcc.o) (GPIOAIntHandler)
+/home/mcbride.342/workspace_v11/tivac_EK-TM4C123GXL_core/Debug/libtivac_EK-TM4C123GXL_core.a(wiring.o)
+                              ./i2c_nb_ds_v1.o (millis)
+/home/mcbride.342/workspace_v11/tivac_EK-TM4C123GXL_core/Debug/libtivac_EK-TM4C123GXL_core.a(wiring_digital.o)
+                              ./i2c_nb_ds_v1.o (pinMode)
+/home/mcbride.342/workspace_v11/tivac_EK-TM4C123GXL_core/Debug/libtivac_EK-TM4C123GXL_core.a(HardwareSerial.o)
+                              ./i2c_nb_ds_v1.o (HardwareSerial::begin(unsigned long))
+/home/mcbride.342/workspace_v11/tivac_EK-TM4C123GXL_core/Debug/libtivac_EK-TM4C123GXL_core.a(main.o)
+                              /home/mcbride.342/workspace_v11/tivac_EK-TM4C123GXL_core/Debug/libtivac_EK-TM4C123GXL_core.a(startup_gcc.o) (_init)
+/home/mcbride.342/workspace_v11/tivac_EK-TM4C123GXL_core/Debug/libtivac_EK-TM4C123GXL_core.a(new.o)
+                              ./i2c_nb_ds_v1.o (operator new(unsigned int))
+/home/mcbride.342/workspace_v11/tivac_EK-TM4C123GXL_core/Debug/libtivac_EK-TM4C123GXL_core.a(Print.o)
+                              ./Wire_nonblocking_v2.o (Print::write(unsigned char const*, unsigned int))
+/home/mcbride.342/.energia15/packages/energia/hardware/tivac/1.0.4/system/driverlib/libdriverlib.a(eeprom.o)
+                              /home/mcbride.342/workspace_v11/tivac_EK-TM4C123GXL_core/Debug/libtivac_EK-TM4C123GXL_core.a(main.o) (EEPROMMassErase)
+/home/mcbride.342/.energia15/packages/energia/hardware/tivac/1.0.4/system/driverlib/libdriverlib.a(gpio.o)
+                              /home/mcbride.342/workspace_v11/tivac_EK-TM4C123GXL_core/Debug/libtivac_EK-TM4C123GXL_core.a(wiring_digital.o) (GPIOPadConfigSet)
+/home/mcbride.342/.energia15/packages/energia/hardware/tivac/1.0.4/system/driverlib/libdriverlib.a(i2c.o)
+                              ./Wire_nonblocking_v2.o (I2CSlaveEnable)
+/home/mcbride.342/.energia15/packages/energia/hardware/tivac/1.0.4/system/driverlib/libdriverlib.a(interrupt.o)
+                              /home/mcbride.342/.energia15/packages/energia/hardware/tivac/1.0.4/system/driverlib/libdriverlib.a(gpio.o) (IntRegister)
+/home/mcbride.342/.energia15/packages/energia/hardware/tivac/1.0.4/system/driverlib/libdriverlib.a(sysctl.o)
+                              /home/mcbride.342/.energia15/packages/energia/hardware/tivac/1.0.4/system/driverlib/libdriverlib.a(eeprom.o) (SysCtlPeripheralReset)
+/home/mcbride.342/.energia15/packages/energia/hardware/tivac/1.0.4/system/driverlib/libdriverlib.a(cpu.o)
+                              /home/mcbride.342/.energia15/packages/energia/hardware/tivac/1.0.4/system/driverlib/libdriverlib.a(interrupt.o) (CPUcpsid)
+/home/mcbride.342/.energia15/packages/energia/tools/arm-none-eabi-gcc/8.3.1-20190703/bin/../lib/gcc/arm-none-eabi/8.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc_nano.a(lib_a-malloc.o)
+                              /home/mcbride.342/workspace_v11/tivac_EK-TM4C123GXL_core/Debug/libtivac_EK-TM4C123GXL_core.a(HardwareSerial.o) (malloc)
+/home/mcbride.342/.energia15/packages/energia/tools/arm-none-eabi-gcc/8.3.1-20190703/bin/../lib/gcc/arm-none-eabi/8.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc_nano.a(lib_a-nano-freer.o)
+                              /home/mcbride.342/.energia15/packages/energia/tools/arm-none-eabi-gcc/8.3.1-20190703/bin/../lib/gcc/arm-none-eabi/8.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc_nano.a(lib_a-malloc.o) (_free_r)
+/home/mcbride.342/.energia15/packages/energia/tools/arm-none-eabi-gcc/8.3.1-20190703/bin/../lib/gcc/arm-none-eabi/8.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc_nano.a(lib_a-nano-mallocr.o)
+                              /home/mcbride.342/.energia15/packages/energia/tools/arm-none-eabi-gcc/8.3.1-20190703/bin/../lib/gcc/arm-none-eabi/8.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc_nano.a(lib_a-malloc.o) (_malloc_r)
+/home/mcbride.342/.energia15/packages/energia/tools/arm-none-eabi-gcc/8.3.1-20190703/bin/../lib/gcc/arm-none-eabi/8.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc_nano.a(lib_a-sbrkr.o)
+                              /home/mcbride.342/.energia15/packages/energia/tools/arm-none-eabi-gcc/8.3.1-20190703/bin/../lib/gcc/arm-none-eabi/8.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc_nano.a(lib_a-nano-mallocr.o) (_sbrk_r)
+/home/mcbride.342/.energia15/packages/energia/tools/arm-none-eabi-gcc/8.3.1-20190703/bin/../lib/gcc/arm-none-eabi/8.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc_nano.a(lib_a-strlen.o)
+                              /home/mcbride.342/workspace_v11/tivac_EK-TM4C123GXL_core/Debug/libtivac_EK-TM4C123GXL_core.a(Print.o) (strlen)
+/home/mcbride.342/.energia15/packages/energia/tools/arm-none-eabi-gcc/8.3.1-20190703/bin/../lib/gcc/arm-none-eabi/8.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc_nano.a(lib_a-impure.o)
+                              /home/mcbride.342/.energia15/packages/energia/tools/arm-none-eabi-gcc/8.3.1-20190703/bin/../lib/gcc/arm-none-eabi/8.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc_nano.a(lib_a-malloc.o) (_impure_ptr)
+/home/mcbride.342/.energia15/packages/energia/tools/arm-none-eabi-gcc/8.3.1-20190703/bin/../lib/gcc/arm-none-eabi/8.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc_nano.a(lib_a-mlock.o)
+                              /home/mcbride.342/.energia15/packages/energia/tools/arm-none-eabi-gcc/8.3.1-20190703/bin/../lib/gcc/arm-none-eabi/8.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc_nano.a(lib_a-nano-freer.o) (__malloc_lock)
+/home/mcbride.342/.energia15/packages/energia/tools/arm-none-eabi-gcc/8.3.1-20190703/bin/../lib/gcc/arm-none-eabi/8.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc_nano.a(lib_a-reent.o)
+                              /home/mcbride.342/.energia15/packages/energia/tools/arm-none-eabi-gcc/8.3.1-20190703/bin/../lib/gcc/arm-none-eabi/8.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc_nano.a(lib_a-sbrkr.o) (errno)
+/home/mcbride.342/.energia15/packages/energia/tools/arm-none-eabi-gcc/8.3.1-20190703/bin/../lib/gcc/arm-none-eabi/8.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc_nano.a(lib_a-lock.o)
+                              /home/mcbride.342/.energia15/packages/energia/tools/arm-none-eabi-gcc/8.3.1-20190703/bin/../lib/gcc/arm-none-eabi/8.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc_nano.a(lib_a-mlock.o) (__retarget_lock_acquire_recursive)
+/home/mcbride.342/.energia15/packages/energia/tools/arm-none-eabi-gcc/8.3.1-20190703/bin/../lib/gcc/arm-none-eabi/8.3.1/thumb/v7e-m+fp/hard/libgcc.a(_arm_addsubdf3.o)
+                              /home/mcbride.342/workspace_v11/tivac_EK-TM4C123GXL_core/Debug/libtivac_EK-TM4C123GXL_core.a(Print.o) (__aeabi_dsub)
+/home/mcbride.342/.energia15/packages/energia/tools/arm-none-eabi-gcc/8.3.1-20190703/bin/../lib/gcc/arm-none-eabi/8.3.1/thumb/v7e-m+fp/hard/libgcc.a(_arm_muldivdf3.o)
+                              /home/mcbride.342/workspace_v11/tivac_EK-TM4C123GXL_core/Debug/libtivac_EK-TM4C123GXL_core.a(Print.o) (__aeabi_dmul)
+/home/mcbride.342/.energia15/packages/energia/tools/arm-none-eabi-gcc/8.3.1-20190703/bin/../lib/gcc/arm-none-eabi/8.3.1/thumb/v7e-m+fp/hard/libgcc.a(_arm_cmpdf2.o)
+                              /home/mcbride.342/workspace_v11/tivac_EK-TM4C123GXL_core/Debug/libtivac_EK-TM4C123GXL_core.a(Print.o) (__aeabi_dcmplt)
+/home/mcbride.342/.energia15/packages/energia/tools/arm-none-eabi-gcc/8.3.1-20190703/bin/../lib/gcc/arm-none-eabi/8.3.1/thumb/v7e-m+fp/hard/libgcc.a(_arm_unorddf2.o)
+                              /home/mcbride.342/workspace_v11/tivac_EK-TM4C123GXL_core/Debug/libtivac_EK-TM4C123GXL_core.a(Print.o) (__aeabi_dcmpun)
+/home/mcbride.342/.energia15/packages/energia/tools/arm-none-eabi-gcc/8.3.1-20190703/bin/../lib/gcc/arm-none-eabi/8.3.1/thumb/v7e-m+fp/hard/libgcc.a(_arm_fixunsdfsi.o)
+                              /home/mcbride.342/workspace_v11/tivac_EK-TM4C123GXL_core/Debug/libtivac_EK-TM4C123GXL_core.a(Print.o) (__aeabi_d2uiz)
+
+Allocating common symbols
+Common symbol       size              file
+
+__lock___atexit_recursive_mutex
+                    0x1               /home/mcbride.342/.energia15/packages/energia/tools/arm-none-eabi-gcc/8.3.1-20190703/bin/../lib/gcc/arm-none-eabi/8.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc_nano.a(lib_a-lock.o)
+__lock___arc4random_mutex
+                    0x1               /home/mcbride.342/.energia15/packages/energia/tools/arm-none-eabi-gcc/8.3.1-20190703/bin/../lib/gcc/arm-none-eabi/8.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc_nano.a(lib_a-lock.o)
+errno               0x4               /home/mcbride.342/.energia15/packages/energia/tools/arm-none-eabi-gcc/8.3.1-20190703/bin/../lib/gcc/arm-none-eabi/8.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc_nano.a(lib_a-reent.o)
+__lock___env_recursive_mutex
+                    0x1               /home/mcbride.342/.energia15/packages/energia/tools/arm-none-eabi-gcc/8.3.1-20190703/bin/../lib/gcc/arm-none-eabi/8.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc_nano.a(lib_a-lock.o)
+__lock___sinit_recursive_mutex
+                    0x1               /home/mcbride.342/.energia15/packages/energia/tools/arm-none-eabi-gcc/8.3.1-20190703/bin/../lib/gcc/arm-none-eabi/8.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc_nano.a(lib_a-lock.o)
+__lock___malloc_recursive_mutex
+                    0x1               /home/mcbride.342/.energia15/packages/energia/tools/arm-none-eabi-gcc/8.3.1-20190703/bin/../lib/gcc/arm-none-eabi/8.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc_nano.a(lib_a-lock.o)
+__lock___at_quick_exit_mutex
+                    0x1               /home/mcbride.342/.energia15/packages/energia/tools/arm-none-eabi-gcc/8.3.1-20190703/bin/../lib/gcc/arm-none-eabi/8.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc_nano.a(lib_a-lock.o)
+__lock___dd_hash_mutex
+                    0x1               /home/mcbride.342/.energia15/packages/energia/tools/arm-none-eabi-gcc/8.3.1-20190703/bin/../lib/gcc/arm-none-eabi/8.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc_nano.a(lib_a-lock.o)
+__lock___tz_mutex   0x1               /home/mcbride.342/.energia15/packages/energia/tools/arm-none-eabi-gcc/8.3.1-20190703/bin/../lib/gcc/arm-none-eabi/8.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc_nano.a(lib_a-lock.o)
+__lock___sfp_recursive_mutex
+                    0x1               /home/mcbride.342/.energia15/packages/energia/tools/arm-none-eabi-gcc/8.3.1-20190703/bin/../lib/gcc/arm-none-eabi/8.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc_nano.a(lib_a-lock.o)
+
+Discarded input sections
+
+ .text          0x0000000000000000        0x0 ./i2c_nb_ds_v1.o
+ .data          0x0000000000000000        0x0 ./i2c_nb_ds_v1.o
+ .bss           0x0000000000000000        0x0 ./i2c_nb_ds_v1.o
+ .text._Z41__static_initialization_and_destruction_0ii
+                0x0000000000000000       0x12 ./i2c_nb_ds_v1.o
+ .bss.WIRESELECT_STATE
+                0x0000000000000000        0x1 ./i2c_nb_ds_v1.o
+ .bss.i2c_tries
+                0x0000000000000000        0x4 ./i2c_nb_ds_v1.o
+ .bss.wireselect_status
+                0x0000000000000000        0x1 ./i2c_nb_ds_v1.o
+ .data.addr2    0x0000000000000000        0x8 ./i2c_nb_ds_v1.o
+ .data.addr3    0x0000000000000000        0x8 ./i2c_nb_ds_v1.o
+ .data.addr4    0x0000000000000000        0x8 ./i2c_nb_ds_v1.o
+ .group         0x0000000000000000        0x8 ./Wire_nonblocking_v2.o
+ .group         0x0000000000000000        0xc ./Wire_nonblocking_v2.o
+ .group         0x0000000000000000        0x8 ./Wire_nonblocking_v2.o
+ .group         0x0000000000000000        0x8 ./Wire_nonblocking_v2.o
+ .group         0x0000000000000000        0xc ./Wire_nonblocking_v2.o
+ .group         0x0000000000000000        0xc ./Wire_nonblocking_v2.o
+ .text          0x0000000000000000        0x0 ./Wire_nonblocking_v2.o
+ .data          0x0000000000000000        0x0 ./Wire_nonblocking_v2.o
+ .bss           0x0000000000000000        0x0 ./Wire_nonblocking_v2.o
+ .rodata._ZL4PB_5
+                0x0000000000000000        0x1 ./Wire_nonblocking_v2.o
+ .rodata._ZL4PB_0
+                0x0000000000000000        0x1 ./Wire_nonblocking_v2.o
+ .rodata._ZL4PB_1
+                0x0000000000000000        0x1 ./Wire_nonblocking_v2.o
+ .rodata._ZL4PE_4
+                0x0000000000000000        0x1 ./Wire_nonblocking_v2.o
+ .rodata._ZL4PE_5
+                0x0000000000000000        0x1 ./Wire_nonblocking_v2.o
+ .rodata._ZL4PB_4
+                0x0000000000000000        0x1 ./Wire_nonblocking_v2.o
+ .rodata._ZL4PA_5
+                0x0000000000000000        0x1 ./Wire_nonblocking_v2.o
+ .rodata._ZL4PA_6
+                0x0000000000000000        0x1 ./Wire_nonblocking_v2.o
+ .rodata._ZL4PA_7
+                0x0000000000000000        0x1 ./Wire_nonblocking_v2.o
+ .rodata._ZL4PA_2
+                0x0000000000000000        0x1 ./Wire_nonblocking_v2.o
+ .rodata._ZL4PA_3
+                0x0000000000000000        0x1 ./Wire_nonblocking_v2.o
+ .rodata._ZL4PA_4
+                0x0000000000000000        0x1 ./Wire_nonblocking_v2.o
+ .rodata._ZL4PB_6
+                0x0000000000000000        0x1 ./Wire_nonblocking_v2.o
+ .rodata._ZL4PB_7
+                0x0000000000000000        0x1 ./Wire_nonblocking_v2.o
+ .rodata._ZL4PF_0
+                0x0000000000000000        0x1 ./Wire_nonblocking_v2.o
+ .rodata._ZL4PE_0
+                0x0000000000000000        0x1 ./Wire_nonblocking_v2.o
+ .rodata._ZL4PB_2
+                0x0000000000000000        0x1 ./Wire_nonblocking_v2.o
+ .rodata._ZL4PD_0
+                0x0000000000000000        0x1 ./Wire_nonblocking_v2.o
+ .rodata._ZL4PD_1
+                0x0000000000000000        0x1 ./Wire_nonblocking_v2.o
+ .rodata._ZL4PD_2
+                0x0000000000000000        0x1 ./Wire_nonblocking_v2.o
+ .rodata._ZL4PD_3
+                0x0000000000000000        0x1 ./Wire_nonblocking_v2.o
+ .rodata._ZL4PE_1
+                0x0000000000000000        0x1 ./Wire_nonblocking_v2.o
+ .rodata._ZL4PE_2
+                0x0000000000000000        0x1 ./Wire_nonblocking_v2.o
+ .rodata._ZL4PE_3
+                0x0000000000000000        0x1 ./Wire_nonblocking_v2.o
+ .rodata._ZL4PF_1
+                0x0000000000000000        0x1 ./Wire_nonblocking_v2.o
+ .rodata._ZL4PF_4
+                0x0000000000000000        0x1 ./Wire_nonblocking_v2.o
+ .rodata._ZL4PD_7
+                0x0000000000000000        0x1 ./Wire_nonblocking_v2.o
+ .rodata._ZL4PD_6
+                0x0000000000000000        0x1 ./Wire_nonblocking_v2.o
+ .rodata._ZL4PC_7
+                0x0000000000000000        0x1 ./Wire_nonblocking_v2.o
+ .rodata._ZL4PC_6
+                0x0000000000000000        0x1 ./Wire_nonblocking_v2.o
+ .rodata._ZL4PC_5
+                0x0000000000000000        0x1 ./Wire_nonblocking_v2.o
+ .rodata._ZL4PC_4
+                0x0000000000000000        0x1 ./Wire_nonblocking_v2.o
+ .rodata._ZL4PB_3
+                0x0000000000000000        0x1 ./Wire_nonblocking_v2.o
+ .rodata._ZL4PF_3
+                0x0000000000000000        0x1 ./Wire_nonblocking_v2.o
+ .rodata._ZL4PF_2
+                0x0000000000000000        0x1 ./Wire_nonblocking_v2.o
+ .rodata._ZL2A0
+                0x0000000000000000        0x1 ./Wire_nonblocking_v2.o
+ .rodata._ZL2A1
+                0x0000000000000000        0x1 ./Wire_nonblocking_v2.o
+ .rodata._ZL2A2
+                0x0000000000000000        0x1 ./Wire_nonblocking_v2.o
+ .rodata._ZL2A3
+                0x0000000000000000        0x1 ./Wire_nonblocking_v2.o
+ .rodata._ZL2A4
+                0x0000000000000000        0x1 ./Wire_nonblocking_v2.o
+ .rodata._ZL2A5
+                0x0000000000000000        0x1 ./Wire_nonblocking_v2.o
+ .rodata._ZL2A6
+                0x0000000000000000        0x1 ./Wire_nonblocking_v2.o
+ .rodata._ZL2A7
+                0x0000000000000000        0x1 ./Wire_nonblocking_v2.o
+ .rodata._ZL2A8
+                0x0000000000000000        0x1 ./Wire_nonblocking_v2.o
+ .rodata._ZL2A9
+                0x0000000000000000        0x1 ./Wire_nonblocking_v2.o
+ .rodata._ZL3A10
+                0x0000000000000000        0x1 ./Wire_nonblocking_v2.o
+ .rodata._ZL3A11
+                0x0000000000000000        0x1 ./Wire_nonblocking_v2.o
+ .rodata._ZL7RED_LED
+                0x0000000000000000        0x1 ./Wire_nonblocking_v2.o
+ .rodata._ZL9GREEN_LED
+                0x0000000000000000        0x1 ./Wire_nonblocking_v2.o
+ .rodata._ZL8BLUE_LED
+                0x0000000000000000        0x1 ./Wire_nonblocking_v2.o
+ .rodata._ZL5PUSH1
+                0x0000000000000000        0x1 ./Wire_nonblocking_v2.o
+ .rodata._ZL5PUSH2
+                0x0000000000000000        0x1 ./Wire_nonblocking_v2.o
+ .rodata._ZL10TEMPSENSOR
+                0x0000000000000000        0x1 ./Wire_nonblocking_v2.o
+ .rodata._ZL10g_uli2cInt
+                0x0000000000000000       0x10 ./Wire_nonblocking_v2.o
+ .text._ZN7TwoWireC2Ev
+                0x0000000000000000       0x44 ./Wire_nonblocking_v2.o
+ .text._Z8getErrorh
+                0x0000000000000000       0x36 ./Wire_nonblocking_v2.o
+ .text._ZN7TwoWire10sendTxDataEmh
+                0x0000000000000000       0xec ./Wire_nonblocking_v2.o
+ .text._ZN7TwoWire5beginEh
+                0x0000000000000000      0x1a4 ./Wire_nonblocking_v2.o
+ .text._ZN7TwoWire5beginEi
+                0x0000000000000000       0x1e ./Wire_nonblocking_v2.o
+ .text._ZN7TwoWire11requestFromEhhh
+                0x0000000000000000       0x64 ./Wire_nonblocking_v2.o
+ .text._ZN7TwoWire11requestFromEhh
+                0x0000000000000000       0x26 ./Wire_nonblocking_v2.o
+ .text._ZN7TwoWire11requestFromEii
+                0x0000000000000000       0x26 ./Wire_nonblocking_v2.o
+ .text._ZN7TwoWire11requestFromEiii
+                0x0000000000000000       0x2a ./Wire_nonblocking_v2.o
+ .text._ZN7TwoWire17beginTransmissionEi
+                0x0000000000000000       0x1e ./Wire_nonblocking_v2.o
+ .text._ZN7TwoWire15endTransmissionEv
+                0x0000000000000000       0x1a ./Wire_nonblocking_v2.o
+ .text._ZN7TwoWire9onReceiveEPFviE
+                0x0000000000000000       0x1e ./Wire_nonblocking_v2.o
+ .text._ZN7TwoWire9onRequestEPFvvE
+                0x0000000000000000       0x1e ./Wire_nonblocking_v2.o
+ .text._ZN7TwoWire8setClockEm
+                0x0000000000000000      0x104 ./Wire_nonblocking_v2.o
+ .text._ZN7TwoWire13I2CIntHandlerEv
+                0x0000000000000000      0x284 ./Wire_nonblocking_v2.o
+ .text._ZN7TwoWire9setModuleEm
+                0x0000000000000000       0x3c ./Wire_nonblocking_v2.o
+ .text._Z14I2CIntHandler0v
+                0x0000000000000000       0x14 ./Wire_nonblocking_v2.o
+ .text._Z14I2CIntHandler1v
+                0x0000000000000000       0x14 ./Wire_nonblocking_v2.o
+ .text._Z14I2CIntHandler2v
+                0x0000000000000000       0x14 ./Wire_nonblocking_v2.o
+ .text._Z14I2CIntHandler3v
+                0x0000000000000000       0x14 ./Wire_nonblocking_v2.o
+ .text          0x0000000000000000        0x0 /home/mcbride.342/workspace_v11/tivac_EK-TM4C123GXL_core/Debug/libtivac_EK-TM4C123GXL_core.a(startup_gcc.o)
+ .data          0x0000000000000000        0x0 /home/mcbride.342/workspace_v11/tivac_EK-TM4C123GXL_core/Debug/libtivac_EK-TM4C123GXL_core.a(startup_gcc.o)
+ .bss           0x0000000000000000        0x0 /home/mcbride.342/workspace_v11/tivac_EK-TM4C123GXL_core/Debug/libtivac_EK-TM4C123GXL_core.a(startup_gcc.o)
+ .text.UARTIntHandler
+                0x0000000000000000        0x2 /home/mcbride.342/workspace_v11/tivac_EK-TM4C123GXL_core/Debug/libtivac_EK-TM4C123GXL_core.a(startup_gcc.o)
+ .text.UARTIntHandler1
+                0x0000000000000000        0x2 /home/mcbride.342/workspace_v11/tivac_EK-TM4C123GXL_core/Debug/libtivac_EK-TM4C123GXL_core.a(startup_gcc.o)
+ .text.UARTIntHandler2
+                0x0000000000000000        0x2 /home/mcbride.342/workspace_v11/tivac_EK-TM4C123GXL_core/Debug/libtivac_EK-TM4C123GXL_core.a(startup_gcc.o)
+ .text.UARTIntHandler3
+                0x0000000000000000        0x2 /home/mcbride.342/workspace_v11/tivac_EK-TM4C123GXL_core/Debug/libtivac_EK-TM4C123GXL_core.a(startup_gcc.o)
+ .text.UARTIntHandler4
+                0x0000000000000000        0x2 /home/mcbride.342/workspace_v11/tivac_EK-TM4C123GXL_core/Debug/libtivac_EK-TM4C123GXL_core.a(startup_gcc.o)
+ .text.UARTIntHandler5
+                0x0000000000000000        0x2 /home/mcbride.342/workspace_v11/tivac_EK-TM4C123GXL_core/Debug/libtivac_EK-TM4C123GXL_core.a(startup_gcc.o)
+ .text.UARTIntHandler6
+                0x0000000000000000        0x2 /home/mcbride.342/workspace_v11/tivac_EK-TM4C123GXL_core/Debug/libtivac_EK-TM4C123GXL_core.a(startup_gcc.o)
+ .text.UARTIntHandler7
+                0x0000000000000000        0x2 /home/mcbride.342/workspace_v11/tivac_EK-TM4C123GXL_core/Debug/libtivac_EK-TM4C123GXL_core.a(startup_gcc.o)
+ .text.link     0x0000000000000000        0x6 /home/mcbride.342/workspace_v11/tivac_EK-TM4C123GXL_core/Debug/libtivac_EK-TM4C123GXL_core.a(startup_gcc.o)
+ .text._close   0x0000000000000000        0x6 /home/mcbride.342/workspace_v11/tivac_EK-TM4C123GXL_core/Debug/libtivac_EK-TM4C123GXL_core.a(startup_gcc.o)
+ .text._fstat   0x0000000000000000        0xa /home/mcbride.342/workspace_v11/tivac_EK-TM4C123GXL_core/Debug/libtivac_EK-TM4C123GXL_core.a(startup_gcc.o)
+ .text._isatty  0x0000000000000000        0x4 /home/mcbride.342/workspace_v11/tivac_EK-TM4C123GXL_core/Debug/libtivac_EK-TM4C123GXL_core.a(startup_gcc.o)
+ .text._lseek   0x0000000000000000        0x4 /home/mcbride.342/workspace_v11/tivac_EK-TM4C123GXL_core/Debug/libtivac_EK-TM4C123GXL_core.a(startup_gcc.o)
+ .text._read    0x0000000000000000        0x4 /home/mcbride.342/workspace_v11/tivac_EK-TM4C123GXL_core/Debug/libtivac_EK-TM4C123GXL_core.a(startup_gcc.o)
+ .text._write   0x0000000000000000        0x4 /home/mcbride.342/workspace_v11/tivac_EK-TM4C123GXL_core/Debug/libtivac_EK-TM4C123GXL_core.a(startup_gcc.o)
+ .text._kill    0x0000000000000000        0x2 /home/mcbride.342/workspace_v11/tivac_EK-TM4C123GXL_core/Debug/libtivac_EK-TM4C123GXL_core.a(startup_gcc.o)
+ .text._getpid  0x0000000000000000        0x6 /home/mcbride.342/workspace_v11/tivac_EK-TM4C123GXL_core/Debug/libtivac_EK-TM4C123GXL_core.a(startup_gcc.o)
+ .bss.__dso_handle
+                0x0000000000000000        0x4 /home/mcbride.342/workspace_v11/tivac_EK-TM4C123GXL_core/Debug/libtivac_EK-TM4C123GXL_core.a(startup_gcc.o)
+ .text          0x0000000000000000        0x0 /home/mcbride.342/workspace_v11/tivac_EK-TM4C123GXL_core/Debug/libtivac_EK-TM4C123GXL_core.a(WInterrupts.o)
+ .data          0x0000000000000000        0x0 /home/mcbride.342/workspace_v11/tivac_EK-TM4C123GXL_core/Debug/libtivac_EK-TM4C123GXL_core.a(WInterrupts.o)
+ .bss           0x0000000000000000        0x0 /home/mcbride.342/workspace_v11/tivac_EK-TM4C123GXL_core/Debug/libtivac_EK-TM4C123GXL_core.a(WInterrupts.o)
+ .text.attachInterrupt
+                0x0000000000000000      0x298 /home/mcbride.342/workspace_v11/tivac_EK-TM4C123GXL_core/Debug/libtivac_EK-TM4C123GXL_core.a(WInterrupts.o)
+ .text.detachInterrupt
+                0x0000000000000000      0x17c /home/mcbride.342/workspace_v11/tivac_EK-TM4C123GXL_core/Debug/libtivac_EK-TM4C123GXL_core.a(WInterrupts.o)
+ .text          0x0000000000000000        0x0 /home/mcbride.342/workspace_v11/tivac_EK-TM4C123GXL_core/Debug/libtivac_EK-TM4C123GXL_core.a(wiring.o)
+ .data          0x0000000000000000        0x0 /home/mcbride.342/workspace_v11/tivac_EK-TM4C123GXL_core/Debug/libtivac_EK-TM4C123GXL_core.a(wiring.o)
+ .bss           0x0000000000000000        0x0 /home/mcbride.342/workspace_v11/tivac_EK-TM4C123GXL_core/Debug/libtivac_EK-TM4C123GXL_core.a(wiring.o)
+ .text.CPUwfi_safe
+                0x0000000000000000        0x8 /home/mcbride.342/workspace_v11/tivac_EK-TM4C123GXL_core/Debug/libtivac_EK-TM4C123GXL_core.a(wiring.o)
+ .text.micros   0x0000000000000000       0x2c /home/mcbride.342/workspace_v11/tivac_EK-TM4C123GXL_core/Debug/libtivac_EK-TM4C123GXL_core.a(wiring.o)
+ .text.delay    0x0000000000000000       0x18 /home/mcbride.342/workspace_v11/tivac_EK-TM4C123GXL_core/Debug/libtivac_EK-TM4C123GXL_core.a(wiring.o)
+ .text.delayMicroseconds
+                0x0000000000000000       0x50 /home/mcbride.342/workspace_v11/tivac_EK-TM4C123GXL_core/Debug/libtivac_EK-TM4C123GXL_core.a(wiring.o)
+ .text.sleep    0x0000000000000000       0xcc /home/mcbride.342/workspace_v11/tivac_EK-TM4C123GXL_core/Debug/libtivac_EK-TM4C123GXL_core.a(wiring.o)
+ .text.sleepSeconds
+                0x0000000000000000       0xd4 /home/mcbride.342/workspace_v11/tivac_EK-TM4C123GXL_core/Debug/libtivac_EK-TM4C123GXL_core.a(wiring.o)
+ .text.suspend  0x0000000000000000       0x54 /home/mcbride.342/workspace_v11/tivac_EK-TM4C123GXL_core/Debug/libtivac_EK-TM4C123GXL_core.a(wiring.o)
+ .text.registerSysTickCb
+                0x0000000000000000       0x20 /home/mcbride.342/workspace_v11/tivac_EK-TM4C123GXL_core/Debug/libtivac_EK-TM4C123GXL_core.a(wiring.o)
+ .bss.stay_asleep
+                0x0000000000000000        0x1 /home/mcbride.342/workspace_v11/tivac_EK-TM4C123GXL_core/Debug/libtivac_EK-TM4C123GXL_core.a(wiring.o)
+ .text          0x0000000000000000        0x0 /home/mcbride.342/workspace_v11/tivac_EK-TM4C123GXL_core/Debug/libtivac_EK-TM4C123GXL_core.a(wiring_digital.o)
+ .data          0x0000000000000000        0x0 /home/mcbride.342/workspace_v11/tivac_EK-TM4C123GXL_core/Debug/libtivac_EK-TM4C123GXL_core.a(wiring_digital.o)
+ .bss           0x0000000000000000        0x0 /home/mcbride.342/workspace_v11/tivac_EK-TM4C123GXL_core/Debug/libtivac_EK-TM4C123GXL_core.a(wiring_digital.o)
+ .text.digitalRead
+                0x0000000000000000       0x38 /home/mcbride.342/workspace_v11/tivac_EK-TM4C123GXL_core/Debug/libtivac_EK-TM4C123GXL_core.a(wiring_digital.o)
+ .rodata.digital_pin_to_analog_in
+                0x0000000000000000       0xa4 /home/mcbride.342/workspace_v11/tivac_EK-TM4C123GXL_core/Debug/libtivac_EK-TM4C123GXL_core.a(wiring_digital.o)
+ .rodata.digital_pin_to_timer
+                0x0000000000000000       0x29 /home/mcbride.342/workspace_v11/tivac_EK-TM4C123GXL_core/Debug/libtivac_EK-TM4C123GXL_core.a(wiring_digital.o)
+ .rodata.timer_to_ab
+                0x0000000000000000       0x17 /home/mcbride.342/workspace_v11/tivac_EK-TM4C123GXL_core/Debug/libtivac_EK-TM4C123GXL_core.a(wiring_digital.o)
+ .rodata.timer_to_offset
+                0x0000000000000000       0x5c /home/mcbride.342/workspace_v11/tivac_EK-TM4C123GXL_core/Debug/libtivac_EK-TM4C123GXL_core.a(wiring_digital.o)
+ .rodata.timer_to_pin_config
+                0x0000000000000000       0x5c /home/mcbride.342/workspace_v11/tivac_EK-TM4C123GXL_core/Debug/libtivac_EK-TM4C123GXL_core.a(wiring_digital.o)
+ .group         0x0000000000000000        0x8 /home/mcbride.342/workspace_v11/tivac_EK-TM4C123GXL_core/Debug/libtivac_EK-TM4C123GXL_core.a(HardwareSerial.o)
+ .text          0x0000000000000000        0x0 /home/mcbride.342/workspace_v11/tivac_EK-TM4C123GXL_core/Debug/libtivac_EK-TM4C123GXL_core.a(HardwareSerial.o)
+ .data          0x0000000000000000        0x0 /home/mcbride.342/workspace_v11/tivac_EK-TM4C123GXL_core/Debug/libtivac_EK-TM4C123GXL_core.a(HardwareSerial.o)
+ .bss           0x0000000000000000        0x0 /home/mcbride.342/workspace_v11/tivac_EK-TM4C123GXL_core/Debug/libtivac_EK-TM4C123GXL_core.a(HardwareSerial.o)
+ .text._ZN5Print17availableForWriteEv
+                0x0000000000000000        0x4 /home/mcbride.342/workspace_v11/tivac_EK-TM4C123GXL_core/Debug/libtivac_EK-TM4C123GXL_core.a(HardwareSerial.o)
+ .text._ZN14HardwareSerial13setBufferSizeEmm
+                0x0000000000000000        0xa /home/mcbride.342/workspace_v11/tivac_EK-TM4C123GXL_core/Debug/libtivac_EK-TM4C123GXL_core.a(HardwareSerial.o)
+ .text._ZN14HardwareSerial9setModuleEm
+                0x0000000000000000       0x48 /home/mcbride.342/workspace_v11/tivac_EK-TM4C123GXL_core/Debug/libtivac_EK-TM4C123GXL_core.a(HardwareSerial.o)
+ .text._ZN14HardwareSerial7setPinsEm
+                0x0000000000000000       0x30 /home/mcbride.342/workspace_v11/tivac_EK-TM4C123GXL_core/Debug/libtivac_EK-TM4C123GXL_core.a(HardwareSerial.o)
+ .text._ZN14HardwareSerialcvbEv
+                0x0000000000000000        0x4 /home/mcbride.342/workspace_v11/tivac_EK-TM4C123GXL_core/Debug/libtivac_EK-TM4C123GXL_core.a(HardwareSerial.o)
+ .text._ZN14HardwareSerial3endEv
+                0x0000000000000000       0x50 /home/mcbride.342/workspace_v11/tivac_EK-TM4C123GXL_core/Debug/libtivac_EK-TM4C123GXL_core.a(HardwareSerial.o)
+ .text          0x0000000000000000        0x0 /home/mcbride.342/workspace_v11/tivac_EK-TM4C123GXL_core/Debug/libtivac_EK-TM4C123GXL_core.a(main.o)
+ .data          0x0000000000000000        0x0 /home/mcbride.342/workspace_v11/tivac_EK-TM4C123GXL_core/Debug/libtivac_EK-TM4C123GXL_core.a(main.o)
+ .bss           0x0000000000000000        0x0 /home/mcbride.342/workspace_v11/tivac_EK-TM4C123GXL_core/Debug/libtivac_EK-TM4C123GXL_core.a(main.o)
+ .text          0x0000000000000000        0x0 /home/mcbride.342/workspace_v11/tivac_EK-TM4C123GXL_core/Debug/libtivac_EK-TM4C123GXL_core.a(new.o)
+ .data          0x0000000000000000        0x0 /home/mcbride.342/workspace_v11/tivac_EK-TM4C123GXL_core/Debug/libtivac_EK-TM4C123GXL_core.a(new.o)
+ .bss           0x0000000000000000        0x0 /home/mcbride.342/workspace_v11/tivac_EK-TM4C123GXL_core/Debug/libtivac_EK-TM4C123GXL_core.a(new.o)
+ .text._ZdlPv   0x0000000000000000        0x4 /home/mcbride.342/workspace_v11/tivac_EK-TM4C123GXL_core/Debug/libtivac_EK-TM4C123GXL_core.a(new.o)
+ .text._Znaj    0x0000000000000000        0x4 /home/mcbride.342/workspace_v11/tivac_EK-TM4C123GXL_core/Debug/libtivac_EK-TM4C123GXL_core.a(new.o)
+ .text._ZdaPv   0x0000000000000000        0x4 /home/mcbride.342/workspace_v11/tivac_EK-TM4C123GXL_core/Debug/libtivac_EK-TM4C123GXL_core.a(new.o)
+ .text.__cxa_guard_acquire
+                0x0000000000000000        0xa /home/mcbride.342/workspace_v11/tivac_EK-TM4C123GXL_core/Debug/libtivac_EK-TM4C123GXL_core.a(new.o)
+ .text.__cxa_guard_release
+                0x0000000000000000        0x6 /home/mcbride.342/workspace_v11/tivac_EK-TM4C123GXL_core/Debug/libtivac_EK-TM4C123GXL_core.a(new.o)
+ .text.__cxa_guard_abort
+                0x0000000000000000        0x2 /home/mcbride.342/workspace_v11/tivac_EK-TM4C123GXL_core/Debug/libtivac_EK-TM4C123GXL_core.a(new.o)
+ .group         0x0000000000000000        0x8 /home/mcbride.342/workspace_v11/tivac_EK-TM4C123GXL_core/Debug/libtivac_EK-TM4C123GXL_core.a(Print.o)
+ .group         0x0000000000000000        0x8 /home/mcbride.342/workspace_v11/tivac_EK-TM4C123GXL_core/Debug/libtivac_EK-TM4C123GXL_core.a(Print.o)
+ .group         0x0000000000000000        0xc /home/mcbride.342/workspace_v11/tivac_EK-TM4C123GXL_core/Debug/libtivac_EK-TM4C123GXL_core.a(Print.o)
+ .text          0x0000000000000000        0x0 /home/mcbride.342/workspace_v11/tivac_EK-TM4C123GXL_core/Debug/libtivac_EK-TM4C123GXL_core.a(Print.o)
+ .data          0x0000000000000000        0x0 /home/mcbride.342/workspace_v11/tivac_EK-TM4C123GXL_core/Debug/libtivac_EK-TM4C123GXL_core.a(Print.o)
+ .bss           0x0000000000000000        0x0 /home/mcbride.342/workspace_v11/tivac_EK-TM4C123GXL_core/Debug/libtivac_EK-TM4C123GXL_core.a(Print.o)
+ .text._ZN5Print17availableForWriteEv
+                0x0000000000000000        0x4 /home/mcbride.342/workspace_v11/tivac_EK-TM4C123GXL_core/Debug/libtivac_EK-TM4C123GXL_core.a(Print.o)
+ .text._ZN5Print5flushEv
+                0x0000000000000000        0x2 /home/mcbride.342/workspace_v11/tivac_EK-TM4C123GXL_core/Debug/libtivac_EK-TM4C123GXL_core.a(Print.o)
+ .text._ZN5Print5printEPK19__FlashStringHelper
+                0x0000000000000000       0x20 /home/mcbride.342/workspace_v11/tivac_EK-TM4C123GXL_core/Debug/libtivac_EK-TM4C123GXL_core.a(Print.o)
+ .text._ZN5Print5printERK6String
+                0x0000000000000000        0xa /home/mcbride.342/workspace_v11/tivac_EK-TM4C123GXL_core/Debug/libtivac_EK-TM4C123GXL_core.a(Print.o)
+ .text._ZN5Print5printEc
+                0x0000000000000000        0x6 /home/mcbride.342/workspace_v11/tivac_EK-TM4C123GXL_core/Debug/libtivac_EK-TM4C123GXL_core.a(Print.o)
+ .text._ZN5Print5printERK9Printable
+                0x0000000000000000        0xc /home/mcbride.342/workspace_v11/tivac_EK-TM4C123GXL_core/Debug/libtivac_EK-TM4C123GXL_core.a(Print.o)
+ .text._ZN5Print7printlnEv
+                0x0000000000000000       0x10 /home/mcbride.342/workspace_v11/tivac_EK-TM4C123GXL_core/Debug/libtivac_EK-TM4C123GXL_core.a(Print.o)
+ .text._ZN5Print7printlnEPK19__FlashStringHelper
+                0x0000000000000000       0x14 /home/mcbride.342/workspace_v11/tivac_EK-TM4C123GXL_core/Debug/libtivac_EK-TM4C123GXL_core.a(Print.o)
+ .text._ZN5Print7printlnERK6String
+                0x0000000000000000       0x14 /home/mcbride.342/workspace_v11/tivac_EK-TM4C123GXL_core/Debug/libtivac_EK-TM4C123GXL_core.a(Print.o)
+ .text._ZN5Print7printlnEPKc
+                0x0000000000000000       0x14 /home/mcbride.342/workspace_v11/tivac_EK-TM4C123GXL_core/Debug/libtivac_EK-TM4C123GXL_core.a(Print.o)
+ .text._ZN5Print7printlnEc
+                0x0000000000000000       0x14 /home/mcbride.342/workspace_v11/tivac_EK-TM4C123GXL_core/Debug/libtivac_EK-TM4C123GXL_core.a(Print.o)
+ .text._ZN5Print7printlnERK9Printable
+                0x0000000000000000       0x14 /home/mcbride.342/workspace_v11/tivac_EK-TM4C123GXL_core/Debug/libtivac_EK-TM4C123GXL_core.a(Print.o)
+ .text._ZN5Print11printNumberEmh
+                0x0000000000000000       0x3c /home/mcbride.342/workspace_v11/tivac_EK-TM4C123GXL_core/Debug/libtivac_EK-TM4C123GXL_core.a(Print.o)
+ .text._ZN5Print5printEli
+                0x0000000000000000       0x44 /home/mcbride.342/workspace_v11/tivac_EK-TM4C123GXL_core/Debug/libtivac_EK-TM4C123GXL_core.a(Print.o)
+ .text._ZN5Print5printEii
+                0x0000000000000000        0x4 /home/mcbride.342/workspace_v11/tivac_EK-TM4C123GXL_core/Debug/libtivac_EK-TM4C123GXL_core.a(Print.o)
+ .text._ZN5Print7printlnEii
+                0x0000000000000000       0x14 /home/mcbride.342/workspace_v11/tivac_EK-TM4C123GXL_core/Debug/libtivac_EK-TM4C123GXL_core.a(Print.o)
+ .text._ZN5Print7printlnEli
+                0x0000000000000000       0x14 /home/mcbride.342/workspace_v11/tivac_EK-TM4C123GXL_core/Debug/libtivac_EK-TM4C123GXL_core.a(Print.o)
+ .text._ZN5Print5printEmi
+                0x0000000000000000       0x1a /home/mcbride.342/workspace_v11/tivac_EK-TM4C123GXL_core/Debug/libtivac_EK-TM4C123GXL_core.a(Print.o)
+ .text._ZN5Print5printEhi
+                0x0000000000000000        0x4 /home/mcbride.342/workspace_v11/tivac_EK-TM4C123GXL_core/Debug/libtivac_EK-TM4C123GXL_core.a(Print.o)
+ .text._ZN5Print7printlnEhi
+                0x0000000000000000       0x14 /home/mcbride.342/workspace_v11/tivac_EK-TM4C123GXL_core/Debug/libtivac_EK-TM4C123GXL_core.a(Print.o)
+ .text._ZN5Print5printEji
+                0x0000000000000000        0x4 /home/mcbride.342/workspace_v11/tivac_EK-TM4C123GXL_core/Debug/libtivac_EK-TM4C123GXL_core.a(Print.o)
+ .text._ZN5Print7printlnEji
+                0x0000000000000000       0x14 /home/mcbride.342/workspace_v11/tivac_EK-TM4C123GXL_core/Debug/libtivac_EK-TM4C123GXL_core.a(Print.o)
+ .text._ZN5Print7printlnEmi
+                0x0000000000000000       0x14 /home/mcbride.342/workspace_v11/tivac_EK-TM4C123GXL_core/Debug/libtivac_EK-TM4C123GXL_core.a(Print.o)
+ .text._ZN5Print10printFloatEdh
+                0x0000000000000000      0x16c /home/mcbride.342/workspace_v11/tivac_EK-TM4C123GXL_core/Debug/libtivac_EK-TM4C123GXL_core.a(Print.o)
+ .text._ZN5Print5printEdi
+                0x0000000000000000        0x6 /home/mcbride.342/workspace_v11/tivac_EK-TM4C123GXL_core/Debug/libtivac_EK-TM4C123GXL_core.a(Print.o)
+ .text._ZN5Print7printlnEdi
+                0x0000000000000000       0x16 /home/mcbride.342/workspace_v11/tivac_EK-TM4C123GXL_core/Debug/libtivac_EK-TM4C123GXL_core.a(Print.o)
+ .rodata._ZN5Print10printFloatEdh.str1.1
+                0x0000000000000000        0xc /home/mcbride.342/workspace_v11/tivac_EK-TM4C123GXL_core/Debug/libtivac_EK-TM4C123GXL_core.a(Print.o)
+ .rodata._ZN5Print7printlnEv.str1.1
+                0x0000000000000000        0x3 /home/mcbride.342/workspace_v11/tivac_EK-TM4C123GXL_core/Debug/libtivac_EK-TM4C123GXL_core.a(Print.o)
+ .text          0x0000000000000000        0x0 /home/mcbride.342/.energia15/packages/energia/hardware/tivac/1.0.4/system/driverlib/libdriverlib.a(eeprom.o)
+ .data          0x0000000000000000        0x0 /home/mcbride.342/.energia15/packages/energia/hardware/tivac/1.0.4/system/driverlib/libdriverlib.a(eeprom.o)
+ .bss           0x0000000000000000        0x0 /home/mcbride.342/.energia15/packages/energia/hardware/tivac/1.0.4/system/driverlib/libdriverlib.a(eeprom.o)
+ .text._EEPROMSectorMaskSet
+                0x0000000000000000       0x40 /home/mcbride.342/.energia15/packages/energia/hardware/tivac/1.0.4/system/driverlib/libdriverlib.a(eeprom.o)
+ .text.EEPROMInit
+                0x0000000000000000       0x3c /home/mcbride.342/.energia15/packages/energia/hardware/tivac/1.0.4/system/driverlib/libdriverlib.a(eeprom.o)
+ .text.EEPROMSizeGet
+                0x0000000000000000       0x10 /home/mcbride.342/.energia15/packages/energia/hardware/tivac/1.0.4/system/driverlib/libdriverlib.a(eeprom.o)
+ .text.EEPROMBlockCountGet
+                0x0000000000000000       0x10 /home/mcbride.342/.energia15/packages/energia/hardware/tivac/1.0.4/system/driverlib/libdriverlib.a(eeprom.o)
+ .text.EEPROMRead
+                0x0000000000000000       0x40 /home/mcbride.342/.energia15/packages/energia/hardware/tivac/1.0.4/system/driverlib/libdriverlib.a(eeprom.o)
+ .text.EEPROMProgram
+                0x0000000000000000       0xc0 /home/mcbride.342/.energia15/packages/energia/hardware/tivac/1.0.4/system/driverlib/libdriverlib.a(eeprom.o)
+ .text.EEPROMProgramNonBlocking
+                0x0000000000000000       0x44 /home/mcbride.342/.energia15/packages/energia/hardware/tivac/1.0.4/system/driverlib/libdriverlib.a(eeprom.o)
+ .text.EEPROMBlockProtectGet
+                0x0000000000000000        0xc /home/mcbride.342/.energia15/packages/energia/hardware/tivac/1.0.4/system/driverlib/libdriverlib.a(eeprom.o)
+ .text.EEPROMBlockProtectSet
+                0x0000000000000000       0x1c /home/mcbride.342/.energia15/packages/energia/hardware/tivac/1.0.4/system/driverlib/libdriverlib.a(eeprom.o)
+ .text.EEPROMBlockPasswordSet
+                0x0000000000000000       0x34 /home/mcbride.342/.energia15/packages/energia/hardware/tivac/1.0.4/system/driverlib/libdriverlib.a(eeprom.o)
+ .text.EEPROMBlockLock
+                0x0000000000000000       0x14 /home/mcbride.342/.energia15/packages/energia/hardware/tivac/1.0.4/system/driverlib/libdriverlib.a(eeprom.o)
+ .text.EEPROMBlockUnlock
+                0x0000000000000000       0x30 /home/mcbride.342/.energia15/packages/energia/hardware/tivac/1.0.4/system/driverlib/libdriverlib.a(eeprom.o)
+ .text.EEPROMBlockHide
+                0x0000000000000000       0x10 /home/mcbride.342/.energia15/packages/energia/hardware/tivac/1.0.4/system/driverlib/libdriverlib.a(eeprom.o)
+ .text.EEPROMIntEnable
+                0x0000000000000000       0x20 /home/mcbride.342/.energia15/packages/energia/hardware/tivac/1.0.4/system/driverlib/libdriverlib.a(eeprom.o)
+ .text.EEPROMIntDisable
+                0x0000000000000000       0x20 /home/mcbride.342/.energia15/packages/energia/hardware/tivac/1.0.4/system/driverlib/libdriverlib.a(eeprom.o)
+ .text.EEPROMIntStatus
+                0x0000000000000000       0x24 /home/mcbride.342/.energia15/packages/energia/hardware/tivac/1.0.4/system/driverlib/libdriverlib.a(eeprom.o)
+ .text.EEPROMIntClear
+                0x0000000000000000       0x30 /home/mcbride.342/.energia15/packages/energia/hardware/tivac/1.0.4/system/driverlib/libdriverlib.a(eeprom.o)
+ .text.EEPROMStatusGet
+                0x0000000000000000        0xc /home/mcbride.342/.energia15/packages/energia/hardware/tivac/1.0.4/system/driverlib/libdriverlib.a(eeprom.o)
+ .text          0x0000000000000000        0x0 /home/mcbride.342/.energia15/packages/energia/hardware/tivac/1.0.4/system/driverlib/libdriverlib.a(gpio.o)
+ .data          0x0000000000000000        0x0 /home/mcbride.342/.energia15/packages/energia/hardware/tivac/1.0.4/system/driverlib/libdriverlib.a(gpio.o)
+ .bss           0x0000000000000000        0x0 /home/mcbride.342/.energia15/packages/energia/hardware/tivac/1.0.4/system/driverlib/libdriverlib.a(gpio.o)
+ .text._GPIOIntNumberGet
+                0x0000000000000000       0x48 /home/mcbride.342/.energia15/packages/energia/hardware/tivac/1.0.4/system/driverlib/libdriverlib.a(gpio.o)
+ .text.GPIODirModeSet
+                0x0000000000000000       0x2e /home/mcbride.342/.energia15/packages/energia/hardware/tivac/1.0.4/system/driverlib/libdriverlib.a(gpio.o)
+ .text.GPIODirModeGet
+                0x0000000000000000       0x24 /home/mcbride.342/.energia15/packages/energia/hardware/tivac/1.0.4/system/driverlib/libdriverlib.a(gpio.o)
+ .text.GPIOIntTypeSet
+                0x0000000000000000       0x5a /home/mcbride.342/.energia15/packages/energia/hardware/tivac/1.0.4/system/driverlib/libdriverlib.a(gpio.o)
+ .text.GPIOIntTypeGet
+                0x0000000000000000       0x4a /home/mcbride.342/.energia15/packages/energia/hardware/tivac/1.0.4/system/driverlib/libdriverlib.a(gpio.o)
+ .text.GPIOPadConfigGet
+                0x0000000000000000       0xc4 /home/mcbride.342/.energia15/packages/energia/hardware/tivac/1.0.4/system/driverlib/libdriverlib.a(gpio.o)
+ .text.GPIOIntEnable
+                0x0000000000000000        0xc /home/mcbride.342/.energia15/packages/energia/hardware/tivac/1.0.4/system/driverlib/libdriverlib.a(gpio.o)
+ .text.GPIOIntDisable
+                0x0000000000000000        0xe /home/mcbride.342/.energia15/packages/energia/hardware/tivac/1.0.4/system/driverlib/libdriverlib.a(gpio.o)
+ .text.GPIOIntRegister
+                0x0000000000000000       0x1a /home/mcbride.342/.energia15/packages/energia/hardware/tivac/1.0.4/system/driverlib/libdriverlib.a(gpio.o)
+ .text.GPIOIntUnregister
+                0x0000000000000000       0x16 /home/mcbride.342/.energia15/packages/energia/hardware/tivac/1.0.4/system/driverlib/libdriverlib.a(gpio.o)
+ .text.GPIOIntRegisterPin
+                0x0000000000000000       0x1e /home/mcbride.342/.energia15/packages/energia/hardware/tivac/1.0.4/system/driverlib/libdriverlib.a(gpio.o)
+ .text.GPIOIntUnregisterPin
+                0x0000000000000000       0x1a /home/mcbride.342/.energia15/packages/energia/hardware/tivac/1.0.4/system/driverlib/libdriverlib.a(gpio.o)
+ .text.GPIOPinRead
+                0x0000000000000000        0x6 /home/mcbride.342/.energia15/packages/energia/hardware/tivac/1.0.4/system/driverlib/libdriverlib.a(gpio.o)
+ .text.GPIOPinWrite
+                0x0000000000000000        0x6 /home/mcbride.342/.energia15/packages/energia/hardware/tivac/1.0.4/system/driverlib/libdriverlib.a(gpio.o)
+ .text.GPIOPinTypeADC
+                0x0000000000000000       0x1c /home/mcbride.342/.energia15/packages/energia/hardware/tivac/1.0.4/system/driverlib/libdriverlib.a(gpio.o)
+ .text.GPIOPinTypeCAN
+                0x0000000000000000       0x1c /home/mcbride.342/.energia15/packages/energia/hardware/tivac/1.0.4/system/driverlib/libdriverlib.a(gpio.o)
+ .text.GPIOPinTypeComparator
+                0x0000000000000000       0x1c /home/mcbride.342/.energia15/packages/energia/hardware/tivac/1.0.4/system/driverlib/libdriverlib.a(gpio.o)
+ .text.GPIOPinTypeComparatorOutput
+                0x0000000000000000       0x1c /home/mcbride.342/.energia15/packages/energia/hardware/tivac/1.0.4/system/driverlib/libdriverlib.a(gpio.o)
+ .text.GPIOPinTypeDIVSCLK
+                0x0000000000000000       0x1c /home/mcbride.342/.energia15/packages/energia/hardware/tivac/1.0.4/system/driverlib/libdriverlib.a(gpio.o)
+ .text.GPIOPinTypeEPI
+                0x0000000000000000       0x1c /home/mcbride.342/.energia15/packages/energia/hardware/tivac/1.0.4/system/driverlib/libdriverlib.a(gpio.o)
+ .text.GPIOPinTypeEthernetLED
+                0x0000000000000000       0x1c /home/mcbride.342/.energia15/packages/energia/hardware/tivac/1.0.4/system/driverlib/libdriverlib.a(gpio.o)
+ .text.GPIOPinTypeEthernetMII
+                0x0000000000000000       0x1c /home/mcbride.342/.energia15/packages/energia/hardware/tivac/1.0.4/system/driverlib/libdriverlib.a(gpio.o)
+ .text.GPIOPinTypeGPIOInput
+                0x0000000000000000       0x1c /home/mcbride.342/.energia15/packages/energia/hardware/tivac/1.0.4/system/driverlib/libdriverlib.a(gpio.o)
+ .text.GPIOPinTypeGPIOOutput
+                0x0000000000000000       0x1c /home/mcbride.342/.energia15/packages/energia/hardware/tivac/1.0.4/system/driverlib/libdriverlib.a(gpio.o)
+ .text.GPIOPinTypeGPIOOutputOD
+                0x0000000000000000       0x1c /home/mcbride.342/.energia15/packages/energia/hardware/tivac/1.0.4/system/driverlib/libdriverlib.a(gpio.o)
+ .text.GPIOPinTypeHibernateRTCCLK
+                0x0000000000000000       0x1c /home/mcbride.342/.energia15/packages/energia/hardware/tivac/1.0.4/system/driverlib/libdriverlib.a(gpio.o)
+ .text.GPIOPinTypeI2C
+                0x0000000000000000       0x1c /home/mcbride.342/.energia15/packages/energia/hardware/tivac/1.0.4/system/driverlib/libdriverlib.a(gpio.o)
+ .text.GPIOPinTypeI2CSCL
+                0x0000000000000000       0x1c /home/mcbride.342/.energia15/packages/energia/hardware/tivac/1.0.4/system/driverlib/libdriverlib.a(gpio.o)
+ .text.GPIOPinTypeLCD
+                0x0000000000000000       0x1c /home/mcbride.342/.energia15/packages/energia/hardware/tivac/1.0.4/system/driverlib/libdriverlib.a(gpio.o)
+ .text.GPIOPinTypeOneWire
+                0x0000000000000000       0x1c /home/mcbride.342/.energia15/packages/energia/hardware/tivac/1.0.4/system/driverlib/libdriverlib.a(gpio.o)
+ .text.GPIOPinTypePWM
+                0x0000000000000000       0x1c /home/mcbride.342/.energia15/packages/energia/hardware/tivac/1.0.4/system/driverlib/libdriverlib.a(gpio.o)
+ .text.GPIOPinTypeQEI
+                0x0000000000000000       0x1c /home/mcbride.342/.energia15/packages/energia/hardware/tivac/1.0.4/system/driverlib/libdriverlib.a(gpio.o)
+ .text.GPIOPinTypeSSI
+                0x0000000000000000       0x1c /home/mcbride.342/.energia15/packages/energia/hardware/tivac/1.0.4/system/driverlib/libdriverlib.a(gpio.o)
+ .text.GPIOPinTypeTimer
+                0x0000000000000000       0x1c /home/mcbride.342/.energia15/packages/energia/hardware/tivac/1.0.4/system/driverlib/libdriverlib.a(gpio.o)
+ .text.GPIOPinTypeTrace
+                0x0000000000000000       0x1c /home/mcbride.342/.energia15/packages/energia/hardware/tivac/1.0.4/system/driverlib/libdriverlib.a(gpio.o)
+ .text.GPIOPinTypeUART
+                0x0000000000000000       0x1c /home/mcbride.342/.energia15/packages/energia/hardware/tivac/1.0.4/system/driverlib/libdriverlib.a(gpio.o)
+ .text.GPIOPinTypeUSBAnalog
+                0x0000000000000000       0x1c /home/mcbride.342/.energia15/packages/energia/hardware/tivac/1.0.4/system/driverlib/libdriverlib.a(gpio.o)
+ .text.GPIOPinTypeUSBDigital
+                0x0000000000000000       0x1c /home/mcbride.342/.energia15/packages/energia/hardware/tivac/1.0.4/system/driverlib/libdriverlib.a(gpio.o)
+ .text.GPIOPinTypeWakeHigh
+                0x0000000000000000       0x1e /home/mcbride.342/.energia15/packages/energia/hardware/tivac/1.0.4/system/driverlib/libdriverlib.a(gpio.o)
+ .text.GPIOPinTypeWakeLow
+                0x0000000000000000       0x1e /home/mcbride.342/.energia15/packages/energia/hardware/tivac/1.0.4/system/driverlib/libdriverlib.a(gpio.o)
+ .text.GPIOPinWakeStatus
+                0x0000000000000000        0x6 /home/mcbride.342/.energia15/packages/energia/hardware/tivac/1.0.4/system/driverlib/libdriverlib.a(gpio.o)
+ .text.GPIOPinConfigure
+                0x0000000000000000       0x4c /home/mcbride.342/.energia15/packages/energia/hardware/tivac/1.0.4/system/driverlib/libdriverlib.a(gpio.o)
+ .text.GPIODMATriggerEnable
+                0x0000000000000000        0xc /home/mcbride.342/.energia15/packages/energia/hardware/tivac/1.0.4/system/driverlib/libdriverlib.a(gpio.o)
+ .text.GPIODMATriggerDisable
+                0x0000000000000000        0xe /home/mcbride.342/.energia15/packages/energia/hardware/tivac/1.0.4/system/driverlib/libdriverlib.a(gpio.o)
+ .text.GPIOADCTriggerEnable
+                0x0000000000000000        0xc /home/mcbride.342/.energia15/packages/energia/hardware/tivac/1.0.4/system/driverlib/libdriverlib.a(gpio.o)
+ .text.GPIOADCTriggerDisable
+                0x0000000000000000        0xe /home/mcbride.342/.energia15/packages/energia/hardware/tivac/1.0.4/system/driverlib/libdriverlib.a(gpio.o)
+ .rodata.g_ppui32GPIOIntMapSnowflake
+                0x0000000000000000       0xd8 /home/mcbride.342/.energia15/packages/energia/hardware/tivac/1.0.4/system/driverlib/libdriverlib.a(gpio.o)
+ .rodata.g_pui32GPIOBaseAddrs
+                0x0000000000000000       0x90 /home/mcbride.342/.energia15/packages/energia/hardware/tivac/1.0.4/system/driverlib/libdriverlib.a(gpio.o)
+ .rodata.g_ppui32GPIOIntMapBlizzard
+                0x0000000000000000       0xc0 /home/mcbride.342/.energia15/packages/energia/hardware/tivac/1.0.4/system/driverlib/libdriverlib.a(gpio.o)
+ .text          0x0000000000000000        0x0 /home/mcbride.342/.energia15/packages/energia/hardware/tivac/1.0.4/system/driverlib/libdriverlib.a(i2c.o)
+ .data          0x0000000000000000        0x0 /home/mcbride.342/.energia15/packages/energia/hardware/tivac/1.0.4/system/driverlib/libdriverlib.a(i2c.o)
+ .bss           0x0000000000000000        0x0 /home/mcbride.342/.energia15/packages/energia/hardware/tivac/1.0.4/system/driverlib/libdriverlib.a(i2c.o)
+ .text._I2CIntNumberGet
+                0x0000000000000000       0x48 /home/mcbride.342/.energia15/packages/energia/hardware/tivac/1.0.4/system/driverlib/libdriverlib.a(i2c.o)
+ .text.I2CSlaveAddressSet
+                0x0000000000000000       0x18 /home/mcbride.342/.energia15/packages/energia/hardware/tivac/1.0.4/system/driverlib/libdriverlib.a(i2c.o)
+ .text.I2CMasterEnable
+                0x0000000000000000        0xa /home/mcbride.342/.energia15/packages/energia/hardware/tivac/1.0.4/system/driverlib/libdriverlib.a(i2c.o)
+ .text.I2CMasterInitExpClk
+                0x0000000000000000       0x54 /home/mcbride.342/.energia15/packages/energia/hardware/tivac/1.0.4/system/driverlib/libdriverlib.a(i2c.o)
+ .text.I2CSlaveEnable
+                0x0000000000000000       0x10 /home/mcbride.342/.energia15/packages/energia/hardware/tivac/1.0.4/system/driverlib/libdriverlib.a(i2c.o)
+ .text.I2CSlaveInit
+                0x0000000000000000       0x10 /home/mcbride.342/.energia15/packages/energia/hardware/tivac/1.0.4/system/driverlib/libdriverlib.a(i2c.o)
+ .text.I2CMasterDisable
+                0x0000000000000000        0xa /home/mcbride.342/.energia15/packages/energia/hardware/tivac/1.0.4/system/driverlib/libdriverlib.a(i2c.o)
+ .text.I2CSlaveDisable
+                0x0000000000000000       0x10 /home/mcbride.342/.energia15/packages/energia/hardware/tivac/1.0.4/system/driverlib/libdriverlib.a(i2c.o)
+ .text.I2CIntRegister
+                0x0000000000000000       0x1a /home/mcbride.342/.energia15/packages/energia/hardware/tivac/1.0.4/system/driverlib/libdriverlib.a(i2c.o)
+ .text.I2CIntUnregister
+                0x0000000000000000       0x16 /home/mcbride.342/.energia15/packages/energia/hardware/tivac/1.0.4/system/driverlib/libdriverlib.a(i2c.o)
+ .text.I2CMasterIntEnable
+                0x0000000000000000        0x6 /home/mcbride.342/.energia15/packages/energia/hardware/tivac/1.0.4/system/driverlib/libdriverlib.a(i2c.o)
+ .text.I2CMasterIntEnableEx
+                0x0000000000000000        0x8 /home/mcbride.342/.energia15/packages/energia/hardware/tivac/1.0.4/system/driverlib/libdriverlib.a(i2c.o)
+ .text.I2CSlaveIntEnable
+                0x0000000000000000        0xe /home/mcbride.342/.energia15/packages/energia/hardware/tivac/1.0.4/system/driverlib/libdriverlib.a(i2c.o)
+ .text.I2CSlaveIntEnableEx
+                0x0000000000000000        0xc /home/mcbride.342/.energia15/packages/energia/hardware/tivac/1.0.4/system/driverlib/libdriverlib.a(i2c.o)
+ .text.I2CMasterIntDisable
+                0x0000000000000000        0x6 /home/mcbride.342/.energia15/packages/energia/hardware/tivac/1.0.4/system/driverlib/libdriverlib.a(i2c.o)
+ .text.I2CMasterIntDisableEx
+                0x0000000000000000        0xa /home/mcbride.342/.energia15/packages/energia/hardware/tivac/1.0.4/system/driverlib/libdriverlib.a(i2c.o)
+ .text.I2CSlaveIntDisable
+                0x0000000000000000        0xe /home/mcbride.342/.energia15/packages/energia/hardware/tivac/1.0.4/system/driverlib/libdriverlib.a(i2c.o)
+ .text.I2CSlaveIntDisableEx
+                0x0000000000000000        0xe /home/mcbride.342/.energia15/packages/energia/hardware/tivac/1.0.4/system/driverlib/libdriverlib.a(i2c.o)
+ .text.I2CMasterIntStatus
+                0x0000000000000000       0x10 /home/mcbride.342/.energia15/packages/energia/hardware/tivac/1.0.4/system/driverlib/libdriverlib.a(i2c.o)
+ .text.I2CMasterIntStatusEx
+                0x0000000000000000        0xa /home/mcbride.342/.energia15/packages/energia/hardware/tivac/1.0.4/system/driverlib/libdriverlib.a(i2c.o)
+ .text.I2CSlaveIntStatus
+                0x0000000000000000       0x14 /home/mcbride.342/.energia15/packages/energia/hardware/tivac/1.0.4/system/driverlib/libdriverlib.a(i2c.o)
+ .text.I2CSlaveIntStatusEx
+                0x0000000000000000        0xe /home/mcbride.342/.energia15/packages/energia/hardware/tivac/1.0.4/system/driverlib/libdriverlib.a(i2c.o)
+ .text.I2CMasterIntClear
+                0x0000000000000000        0x8 /home/mcbride.342/.energia15/packages/energia/hardware/tivac/1.0.4/system/driverlib/libdriverlib.a(i2c.o)
+ .text.I2CMasterIntClearEx
+                0x0000000000000000        0x4 /home/mcbride.342/.energia15/packages/energia/hardware/tivac/1.0.4/system/driverlib/libdriverlib.a(i2c.o)
+ .text.I2CSlaveIntClear
+                0x0000000000000000        0x8 /home/mcbride.342/.energia15/packages/energia/hardware/tivac/1.0.4/system/driverlib/libdriverlib.a(i2c.o)
+ .text.I2CSlaveIntClearEx
+                0x0000000000000000        0x6 /home/mcbride.342/.energia15/packages/energia/hardware/tivac/1.0.4/system/driverlib/libdriverlib.a(i2c.o)
+ .text.I2CMasterSlaveAddrSet
+                0x0000000000000000        0x8 /home/mcbride.342/.energia15/packages/energia/hardware/tivac/1.0.4/system/driverlib/libdriverlib.a(i2c.o)
+ .text.I2CMasterLineStateGet
+                0x0000000000000000        0x4 /home/mcbride.342/.energia15/packages/energia/hardware/tivac/1.0.4/system/driverlib/libdriverlib.a(i2c.o)
+ .text.I2CMasterBusy
+                0x0000000000000000        0x8 /home/mcbride.342/.energia15/packages/energia/hardware/tivac/1.0.4/system/driverlib/libdriverlib.a(i2c.o)
+ .text.I2CMasterBusBusy
+                0x0000000000000000        0x8 /home/mcbride.342/.energia15/packages/energia/hardware/tivac/1.0.4/system/driverlib/libdriverlib.a(i2c.o)
+ .text.I2CMasterControl
+                0x0000000000000000        0x4 /home/mcbride.342/.energia15/packages/energia/hardware/tivac/1.0.4/system/driverlib/libdriverlib.a(i2c.o)
+ .text.I2CMasterErr
+                0x0000000000000000       0x16 /home/mcbride.342/.energia15/packages/energia/hardware/tivac/1.0.4/system/driverlib/libdriverlib.a(i2c.o)
+ .text.I2CMasterDataPut
+                0x0000000000000000        0x4 /home/mcbride.342/.energia15/packages/energia/hardware/tivac/1.0.4/system/driverlib/libdriverlib.a(i2c.o)
+ .text.I2CMasterDataGet
+                0x0000000000000000        0x4 /home/mcbride.342/.energia15/packages/energia/hardware/tivac/1.0.4/system/driverlib/libdriverlib.a(i2c.o)
+ .text.I2CMasterTimeoutSet
+                0x0000000000000000        0x4 /home/mcbride.342/.energia15/packages/energia/hardware/tivac/1.0.4/system/driverlib/libdriverlib.a(i2c.o)
+ .text.I2CSlaveACKOverride
+                0x0000000000000000       0x16 /home/mcbride.342/.energia15/packages/energia/hardware/tivac/1.0.4/system/driverlib/libdriverlib.a(i2c.o)
+ .text.I2CSlaveACKValueSet
+                0x0000000000000000       0x16 /home/mcbride.342/.energia15/packages/energia/hardware/tivac/1.0.4/system/driverlib/libdriverlib.a(i2c.o)
+ .text.I2CSlaveStatus
+                0x0000000000000000        0x6 /home/mcbride.342/.energia15/packages/energia/hardware/tivac/1.0.4/system/driverlib/libdriverlib.a(i2c.o)
+ .text.I2CSlaveDataGet
+                0x0000000000000000        0x6 /home/mcbride.342/.energia15/packages/energia/hardware/tivac/1.0.4/system/driverlib/libdriverlib.a(i2c.o)
+ .text.I2CTxFIFOConfigSet
+                0x0000000000000000       0x18 /home/mcbride.342/.energia15/packages/energia/hardware/tivac/1.0.4/system/driverlib/libdriverlib.a(i2c.o)
+ .text.I2CTxFIFOFlush
+                0x0000000000000000        0xe /home/mcbride.342/.energia15/packages/energia/hardware/tivac/1.0.4/system/driverlib/libdriverlib.a(i2c.o)
+ .text.I2CRxFIFOConfigSet
+                0x0000000000000000       0x16 /home/mcbride.342/.energia15/packages/energia/hardware/tivac/1.0.4/system/driverlib/libdriverlib.a(i2c.o)
+ .text.I2CRxFIFOFlush
+                0x0000000000000000        0xe /home/mcbride.342/.energia15/packages/energia/hardware/tivac/1.0.4/system/driverlib/libdriverlib.a(i2c.o)
+ .text.I2CFIFOStatus
+                0x0000000000000000        0x6 /home/mcbride.342/.energia15/packages/energia/hardware/tivac/1.0.4/system/driverlib/libdriverlib.a(i2c.o)
+ .text.I2CFIFODataPut
+                0x0000000000000000        0xe /home/mcbride.342/.energia15/packages/energia/hardware/tivac/1.0.4/system/driverlib/libdriverlib.a(i2c.o)
+ .text.I2CFIFODataPutNonBlocking
+                0x0000000000000000       0x14 /home/mcbride.342/.energia15/packages/energia/hardware/tivac/1.0.4/system/driverlib/libdriverlib.a(i2c.o)
+ .text.I2CFIFODataGet
+                0x0000000000000000        0xe /home/mcbride.342/.energia15/packages/energia/hardware/tivac/1.0.4/system/driverlib/libdriverlib.a(i2c.o)
+ .text.I2CFIFODataGetNonBlocking
+                0x0000000000000000       0x16 /home/mcbride.342/.energia15/packages/energia/hardware/tivac/1.0.4/system/driverlib/libdriverlib.a(i2c.o)
+ .text.I2CMasterBurstLengthSet
+                0x0000000000000000        0x4 /home/mcbride.342/.energia15/packages/energia/hardware/tivac/1.0.4/system/driverlib/libdriverlib.a(i2c.o)
+ .text.I2CMasterBurstCountGet
+                0x0000000000000000        0x4 /home/mcbride.342/.energia15/packages/energia/hardware/tivac/1.0.4/system/driverlib/libdriverlib.a(i2c.o)
+ .text.I2CMasterGlitchFilterConfigSet
+                0x0000000000000000       0x44 /home/mcbride.342/.energia15/packages/energia/hardware/tivac/1.0.4/system/driverlib/libdriverlib.a(i2c.o)
+ .text.I2CSlaveFIFOEnable
+                0x0000000000000000        0xa /home/mcbride.342/.energia15/packages/energia/hardware/tivac/1.0.4/system/driverlib/libdriverlib.a(i2c.o)
+ .text.I2CSlaveFIFODisable
+                0x0000000000000000        0x8 /home/mcbride.342/.energia15/packages/energia/hardware/tivac/1.0.4/system/driverlib/libdriverlib.a(i2c.o)
+ .text.I2CLoopbackEnable
+                0x0000000000000000        0xa /home/mcbride.342/.energia15/packages/energia/hardware/tivac/1.0.4/system/driverlib/libdriverlib.a(i2c.o)
+ .rodata.g_ppui32I2CIntMap
+                0x0000000000000000       0x30 /home/mcbride.342/.energia15/packages/energia/hardware/tivac/1.0.4/system/driverlib/libdriverlib.a(i2c.o)
+ .rodata.g_ppui32I2CIntMapSnowflake
+                0x0000000000000000       0x50 /home/mcbride.342/.energia15/packages/energia/hardware/tivac/1.0.4/system/driverlib/libdriverlib.a(i2c.o)
+ .text          0x0000000000000000        0x0 /home/mcbride.342/.energia15/packages/energia/hardware/tivac/1.0.4/system/driverlib/libdriverlib.a(interrupt.o)
+ .data          0x0000000000000000        0x0 /home/mcbride.342/.energia15/packages/energia/hardware/tivac/1.0.4/system/driverlib/libdriverlib.a(interrupt.o)
+ .bss           0x0000000000000000        0x0 /home/mcbride.342/.energia15/packages/energia/hardware/tivac/1.0.4/system/driverlib/libdriverlib.a(interrupt.o)
+ .text._IntDefaultHandler
+                0x0000000000000000        0x2 /home/mcbride.342/.energia15/packages/energia/hardware/tivac/1.0.4/system/driverlib/libdriverlib.a(interrupt.o)
+ .text.IntMasterEnable
+                0x0000000000000000        0xe /home/mcbride.342/.energia15/packages/energia/hardware/tivac/1.0.4/system/driverlib/libdriverlib.a(interrupt.o)
+ .text.IntMasterDisable
+                0x0000000000000000        0xe /home/mcbride.342/.energia15/packages/energia/hardware/tivac/1.0.4/system/driverlib/libdriverlib.a(interrupt.o)
+ .text.IntRegister
+                0x0000000000000000       0x34 /home/mcbride.342/.energia15/packages/energia/hardware/tivac/1.0.4/system/driverlib/libdriverlib.a(interrupt.o)
+ .text.IntUnregister
+                0x0000000000000000       0x14 /home/mcbride.342/.energia15/packages/energia/hardware/tivac/1.0.4/system/driverlib/libdriverlib.a(interrupt.o)
+ .text.IntPriorityGroupingSet
+                0x0000000000000000       0x1c /home/mcbride.342/.energia15/packages/energia/hardware/tivac/1.0.4/system/driverlib/libdriverlib.a(interrupt.o)
+ .text.IntPriorityGroupingGet
+                0x0000000000000000       0x24 /home/mcbride.342/.energia15/packages/energia/hardware/tivac/1.0.4/system/driverlib/libdriverlib.a(interrupt.o)
+ .text.IntPrioritySet
+                0x0000000000000000       0x2c /home/mcbride.342/.energia15/packages/energia/hardware/tivac/1.0.4/system/driverlib/libdriverlib.a(interrupt.o)
+ .text.IntPriorityGet
+                0x0000000000000000       0x1c /home/mcbride.342/.energia15/packages/energia/hardware/tivac/1.0.4/system/driverlib/libdriverlib.a(interrupt.o)
+ .text.IntEnable
+                0x0000000000000000       0x60 /home/mcbride.342/.energia15/packages/energia/hardware/tivac/1.0.4/system/driverlib/libdriverlib.a(interrupt.o)
+ .text.IntDisable
+                0x0000000000000000       0x60 /home/mcbride.342/.energia15/packages/energia/hardware/tivac/1.0.4/system/driverlib/libdriverlib.a(interrupt.o)
+ .text.IntIsEnabled
+                0x0000000000000000       0x64 /home/mcbride.342/.energia15/packages/energia/hardware/tivac/1.0.4/system/driverlib/libdriverlib.a(interrupt.o)
+ .text.IntPendSet
+                0x0000000000000000       0x50 /home/mcbride.342/.energia15/packages/energia/hardware/tivac/1.0.4/system/driverlib/libdriverlib.a(interrupt.o)
+ .text.IntPendClear
+                0x0000000000000000       0x40 /home/mcbride.342/.energia15/packages/energia/hardware/tivac/1.0.4/system/driverlib/libdriverlib.a(interrupt.o)
+ .text.IntPriorityMaskSet
+                0x0000000000000000        0x4 /home/mcbride.342/.energia15/packages/energia/hardware/tivac/1.0.4/system/driverlib/libdriverlib.a(interrupt.o)
+ .text.IntPriorityMaskGet
+                0x0000000000000000        0x4 /home/mcbride.342/.energia15/packages/energia/hardware/tivac/1.0.4/system/driverlib/libdriverlib.a(interrupt.o)
+ .text.IntTrigger
+                0x0000000000000000        0xc /home/mcbride.342/.energia15/packages/energia/hardware/tivac/1.0.4/system/driverlib/libdriverlib.a(interrupt.o)
+ .rodata.g_pui32Priority
+                0x0000000000000000       0x20 /home/mcbride.342/.energia15/packages/energia/hardware/tivac/1.0.4/system/driverlib/libdriverlib.a(interrupt.o)
+ .rodata.g_pui32Dii16Regs
+                0x0000000000000000       0x14 /home/mcbride.342/.energia15/packages/energia/hardware/tivac/1.0.4/system/driverlib/libdriverlib.a(interrupt.o)
+ .rodata.g_pui32PendRegs
+                0x0000000000000000       0x14 /home/mcbride.342/.energia15/packages/energia/hardware/tivac/1.0.4/system/driverlib/libdriverlib.a(interrupt.o)
+ vtable         0x0000000000000000      0x400 /home/mcbride.342/.energia15/packages/energia/hardware/tivac/1.0.4/system/driverlib/libdriverlib.a(interrupt.o)
+ .rodata.g_pui32Regs
+                0x0000000000000000       0x9c /home/mcbride.342/.energia15/packages/energia/hardware/tivac/1.0.4/system/driverlib/libdriverlib.a(interrupt.o)
+ .rodata.g_pui32EnRegs
+                0x0000000000000000       0x14 /home/mcbride.342/.energia15/packages/energia/hardware/tivac/1.0.4/system/driverlib/libdriverlib.a(interrupt.o)
+ .rodata.g_pui32UnpendRegs
+                0x0000000000000000       0x14 /home/mcbride.342/.energia15/packages/energia/hardware/tivac/1.0.4/system/driverlib/libdriverlib.a(interrupt.o)
+ .comment       0x0000000000000000       0x71 /home/mcbride.342/.energia15/packages/energia/hardware/tivac/1.0.4/system/driverlib/libdriverlib.a(interrupt.o)
+ .ARM.attributes
+                0x0000000000000000       0x3b /home/mcbride.342/.energia15/packages/energia/hardware/tivac/1.0.4/system/driverlib/libdriverlib.a(interrupt.o)
+ .text          0x0000000000000000        0x0 /home/mcbride.342/.energia15/packages/energia/hardware/tivac/1.0.4/system/driverlib/libdriverlib.a(sysctl.o)
+ .data          0x0000000000000000        0x0 /home/mcbride.342/.energia15/packages/energia/hardware/tivac/1.0.4/system/driverlib/libdriverlib.a(sysctl.o)
+ .bss           0x0000000000000000        0x0 /home/mcbride.342/.energia15/packages/energia/hardware/tivac/1.0.4/system/driverlib/libdriverlib.a(sysctl.o)
+ .text._SysCtlMemTimingGet
+                0x0000000000000000       0x24 /home/mcbride.342/.energia15/packages/energia/hardware/tivac/1.0.4/system/driverlib/libdriverlib.a(sysctl.o)
+ .text.SysCtlSRAMSizeGet
+                0x0000000000000000       0x10 /home/mcbride.342/.energia15/packages/energia/hardware/tivac/1.0.4/system/driverlib/libdriverlib.a(sysctl.o)
+ .text.SysCtlFlashSizeGet
+                0x0000000000000000       0x3c /home/mcbride.342/.energia15/packages/energia/hardware/tivac/1.0.4/system/driverlib/libdriverlib.a(sysctl.o)
+ .text.SysCtlFlashSectorSizeGet
+                0x0000000000000000       0x38 /home/mcbride.342/.energia15/packages/energia/hardware/tivac/1.0.4/system/driverlib/libdriverlib.a(sysctl.o)
+ .text.SysCtlPeripheralPresent
+                0x0000000000000000       0x26 /home/mcbride.342/.energia15/packages/energia/hardware/tivac/1.0.4/system/driverlib/libdriverlib.a(sysctl.o)
+ .text.SysCtlPeripheralReady
+                0x0000000000000000       0x26 /home/mcbride.342/.energia15/packages/energia/hardware/tivac/1.0.4/system/driverlib/libdriverlib.a(sysctl.o)
+ .text.SysCtlPeripheralPowerOn
+                0x0000000000000000       0x22 /home/mcbride.342/.energia15/packages/energia/hardware/tivac/1.0.4/system/driverlib/libdriverlib.a(sysctl.o)
+ .text.SysCtlPeripheralPowerOff
+                0x0000000000000000       0x22 /home/mcbride.342/.energia15/packages/energia/hardware/tivac/1.0.4/system/driverlib/libdriverlib.a(sysctl.o)
+ .text.SysCtlPeripheralEnable
+                0x0000000000000000       0x22 /home/mcbride.342/.energia15/packages/energia/hardware/tivac/1.0.4/system/driverlib/libdriverlib.a(sysctl.o)
+ .text.SysCtlPeripheralDisable
+                0x0000000000000000       0x22 /home/mcbride.342/.energia15/packages/energia/hardware/tivac/1.0.4/system/driverlib/libdriverlib.a(sysctl.o)
+ .text.SysCtlPeripheralSleepEnable
+                0x0000000000000000       0x22 /home/mcbride.342/.energia15/packages/energia/hardware/tivac/1.0.4/system/driverlib/libdriverlib.a(sysctl.o)
+ .text.SysCtlPeripheralSleepDisable
+                0x0000000000000000       0x22 /home/mcbride.342/.energia15/packages/energia/hardware/tivac/1.0.4/system/driverlib/libdriverlib.a(sysctl.o)
+ .text.SysCtlPeripheralDeepSleepEnable
+                0x0000000000000000       0x22 /home/mcbride.342/.energia15/packages/energia/hardware/tivac/1.0.4/system/driverlib/libdriverlib.a(sysctl.o)
+ .text.SysCtlPeripheralDeepSleepDisable
+                0x0000000000000000       0x22 /home/mcbride.342/.energia15/packages/energia/hardware/tivac/1.0.4/system/driverlib/libdriverlib.a(sysctl.o)
+ .text.SysCtlPeripheralClockGating
+                0x0000000000000000       0x48 /home/mcbride.342/.energia15/packages/energia/hardware/tivac/1.0.4/system/driverlib/libdriverlib.a(sysctl.o)
+ .text.SysCtlIntRegister
+                0x0000000000000000       0x14 /home/mcbride.342/.energia15/packages/energia/hardware/tivac/1.0.4/system/driverlib/libdriverlib.a(sysctl.o)
+ .text.SysCtlIntUnregister
+                0x0000000000000000       0x12 /home/mcbride.342/.energia15/packages/energia/hardware/tivac/1.0.4/system/driverlib/libdriverlib.a(sysctl.o)
+ .text.SysCtlIntEnable
+                0x0000000000000000       0x10 /home/mcbride.342/.energia15/packages/energia/hardware/tivac/1.0.4/system/driverlib/libdriverlib.a(sysctl.o)
+ .text.SysCtlIntDisable
+                0x0000000000000000       0x10 /home/mcbride.342/.energia15/packages/energia/hardware/tivac/1.0.4/system/driverlib/libdriverlib.a(sysctl.o)
+ .text.SysCtlIntClear
+                0x0000000000000000        0xc /home/mcbride.342/.energia15/packages/energia/hardware/tivac/1.0.4/system/driverlib/libdriverlib.a(sysctl.o)
+ .text.SysCtlIntStatus
+                0x0000000000000000       0x14 /home/mcbride.342/.energia15/packages/energia/hardware/tivac/1.0.4/system/driverlib/libdriverlib.a(sysctl.o)
+ .text.SysCtlLDOSleepSet
+                0x0000000000000000        0xc /home/mcbride.342/.energia15/packages/energia/hardware/tivac/1.0.4/system/driverlib/libdriverlib.a(sysctl.o)
+ .text.SysCtlLDOSleepGet
+                0x0000000000000000        0xc /home/mcbride.342/.energia15/packages/energia/hardware/tivac/1.0.4/system/driverlib/libdriverlib.a(sysctl.o)
+ .text.SysCtlLDODeepSleepGet
+                0x0000000000000000        0xc /home/mcbride.342/.energia15/packages/energia/hardware/tivac/1.0.4/system/driverlib/libdriverlib.a(sysctl.o)
+ .text.SysCtlSleepPowerSet
+                0x0000000000000000        0xc /home/mcbride.342/.energia15/packages/energia/hardware/tivac/1.0.4/system/driverlib/libdriverlib.a(sysctl.o)
+ .text.SysCtlSleep
+                0x0000000000000000        0x4 /home/mcbride.342/.energia15/packages/energia/hardware/tivac/1.0.4/system/driverlib/libdriverlib.a(sysctl.o)
+ .text.SysCtlDeepSleep
+                0x0000000000000000       0x20 /home/mcbride.342/.energia15/packages/energia/hardware/tivac/1.0.4/system/driverlib/libdriverlib.a(sysctl.o)
+ .text.SysCtlResetCauseGet
+                0x0000000000000000        0xc /home/mcbride.342/.energia15/packages/energia/hardware/tivac/1.0.4/system/driverlib/libdriverlib.a(sysctl.o)
+ .text.SysCtlResetCauseClear
+                0x0000000000000000       0x10 /home/mcbride.342/.energia15/packages/energia/hardware/tivac/1.0.4/system/driverlib/libdriverlib.a(sysctl.o)
+ .text.SysCtlMOSCConfigSet
+                0x0000000000000000        0xc /home/mcbride.342/.energia15/packages/energia/hardware/tivac/1.0.4/system/driverlib/libdriverlib.a(sysctl.o)
+ .text.SysCtlPIOSCCalibrate
+                0x0000000000000000       0x48 /home/mcbride.342/.energia15/packages/energia/hardware/tivac/1.0.4/system/driverlib/libdriverlib.a(sysctl.o)
+ .text.SysCtlResetBehaviorSet
+                0x0000000000000000        0xc /home/mcbride.342/.energia15/packages/energia/hardware/tivac/1.0.4/system/driverlib/libdriverlib.a(sysctl.o)
+ .text.SysCtlResetBehaviorGet
+                0x0000000000000000        0xc /home/mcbride.342/.energia15/packages/energia/hardware/tivac/1.0.4/system/driverlib/libdriverlib.a(sysctl.o)
+ .text.SysCtlClockFreqSet
+                0x0000000000000000      0x248 /home/mcbride.342/.energia15/packages/energia/hardware/tivac/1.0.4/system/driverlib/libdriverlib.a(sysctl.o)
+ .text.SysCtlClockSet
+                0x0000000000000000      0x11c /home/mcbride.342/.energia15/packages/energia/hardware/tivac/1.0.4/system/driverlib/libdriverlib.a(sysctl.o)
+ .text.SysCtlClockGet
+                0x0000000000000000      0x12c /home/mcbride.342/.energia15/packages/energia/hardware/tivac/1.0.4/system/driverlib/libdriverlib.a(sysctl.o)
+ .text.SysCtlDeepSleepClockSet
+                0x0000000000000000        0xc /home/mcbride.342/.energia15/packages/energia/hardware/tivac/1.0.4/system/driverlib/libdriverlib.a(sysctl.o)
+ .text.SysCtlDeepSleepClockConfigSet
+                0x0000000000000000       0x60 /home/mcbride.342/.energia15/packages/energia/hardware/tivac/1.0.4/system/driverlib/libdriverlib.a(sysctl.o)
+ .text.SysCtlPWMClockSet
+                0x0000000000000000       0x14 /home/mcbride.342/.energia15/packages/energia/hardware/tivac/1.0.4/system/driverlib/libdriverlib.a(sysctl.o)
+ .text.SysCtlPWMClockGet
+                0x0000000000000000       0x18 /home/mcbride.342/.energia15/packages/energia/hardware/tivac/1.0.4/system/driverlib/libdriverlib.a(sysctl.o)
+ .text.SysCtlGPIOAHBEnable
+                0x0000000000000000       0x18 /home/mcbride.342/.energia15/packages/energia/hardware/tivac/1.0.4/system/driverlib/libdriverlib.a(sysctl.o)
+ .text.SysCtlGPIOAHBDisable
+                0x0000000000000000       0x1c /home/mcbride.342/.energia15/packages/energia/hardware/tivac/1.0.4/system/driverlib/libdriverlib.a(sysctl.o)
+ .text.SysCtlUSBPLLEnable
+                0x0000000000000000       0x10 /home/mcbride.342/.energia15/packages/energia/hardware/tivac/1.0.4/system/driverlib/libdriverlib.a(sysctl.o)
+ .text.SysCtlUSBPLLDisable
+                0x0000000000000000       0x10 /home/mcbride.342/.energia15/packages/energia/hardware/tivac/1.0.4/system/driverlib/libdriverlib.a(sysctl.o)
+ .text.SysCtlVoltageEventConfig
+                0x0000000000000000        0xc /home/mcbride.342/.energia15/packages/energia/hardware/tivac/1.0.4/system/driverlib/libdriverlib.a(sysctl.o)
+ .text.SysCtlVoltageEventStatus
+                0x0000000000000000        0xc /home/mcbride.342/.energia15/packages/energia/hardware/tivac/1.0.4/system/driverlib/libdriverlib.a(sysctl.o)
+ .text.SysCtlVoltageEventClear
+                0x0000000000000000       0x10 /home/mcbride.342/.energia15/packages/energia/hardware/tivac/1.0.4/system/driverlib/libdriverlib.a(sysctl.o)
+ .text.SysCtlVCOGet
+                0x0000000000000000       0x78 /home/mcbride.342/.energia15/packages/energia/hardware/tivac/1.0.4/system/driverlib/libdriverlib.a(sysctl.o)
+ .text.SysCtlNMIStatus
+                0x0000000000000000        0xc /home/mcbride.342/.energia15/packages/energia/hardware/tivac/1.0.4/system/driverlib/libdriverlib.a(sysctl.o)
+ .text.SysCtlNMIClear
+                0x0000000000000000       0x10 /home/mcbride.342/.energia15/packages/energia/hardware/tivac/1.0.4/system/driverlib/libdriverlib.a(sysctl.o)
+ .text.SysCtlClockOutConfig
+                0x0000000000000000       0x10 /home/mcbride.342/.energia15/packages/energia/hardware/tivac/1.0.4/system/driverlib/libdriverlib.a(sysctl.o)
+ .text.SysCtlAltClkConfig
+                0x0000000000000000        0xc /home/mcbride.342/.energia15/packages/energia/hardware/tivac/1.0.4/system/driverlib/libdriverlib.a(sysctl.o)
+ .rodata.g_pppui32XTALtoVCO
+                0x0000000000000000      0x1b0 /home/mcbride.342/.energia15/packages/energia/hardware/tivac/1.0.4/system/driverlib/libdriverlib.a(sysctl.o)
+ .rodata.g_pui32VCOFrequencies
+                0x0000000000000000        0x8 /home/mcbride.342/.energia15/packages/energia/hardware/tivac/1.0.4/system/driverlib/libdriverlib.a(sysctl.o)
+ .rodata.g_sXTALtoMEMTIM
+                0x0000000000000000       0x30 /home/mcbride.342/.energia15/packages/energia/hardware/tivac/1.0.4/system/driverlib/libdriverlib.a(sysctl.o)
+ .rodata.g_pui32Xtals
+                0x0000000000000000       0x6c /home/mcbride.342/.energia15/packages/energia/hardware/tivac/1.0.4/system/driverlib/libdriverlib.a(sysctl.o)
+ .text          0x0000000000000000        0x0 /home/mcbride.342/.energia15/packages/energia/hardware/tivac/1.0.4/system/driverlib/libdriverlib.a(cpu.o)
+ .data          0x0000000000000000        0x0 /home/mcbride.342/.energia15/packages/energia/hardware/tivac/1.0.4/system/driverlib/libdriverlib.a(cpu.o)
+ .bss           0x0000000000000000        0x0 /home/mcbride.342/.energia15/packages/energia/hardware/tivac/1.0.4/system/driverlib/libdriverlib.a(cpu.o)
+ .text.CPUcpsid
+                0x0000000000000000        0x8 /home/mcbride.342/.energia15/packages/energia/hardware/tivac/1.0.4/system/driverlib/libdriverlib.a(cpu.o)
+ .text.CPUprimask
+                0x0000000000000000        0x6 /home/mcbride.342/.energia15/packages/energia/hardware/tivac/1.0.4/system/driverlib/libdriverlib.a(cpu.o)
+ .text.CPUcpsie
+                0x0000000000000000        0x8 /home/mcbride.342/.energia15/packages/energia/hardware/tivac/1.0.4/system/driverlib/libdriverlib.a(cpu.o)
+ .text.CPUwfi   0x0000000000000000        0x4 /home/mcbride.342/.energia15/packages/energia/hardware/tivac/1.0.4/system/driverlib/libdriverlib.a(cpu.o)
+ .text.CPUbasepriSet
+                0x0000000000000000        0x6 /home/mcbride.342/.energia15/packages/energia/hardware/tivac/1.0.4/system/driverlib/libdriverlib.a(cpu.o)
+ .text.CPUbasepriGet
+                0x0000000000000000        0x6 /home/mcbride.342/.energia15/packages/energia/hardware/tivac/1.0.4/system/driverlib/libdriverlib.a(cpu.o)
+ .comment       0x0000000000000000       0x71 /home/mcbride.342/.energia15/packages/energia/hardware/tivac/1.0.4/system/driverlib/libdriverlib.a(cpu.o)
+ .ARM.attributes
+                0x0000000000000000       0x3b /home/mcbride.342/.energia15/packages/energia/hardware/tivac/1.0.4/system/driverlib/libdriverlib.a(cpu.o)
+ .text          0x0000000000000000        0x0 /home/mcbride.342/.energia15/packages/energia/tools/arm-none-eabi-gcc/8.3.1-20190703/bin/../lib/gcc/arm-none-eabi/8.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc_nano.a(lib_a-malloc.o)
+ .data          0x0000000000000000        0x0 /home/mcbride.342/.energia15/packages/energia/tools/arm-none-eabi-gcc/8.3.1-20190703/bin/../lib/gcc/arm-none-eabi/8.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc_nano.a(lib_a-malloc.o)
+ .bss           0x0000000000000000        0x0 /home/mcbride.342/.energia15/packages/energia/tools/arm-none-eabi-gcc/8.3.1-20190703/bin/../lib/gcc/arm-none-eabi/8.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc_nano.a(lib_a-malloc.o)
+ .text          0x0000000000000000        0x0 /home/mcbride.342/.energia15/packages/energia/tools/arm-none-eabi-gcc/8.3.1-20190703/bin/../lib/gcc/arm-none-eabi/8.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc_nano.a(lib_a-nano-freer.o)
+ .data          0x0000000000000000        0x0 /home/mcbride.342/.energia15/packages/energia/tools/arm-none-eabi-gcc/8.3.1-20190703/bin/../lib/gcc/arm-none-eabi/8.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc_nano.a(lib_a-nano-freer.o)
+ .bss           0x0000000000000000        0x0 /home/mcbride.342/.energia15/packages/energia/tools/arm-none-eabi-gcc/8.3.1-20190703/bin/../lib/gcc/arm-none-eabi/8.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc_nano.a(lib_a-nano-freer.o)
+ .text          0x0000000000000000        0x0 /home/mcbride.342/.energia15/packages/energia/tools/arm-none-eabi-gcc/8.3.1-20190703/bin/../lib/gcc/arm-none-eabi/8.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc_nano.a(lib_a-nano-mallocr.o)
+ .data          0x0000000000000000        0x0 /home/mcbride.342/.energia15/packages/energia/tools/arm-none-eabi-gcc/8.3.1-20190703/bin/../lib/gcc/arm-none-eabi/8.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc_nano.a(lib_a-nano-mallocr.o)
+ .bss           0x0000000000000000        0x0 /home/mcbride.342/.energia15/packages/energia/tools/arm-none-eabi-gcc/8.3.1-20190703/bin/../lib/gcc/arm-none-eabi/8.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc_nano.a(lib_a-nano-mallocr.o)
+ .text          0x0000000000000000        0x0 /home/mcbride.342/.energia15/packages/energia/tools/arm-none-eabi-gcc/8.3.1-20190703/bin/../lib/gcc/arm-none-eabi/8.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc_nano.a(lib_a-sbrkr.o)
+ .data          0x0000000000000000        0x0 /home/mcbride.342/.energia15/packages/energia/tools/arm-none-eabi-gcc/8.3.1-20190703/bin/../lib/gcc/arm-none-eabi/8.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc_nano.a(lib_a-sbrkr.o)
+ .bss           0x0000000000000000        0x0 /home/mcbride.342/.energia15/packages/energia/tools/arm-none-eabi-gcc/8.3.1-20190703/bin/../lib/gcc/arm-none-eabi/8.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc_nano.a(lib_a-sbrkr.o)
+ .data          0x0000000000000000        0x0 /home/mcbride.342/.energia15/packages/energia/tools/arm-none-eabi-gcc/8.3.1-20190703/bin/../lib/gcc/arm-none-eabi/8.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc_nano.a(lib_a-strlen.o)
+ .bss           0x0000000000000000        0x0 /home/mcbride.342/.energia15/packages/energia/tools/arm-none-eabi-gcc/8.3.1-20190703/bin/../lib/gcc/arm-none-eabi/8.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc_nano.a(lib_a-strlen.o)
+ .text          0x0000000000000000        0x0 /home/mcbride.342/.energia15/packages/energia/tools/arm-none-eabi-gcc/8.3.1-20190703/bin/../lib/gcc/arm-none-eabi/8.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc_nano.a(lib_a-impure.o)
+ .data          0x0000000000000000        0x0 /home/mcbride.342/.energia15/packages/energia/tools/arm-none-eabi-gcc/8.3.1-20190703/bin/../lib/gcc/arm-none-eabi/8.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc_nano.a(lib_a-impure.o)
+ .bss           0x0000000000000000        0x0 /home/mcbride.342/.energia15/packages/energia/tools/arm-none-eabi-gcc/8.3.1-20190703/bin/../lib/gcc/arm-none-eabi/8.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc_nano.a(lib_a-impure.o)
+ .rodata._global_impure_ptr
+                0x0000000000000000        0x4 /home/mcbride.342/.energia15/packages/energia/tools/arm-none-eabi-gcc/8.3.1-20190703/bin/../lib/gcc/arm-none-eabi/8.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc_nano.a(lib_a-impure.o)
+ .text          0x0000000000000000        0x0 /home/mcbride.342/.energia15/packages/energia/tools/arm-none-eabi-gcc/8.3.1-20190703/bin/../lib/gcc/arm-none-eabi/8.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc_nano.a(lib_a-mlock.o)
+ .data          0x0000000000000000        0x0 /home/mcbride.342/.energia15/packages/energia/tools/arm-none-eabi-gcc/8.3.1-20190703/bin/../lib/gcc/arm-none-eabi/8.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc_nano.a(lib_a-mlock.o)
+ .bss           0x0000000000000000        0x0 /home/mcbride.342/.energia15/packages/energia/tools/arm-none-eabi-gcc/8.3.1-20190703/bin/../lib/gcc/arm-none-eabi/8.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc_nano.a(lib_a-mlock.o)
+ .text          0x0000000000000000        0x0 /home/mcbride.342/.energia15/packages/energia/tools/arm-none-eabi-gcc/8.3.1-20190703/bin/../lib/gcc/arm-none-eabi/8.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc_nano.a(lib_a-reent.o)
+ .data          0x0000000000000000        0x0 /home/mcbride.342/.energia15/packages/energia/tools/arm-none-eabi-gcc/8.3.1-20190703/bin/../lib/gcc/arm-none-eabi/8.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc_nano.a(lib_a-reent.o)
+ .bss           0x0000000000000000        0x0 /home/mcbride.342/.energia15/packages/energia/tools/arm-none-eabi-gcc/8.3.1-20190703/bin/../lib/gcc/arm-none-eabi/8.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc_nano.a(lib_a-reent.o)
+ .text.cleanup_glue
+                0x0000000000000000       0x1a /home/mcbride.342/.energia15/packages/energia/tools/arm-none-eabi-gcc/8.3.1-20190703/bin/../lib/gcc/arm-none-eabi/8.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc_nano.a(lib_a-reent.o)
+ .text._reclaim_reent
+                0x0000000000000000       0xb8 /home/mcbride.342/.energia15/packages/energia/tools/arm-none-eabi-gcc/8.3.1-20190703/bin/../lib/gcc/arm-none-eabi/8.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc_nano.a(lib_a-reent.o)
+ .text          0x0000000000000000        0x0 /home/mcbride.342/.energia15/packages/energia/tools/arm-none-eabi-gcc/8.3.1-20190703/bin/../lib/gcc/arm-none-eabi/8.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc_nano.a(lib_a-lock.o)
+ .data          0x0000000000000000        0x0 /home/mcbride.342/.energia15/packages/energia/tools/arm-none-eabi-gcc/8.3.1-20190703/bin/../lib/gcc/arm-none-eabi/8.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc_nano.a(lib_a-lock.o)
+ .bss           0x0000000000000000        0x0 /home/mcbride.342/.energia15/packages/energia/tools/arm-none-eabi-gcc/8.3.1-20190703/bin/../lib/gcc/arm-none-eabi/8.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc_nano.a(lib_a-lock.o)
+ .text.__retarget_lock_init
+                0x0000000000000000        0x2 /home/mcbride.342/.energia15/packages/energia/tools/arm-none-eabi-gcc/8.3.1-20190703/bin/../lib/gcc/arm-none-eabi/8.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc_nano.a(lib_a-lock.o)
+ .text.__retarget_lock_init_recursive
+                0x0000000000000000        0x2 /home/mcbride.342/.energia15/packages/energia/tools/arm-none-eabi-gcc/8.3.1-20190703/bin/../lib/gcc/arm-none-eabi/8.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc_nano.a(lib_a-lock.o)
+ .text.__retarget_lock_close
+                0x0000000000000000        0x2 /home/mcbride.342/.energia15/packages/energia/tools/arm-none-eabi-gcc/8.3.1-20190703/bin/../lib/gcc/arm-none-eabi/8.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc_nano.a(lib_a-lock.o)
+ .text.__retarget_lock_close_recursive
+                0x0000000000000000        0x2 /home/mcbride.342/.energia15/packages/energia/tools/arm-none-eabi-gcc/8.3.1-20190703/bin/../lib/gcc/arm-none-eabi/8.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc_nano.a(lib_a-lock.o)
+ .text.__retarget_lock_acquire
+                0x0000000000000000        0x2 /home/mcbride.342/.energia15/packages/energia/tools/arm-none-eabi-gcc/8.3.1-20190703/bin/../lib/gcc/arm-none-eabi/8.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc_nano.a(lib_a-lock.o)
+ .text.__retarget_lock_try_acquire
+                0x0000000000000000        0x4 /home/mcbride.342/.energia15/packages/energia/tools/arm-none-eabi-gcc/8.3.1-20190703/bin/../lib/gcc/arm-none-eabi/8.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc_nano.a(lib_a-lock.o)
+ .text.__retarget_lock_try_acquire_recursive
+                0x0000000000000000        0x4 /home/mcbride.342/.energia15/packages/energia/tools/arm-none-eabi-gcc/8.3.1-20190703/bin/../lib/gcc/arm-none-eabi/8.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc_nano.a(lib_a-lock.o)
+ .text.__retarget_lock_release
+                0x0000000000000000        0x2 /home/mcbride.342/.energia15/packages/energia/tools/arm-none-eabi-gcc/8.3.1-20190703/bin/../lib/gcc/arm-none-eabi/8.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc_nano.a(lib_a-lock.o)
+ .text          0x0000000000000000      0x378 /home/mcbride.342/.energia15/packages/energia/tools/arm-none-eabi-gcc/8.3.1-20190703/bin/../lib/gcc/arm-none-eabi/8.3.1/thumb/v7e-m+fp/hard/libgcc.a(_arm_addsubdf3.o)
+ .data          0x0000000000000000        0x0 /home/mcbride.342/.energia15/packages/energia/tools/arm-none-eabi-gcc/8.3.1-20190703/bin/../lib/gcc/arm-none-eabi/8.3.1/thumb/v7e-m+fp/hard/libgcc.a(_arm_addsubdf3.o)
+ .bss           0x0000000000000000        0x0 /home/mcbride.342/.energia15/packages/energia/tools/arm-none-eabi-gcc/8.3.1-20190703/bin/../lib/gcc/arm-none-eabi/8.3.1/thumb/v7e-m+fp/hard/libgcc.a(_arm_addsubdf3.o)
+ .debug_frame   0x0000000000000000       0xac /home/mcbride.342/.energia15/packages/energia/tools/arm-none-eabi-gcc/8.3.1-20190703/bin/../lib/gcc/arm-none-eabi/8.3.1/thumb/v7e-m+fp/hard/libgcc.a(_arm_addsubdf3.o)
+ .ARM.attributes
+                0x0000000000000000       0x1e /home/mcbride.342/.energia15/packages/energia/tools/arm-none-eabi-gcc/8.3.1-20190703/bin/../lib/gcc/arm-none-eabi/8.3.1/thumb/v7e-m+fp/hard/libgcc.a(_arm_addsubdf3.o)
+ .text          0x0000000000000000      0x424 /home/mcbride.342/.energia15/packages/energia/tools/arm-none-eabi-gcc/8.3.1-20190703/bin/../lib/gcc/arm-none-eabi/8.3.1/thumb/v7e-m+fp/hard/libgcc.a(_arm_muldivdf3.o)
+ .data          0x0000000000000000        0x0 /home/mcbride.342/.energia15/packages/energia/tools/arm-none-eabi-gcc/8.3.1-20190703/bin/../lib/gcc/arm-none-eabi/8.3.1/thumb/v7e-m+fp/hard/libgcc.a(_arm_muldivdf3.o)
+ .bss           0x0000000000000000        0x0 /home/mcbride.342/.energia15/packages/energia/tools/arm-none-eabi-gcc/8.3.1-20190703/bin/../lib/gcc/arm-none-eabi/8.3.1/thumb/v7e-m+fp/hard/libgcc.a(_arm_muldivdf3.o)
+ .debug_frame   0x0000000000000000       0x50 /home/mcbride.342/.energia15/packages/energia/tools/arm-none-eabi-gcc/8.3.1-20190703/bin/../lib/gcc/arm-none-eabi/8.3.1/thumb/v7e-m+fp/hard/libgcc.a(_arm_muldivdf3.o)
+ .ARM.attributes
+                0x0000000000000000       0x1e /home/mcbride.342/.energia15/packages/energia/tools/arm-none-eabi-gcc/8.3.1-20190703/bin/../lib/gcc/arm-none-eabi/8.3.1/thumb/v7e-m+fp/hard/libgcc.a(_arm_muldivdf3.o)
+ .text          0x0000000000000000      0x110 /home/mcbride.342/.energia15/packages/energia/tools/arm-none-eabi-gcc/8.3.1-20190703/bin/../lib/gcc/arm-none-eabi/8.3.1/thumb/v7e-m+fp/hard/libgcc.a(_arm_cmpdf2.o)
+ .data          0x0000000000000000        0x0 /home/mcbride.342/.energia15/packages/energia/tools/arm-none-eabi-gcc/8.3.1-20190703/bin/../lib/gcc/arm-none-eabi/8.3.1/thumb/v7e-m+fp/hard/libgcc.a(_arm_cmpdf2.o)
+ .bss           0x0000000000000000        0x0 /home/mcbride.342/.energia15/packages/energia/tools/arm-none-eabi-gcc/8.3.1-20190703/bin/../lib/gcc/arm-none-eabi/8.3.1/thumb/v7e-m+fp/hard/libgcc.a(_arm_cmpdf2.o)
+ .debug_frame   0x0000000000000000       0xc4 /home/mcbride.342/.energia15/packages/energia/tools/arm-none-eabi-gcc/8.3.1-20190703/bin/../lib/gcc/arm-none-eabi/8.3.1/thumb/v7e-m+fp/hard/libgcc.a(_arm_cmpdf2.o)
+ .ARM.attributes
+                0x0000000000000000       0x1e /home/mcbride.342/.energia15/packages/energia/tools/arm-none-eabi-gcc/8.3.1-20190703/bin/../lib/gcc/arm-none-eabi/8.3.1/thumb/v7e-m+fp/hard/libgcc.a(_arm_cmpdf2.o)
+ .text          0x0000000000000000       0x2c /home/mcbride.342/.energia15/packages/energia/tools/arm-none-eabi-gcc/8.3.1-20190703/bin/../lib/gcc/arm-none-eabi/8.3.1/thumb/v7e-m+fp/hard/libgcc.a(_arm_unorddf2.o)
+ .data          0x0000000000000000        0x0 /home/mcbride.342/.energia15/packages/energia/tools/arm-none-eabi-gcc/8.3.1-20190703/bin/../lib/gcc/arm-none-eabi/8.3.1/thumb/v7e-m+fp/hard/libgcc.a(_arm_unorddf2.o)
+ .bss           0x0000000000000000        0x0 /home/mcbride.342/.energia15/packages/energia/tools/arm-none-eabi-gcc/8.3.1-20190703/bin/../lib/gcc/arm-none-eabi/8.3.1/thumb/v7e-m+fp/hard/libgcc.a(_arm_unorddf2.o)
+ .debug_frame   0x0000000000000000       0x20 /home/mcbride.342/.energia15/packages/energia/tools/arm-none-eabi-gcc/8.3.1-20190703/bin/../lib/gcc/arm-none-eabi/8.3.1/thumb/v7e-m+fp/hard/libgcc.a(_arm_unorddf2.o)
+ .ARM.attributes
+                0x0000000000000000       0x1e /home/mcbride.342/.energia15/packages/energia/tools/arm-none-eabi-gcc/8.3.1-20190703/bin/../lib/gcc/arm-none-eabi/8.3.1/thumb/v7e-m+fp/hard/libgcc.a(_arm_unorddf2.o)
+ .text          0x0000000000000000       0x40 /home/mcbride.342/.energia15/packages/energia/tools/arm-none-eabi-gcc/8.3.1-20190703/bin/../lib/gcc/arm-none-eabi/8.3.1/thumb/v7e-m+fp/hard/libgcc.a(_arm_fixunsdfsi.o)
+ .data          0x0000000000000000        0x0 /home/mcbride.342/.energia15/packages/energia/tools/arm-none-eabi-gcc/8.3.1-20190703/bin/../lib/gcc/arm-none-eabi/8.3.1/thumb/v7e-m+fp/hard/libgcc.a(_arm_fixunsdfsi.o)
+ .bss           0x0000000000000000        0x0 /home/mcbride.342/.energia15/packages/energia/tools/arm-none-eabi-gcc/8.3.1-20190703/bin/../lib/gcc/arm-none-eabi/8.3.1/thumb/v7e-m+fp/hard/libgcc.a(_arm_fixunsdfsi.o)
+ .debug_frame   0x0000000000000000       0x24 /home/mcbride.342/.energia15/packages/energia/tools/arm-none-eabi-gcc/8.3.1-20190703/bin/../lib/gcc/arm-none-eabi/8.3.1/thumb/v7e-m+fp/hard/libgcc.a(_arm_fixunsdfsi.o)
+ .ARM.attributes
+                0x0000000000000000       0x1e /home/mcbride.342/.energia15/packages/energia/tools/arm-none-eabi-gcc/8.3.1-20190703/bin/../lib/gcc/arm-none-eabi/8.3.1/thumb/v7e-m+fp/hard/libgcc.a(_arm_fixunsdfsi.o)
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+flash            0x0000000000000000 0x0000000000040000 xr
+ram              0x0000000020000000 0x0000000000008000 xrw
+*default*        0x0000000000000000 0xffffffffffffffff
+
+Linker script and memory map
+
+LOAD ./i2c_nb_ds_v1.o
+LOAD ./Wire_nonblocking_v2.o
+START GROUP
+
+.text           0x0000000000000000     0x3020
+                0x0000000000000000                . = ALIGN (0x4)
+                0x0000000000000000                _text = .
+ *(.isr_vector)
+ .isr_vector    0x0000000000000000      0x26c /home/mcbride.342/workspace_v11/tivac_EK-TM4C123GXL_core/Debug/libtivac_EK-TM4C123GXL_core.a(startup_gcc.o)
+                0x0000000000000000                g_pfnVectors
+ *(.text .text* .gnu.linkonce.t.*)
+ .text._Z17read_i2c_one_bytePh
+                0x000000000000026c       0x74 ./i2c_nb_ds_v1.o
+                0x000000000000026c                read_i2c_one_byte(unsigned char*)
+ .text._Z13write_a_resetv
+                0x00000000000002e0       0x10 ./i2c_nb_ds_v1.o
+                0x00000000000002e0                write_a_reset()
+ .text._Z14write_a_configv
+                0x00000000000002f0        0x8 ./i2c_nb_ds_v1.o
+                0x00000000000002f0                write_a_config()
+ .text._Z11do_a_configv
+                0x00000000000002f8       0x20 ./i2c_nb_ds_v1.o
+                0x00000000000002f8                do_a_config()
+ .text._Z20write_channel_selectv
+                0x0000000000000318        0x8 ./i2c_nb_ds_v1.o
+                0x0000000000000318                write_channel_select()
+ .text._Z16select_a_channelv
+                0x0000000000000320       0x20 ./i2c_nb_ds_v1.o
+                0x0000000000000320                select_a_channel()
+ .text._Z14status_reg_setv
+                0x0000000000000340        0x8 ./i2c_nb_ds_v1.o
+                0x0000000000000340                status_reg_set()
+ .text._Z12check_1WB_SMv
+                0x0000000000000348       0xc0 ./i2c_nb_ds_v1.o
+                0x0000000000000348                check_1WB_SM()
+ .text._Z9check_1WBv
+                0x0000000000000408       0x58 ./i2c_nb_ds_v1.o
+                0x0000000000000408                check_1WB()
+ .text._Z10wire_resetv
+                0x0000000000000460       0x18 ./i2c_nb_ds_v1.o
+                0x0000000000000460                wire_reset()
+ .text._Z15write_wire_byteh
+                0x0000000000000478       0x28 ./i2c_nb_ds_v1.o
+                0x0000000000000478                write_wire_byte(unsigned char)
+ .text._Z18write_wire_byte_smh
+                0x00000000000004a0       0x78 ./i2c_nb_ds_v1.o
+                0x00000000000004a0                write_wire_byte_sm(unsigned char)
+ .text._Z15new_wire_selectv
+                0x0000000000000518       0x4c ./i2c_nb_ds_v1.o
+                0x0000000000000518                new_wire_select()
+ .text._Z12wire_convertv
+                0x0000000000000564        0x6 ./i2c_nb_ds_v1.o
+                0x0000000000000564                wire_convert()
+ .text._Z13wire_temp_reqv
+                0x000000000000056a        0x6 ./i2c_nb_ds_v1.o
+                0x000000000000056a                wire_temp_req()
+ .text._Z12read_reg_setv
+                0x0000000000000570       0x12 ./i2c_nb_ds_v1.o
+                0x0000000000000570                read_reg_set()
+ *fill*         0x0000000000000582        0x2 
+ .text._Z17read_wire_byte_smv
+                0x0000000000000584      0x170 ./i2c_nb_ds_v1.o
+                0x0000000000000584                read_wire_byte_sm()
+ .text._Z14read_wire_bytev
+                0x00000000000006f4       0x54 ./i2c_nb_ds_v1.o
+                0x00000000000006f4                read_wire_byte()
+ .text._Z13read_them_allv
+                0x0000000000000748       0x74 ./i2c_nb_ds_v1.o
+                0x0000000000000748                read_them_all()
+ .text._Z13print_celsiusv
+                0x00000000000007bc      0x10c ./i2c_nb_ds_v1.o
+                0x00000000000007bc                print_celsius()
+ .text._Z19copy_temp_addressesv
+                0x00000000000008c8       0x18 ./i2c_nb_ds_v1.o
+                0x00000000000008c8                copy_temp_addresses()
+ .text.startup._GLOBAL__sub_I_wire_
+                0x00000000000008e0        0x4 ./i2c_nb_ds_v1.o
+ .text._Z41__static_initialization_and_destruction_0ii.part.9
+                0x00000000000008e4       0x1c ./i2c_nb_ds_v1.o
+ .text._Z10switch_LEDv
+                0x0000000000000900       0x20 ./i2c_nb_ds_v1.o
+                0x0000000000000900                switch_LED()
+ .text._Z12switch_LED_2v
+                0x0000000000000920       0x20 ./i2c_nb_ds_v1.o
+                0x0000000000000920                switch_LED_2()
+ .text._Z11CheckStatesv
+                0x0000000000000940       0x78 ./i2c_nb_ds_v1.o
+                0x0000000000000940                CheckStates()
+ .text._Z10i2c_wstatehhi
+                0x00000000000009b8       0xe8 ./i2c_nb_ds_v1.o
+                0x00000000000009b8                i2c_wstate(unsigned char, unsigned char, int)
+ .text._Z10i2c_rstatePh
+                0x0000000000000aa0      0x12c ./i2c_nb_ds_v1.o
+                0x0000000000000aa0                i2c_rstate(unsigned char*)
+ .text._Z18write_i2c_one_byteh
+                0x0000000000000bcc       0x40 ./i2c_nb_ds_v1.o
+                0x0000000000000bcc                write_i2c_one_byte(unsigned char)
+ .text._Z19write_i2c_two_byteshh
+                0x0000000000000c0c       0x44 ./i2c_nb_ds_v1.o
+                0x0000000000000c0c                write_i2c_two_bytes(unsigned char, unsigned char)
+ .text.loop     0x0000000000000c50      0x24c ./i2c_nb_ds_v1.o
+                0x0000000000000c50                loop
+ .text.setup    0x0000000000000e9c       0xb4 ./i2c_nb_ds_v1.o
+                0x0000000000000e9c                setup
+ .text._ZN5Print13setWriteErrorEi
+                0x0000000000000f50       0x1c ./Wire_nonblocking_v2.o
+                0x0000000000000f50                Print::setWriteError(int)
+ .text._ZN5PrintC2Ev
+                0x0000000000000f6c       0x28 ./Wire_nonblocking_v2.o
+                0x0000000000000f6c                Print::Print()
+                0x0000000000000f6c                Print::Print()
+ .text._ZN5Print17availableForWriteEv
+                0x0000000000000f94       0x16 ./Wire_nonblocking_v2.o
+                0x0000000000000f94                Print::availableForWrite()
+ .text._ZN5Print5flushEv
+                0x0000000000000faa       0x14 ./Wire_nonblocking_v2.o
+                0x0000000000000faa                Print::flush()
+ *fill*         0x0000000000000fbe        0x2 
+ .text._ZN6StreamC2Ev
+                0x0000000000000fc0       0x2c ./Wire_nonblocking_v2.o
+                0x0000000000000fc0                Stream::Stream()
+                0x0000000000000fc0                Stream::Stream()
+ .text._ZN7TwoWireC2Em
+                0x0000000000000fec       0x50 ./Wire_nonblocking_v2.o
+                0x0000000000000fec                TwoWire::TwoWire(unsigned long)
+                0x0000000000000fec                TwoWire::TwoWire(unsigned long)
+ .text._ZN7TwoWire9forceStopEv
+                0x000000000000103c      0x1d4 ./Wire_nonblocking_v2.o
+                0x000000000000103c                TwoWire::forceStop()
+ .text._ZN7TwoWire5beginEv
+                0x0000000000001210      0x340 ./Wire_nonblocking_v2.o
+                0x0000000000001210                TwoWire::begin()
+ .text._ZN7TwoWire11getRxStatusEv
+                0x0000000000001550      0x2a8 ./Wire_nonblocking_v2.o
+                0x0000000000001550                TwoWire::getRxStatus()
+ .text._ZN7TwoWire18getRxBytesReceivedEv
+                0x00000000000017f8       0x1a ./Wire_nonblocking_v2.o
+                0x00000000000017f8                TwoWire::getRxBytesReceived()
+ *fill*         0x0000000000001812        0x2 
+ .text._ZN7TwoWire23requestFrom_nonblockingEhhh
+                0x0000000000001814       0xd0 ./Wire_nonblocking_v2.o
+                0x0000000000001814                TwoWire::requestFrom_nonblocking(unsigned char, unsigned char, unsigned char)
+ .text._ZN7TwoWire17beginTransmissionEh
+                0x00000000000018e4       0x28 ./Wire_nonblocking_v2.o
+                0x00000000000018e4                TwoWire::beginTransmission(unsigned char)
+ .text._ZN7TwoWire27endTransmission_nonblockingEh
+                0x000000000000190c       0x60 ./Wire_nonblocking_v2.o
+                0x000000000000190c                TwoWire::endTransmission_nonblocking(unsigned char)
+ .text._ZN7TwoWire11getTxStatusEv
+                0x000000000000196c      0x31c ./Wire_nonblocking_v2.o
+                0x000000000000196c                TwoWire::getTxStatus()
+ .text._ZN7TwoWire5writeEh
+                0x0000000000001c88      0x118 ./Wire_nonblocking_v2.o
+                0x0000000000001c88                TwoWire::write(unsigned char)
+ .text._ZN7TwoWire5writeEPKhj
+                0x0000000000001da0       0x3e ./Wire_nonblocking_v2.o
+                0x0000000000001da0                TwoWire::write(unsigned char const*, unsigned int)
+ .text._ZN7TwoWire9availableEv
+                0x0000000000001dde       0x4a ./Wire_nonblocking_v2.o
+                0x0000000000001dde                TwoWire::available()
+ .text._ZN7TwoWire4readEv
+                0x0000000000001e28       0x6a ./Wire_nonblocking_v2.o
+                0x0000000000001e28                TwoWire::read()
+ .text._ZN7TwoWire4peekEv
+                0x0000000000001e92       0x3c ./Wire_nonblocking_v2.o
+                0x0000000000001e92                TwoWire::peek()
+ .text._ZN7TwoWire5flushEv
+                0x0000000000001ece       0x30 ./Wire_nonblocking_v2.o
+                0x0000000000001ece                TwoWire::flush()
+ *fill*         0x0000000000001efe        0x2 
+ .text._Z41__static_initialization_and_destruction_0ii
+                0x0000000000001f00       0x54 ./Wire_nonblocking_v2.o
+ .text._GLOBAL__sub_I__ZN7TwoWireC2Ev
+                0x0000000000001f54       0x10 ./Wire_nonblocking_v2.o
+ .text.NmiSR    0x0000000000001f64        0x2 /home/mcbride.342/workspace_v11/tivac_EK-TM4C123GXL_core/Debug/libtivac_EK-TM4C123GXL_core.a(startup_gcc.o)
+ .text.FaultISR
+                0x0000000000001f66        0x2 /home/mcbride.342/workspace_v11/tivac_EK-TM4C123GXL_core/Debug/libtivac_EK-TM4C123GXL_core.a(startup_gcc.o)
+ .text.IntDefaultHandler
+                0x0000000000001f68        0x2 /home/mcbride.342/workspace_v11/tivac_EK-TM4C123GXL_core/Debug/libtivac_EK-TM4C123GXL_core.a(startup_gcc.o)
+ *fill*         0x0000000000001f6a        0x2 
+ .text.ResetISR
+                0x0000000000001f6c       0x98 /home/mcbride.342/workspace_v11/tivac_EK-TM4C123GXL_core/Debug/libtivac_EK-TM4C123GXL_core.a(startup_gcc.o)
+                0x0000000000001f6c                ResetISR
+ .text.I2CIntHandler
+                0x0000000000002004        0x2 /home/mcbride.342/workspace_v11/tivac_EK-TM4C123GXL_core/Debug/libtivac_EK-TM4C123GXL_core.a(startup_gcc.o)
+                0x0000000000002004                I2CIntHandler
+ .text.ToneIntHandler
+                0x0000000000002006        0x2 /home/mcbride.342/workspace_v11/tivac_EK-TM4C123GXL_core/Debug/libtivac_EK-TM4C123GXL_core.a(startup_gcc.o)
+                0x0000000000002006                ToneIntHandler
+ .text._sbrk    0x0000000000002008       0x28 /home/mcbride.342/workspace_v11/tivac_EK-TM4C123GXL_core/Debug/libtivac_EK-TM4C123GXL_core.a(startup_gcc.o)
+                0x0000000000002008                _sbrk
+ .text.GPIOXIntHandler
+                0x0000000000002030       0x30 /home/mcbride.342/workspace_v11/tivac_EK-TM4C123GXL_core/Debug/libtivac_EK-TM4C123GXL_core.a(WInterrupts.o)
+                0x0000000000002030                GPIOXIntHandler
+ .text.GPIOAIntHandler
+                0x0000000000002060       0x10 /home/mcbride.342/workspace_v11/tivac_EK-TM4C123GXL_core/Debug/libtivac_EK-TM4C123GXL_core.a(WInterrupts.o)
+                0x0000000000002060                GPIOAIntHandler
+ .text.GPIOBIntHandler
+                0x0000000000002070       0x10 /home/mcbride.342/workspace_v11/tivac_EK-TM4C123GXL_core/Debug/libtivac_EK-TM4C123GXL_core.a(WInterrupts.o)
+                0x0000000000002070                GPIOBIntHandler
+ .text.GPIOCIntHandler
+                0x0000000000002080       0x10 /home/mcbride.342/workspace_v11/tivac_EK-TM4C123GXL_core/Debug/libtivac_EK-TM4C123GXL_core.a(WInterrupts.o)
+                0x0000000000002080                GPIOCIntHandler
+ .text.GPIODIntHandler
+                0x0000000000002090       0x10 /home/mcbride.342/workspace_v11/tivac_EK-TM4C123GXL_core/Debug/libtivac_EK-TM4C123GXL_core.a(WInterrupts.o)
+                0x0000000000002090                GPIODIntHandler
+ .text.GPIOEIntHandler
+                0x00000000000020a0       0x10 /home/mcbride.342/workspace_v11/tivac_EK-TM4C123GXL_core/Debug/libtivac_EK-TM4C123GXL_core.a(WInterrupts.o)
+                0x00000000000020a0                GPIOEIntHandler
+ .text.GPIOFIntHandler
+                0x00000000000020b0       0x10 /home/mcbride.342/workspace_v11/tivac_EK-TM4C123GXL_core/Debug/libtivac_EK-TM4C123GXL_core.a(WInterrupts.o)
+                0x00000000000020b0                GPIOFIntHandler
+ .text.GPIOGIntHandler
+                0x00000000000020c0       0x10 /home/mcbride.342/workspace_v11/tivac_EK-TM4C123GXL_core/Debug/libtivac_EK-TM4C123GXL_core.a(WInterrupts.o)
+                0x00000000000020c0                GPIOGIntHandler
+ .text.GPIOHIntHandler
+                0x00000000000020d0       0x10 /home/mcbride.342/workspace_v11/tivac_EK-TM4C123GXL_core/Debug/libtivac_EK-TM4C123GXL_core.a(WInterrupts.o)
+                0x00000000000020d0                GPIOHIntHandler
+ .text.GPIOJIntHandler
+                0x00000000000020e0       0x10 /home/mcbride.342/workspace_v11/tivac_EK-TM4C123GXL_core/Debug/libtivac_EK-TM4C123GXL_core.a(WInterrupts.o)
+                0x00000000000020e0                GPIOJIntHandler
+ .text.GPIOKIntHandler
+                0x00000000000020f0       0x10 /home/mcbride.342/workspace_v11/tivac_EK-TM4C123GXL_core/Debug/libtivac_EK-TM4C123GXL_core.a(WInterrupts.o)
+                0x00000000000020f0                GPIOKIntHandler
+ .text.GPIOLIntHandler
+                0x0000000000002100       0x10 /home/mcbride.342/workspace_v11/tivac_EK-TM4C123GXL_core/Debug/libtivac_EK-TM4C123GXL_core.a(WInterrupts.o)
+                0x0000000000002100                GPIOLIntHandler
+ .text.GPIOMIntHandler
+                0x0000000000002110       0x10 /home/mcbride.342/workspace_v11/tivac_EK-TM4C123GXL_core/Debug/libtivac_EK-TM4C123GXL_core.a(WInterrupts.o)
+                0x0000000000002110                GPIOMIntHandler
+ .text.GPIONIntHandler
+                0x0000000000002120       0x10 /home/mcbride.342/workspace_v11/tivac_EK-TM4C123GXL_core/Debug/libtivac_EK-TM4C123GXL_core.a(WInterrupts.o)
+                0x0000000000002120                GPIONIntHandler
+ .text.GPIOPIntHandler
+                0x0000000000002130       0x10 /home/mcbride.342/workspace_v11/tivac_EK-TM4C123GXL_core/Debug/libtivac_EK-TM4C123GXL_core.a(WInterrupts.o)
+                0x0000000000002130                GPIOPIntHandler
+ .text.GPIOQIntHandler
+                0x0000000000002140       0x10 /home/mcbride.342/workspace_v11/tivac_EK-TM4C123GXL_core/Debug/libtivac_EK-TM4C123GXL_core.a(WInterrupts.o)
+                0x0000000000002140                GPIOQIntHandler
+ .text.timerInit
+                0x0000000000002150       0x58 /home/mcbride.342/workspace_v11/tivac_EK-TM4C123GXL_core/Debug/libtivac_EK-TM4C123GXL_core.a(wiring.o)
+                0x0000000000002150                timerInit
+ .text.millis   0x00000000000021a8        0xc /home/mcbride.342/workspace_v11/tivac_EK-TM4C123GXL_core/Debug/libtivac_EK-TM4C123GXL_core.a(wiring.o)
+                0x00000000000021a8                millis
+ .text.SysTickIntHandler
+                0x00000000000021b4       0x2c /home/mcbride.342/workspace_v11/tivac_EK-TM4C123GXL_core/Debug/libtivac_EK-TM4C123GXL_core.a(wiring.o)
+                0x00000000000021b4                SysTickIntHandler
+ .text.pinMode  0x00000000000021e0       0xa4 /home/mcbride.342/workspace_v11/tivac_EK-TM4C123GXL_core/Debug/libtivac_EK-TM4C123GXL_core.a(wiring_digital.o)
+                0x00000000000021e0                pinMode
+ .text.digitalWrite
+                0x0000000000002284       0x3c /home/mcbride.342/workspace_v11/tivac_EK-TM4C123GXL_core/Debug/libtivac_EK-TM4C123GXL_core.a(wiring_digital.o)
+                0x0000000000002284                digitalWrite
+ .text._ZN14HardwareSerial4peekEv
+                0x00000000000022c0       0x14 /home/mcbride.342/workspace_v11/tivac_EK-TM4C123GXL_core/Debug/libtivac_EK-TM4C123GXL_core.a(HardwareSerial.o)
+                0x00000000000022c0                HardwareSerial::peek()
+ .text._ZN14HardwareSerial4readEv
+                0x00000000000022d4       0x2a /home/mcbride.342/workspace_v11/tivac_EK-TM4C123GXL_core/Debug/libtivac_EK-TM4C123GXL_core.a(HardwareSerial.o)
+                0x00000000000022d4                HardwareSerial::read()
+ *fill*         0x00000000000022fe        0x2 
+ .text._ZN14HardwareSerial5flushEv
+                0x0000000000002300       0x2c /home/mcbride.342/workspace_v11/tivac_EK-TM4C123GXL_core/Debug/libtivac_EK-TM4C123GXL_core.a(HardwareSerial.o)
+                0x0000000000002300                HardwareSerial::flush()
+ .text._ZN14HardwareSerial9availableEv
+                0x000000000000232c       0x1a /home/mcbride.342/workspace_v11/tivac_EK-TM4C123GXL_core/Debug/libtivac_EK-TM4C123GXL_core.a(HardwareSerial.o)
+                0x000000000000232c                HardwareSerial::available()
+ *fill*         0x0000000000002346        0x2 
+ .text._ZN14HardwareSerialC2Ev
+                0x0000000000002348       0x30 /home/mcbride.342/workspace_v11/tivac_EK-TM4C123GXL_core/Debug/libtivac_EK-TM4C123GXL_core.a(HardwareSerial.o)
+                0x0000000000002348                HardwareSerial::HardwareSerial()
+                0x0000000000002348                HardwareSerial::HardwareSerial()
+ .text._ZN14HardwareSerialC2Em
+                0x0000000000002378       0x30 /home/mcbride.342/workspace_v11/tivac_EK-TM4C123GXL_core/Debug/libtivac_EK-TM4C123GXL_core.a(HardwareSerial.o)
+                0x0000000000002378                HardwareSerial::HardwareSerial(unsigned long)
+                0x0000000000002378                HardwareSerial::HardwareSerial(unsigned long)
+ .text._ZN14HardwareSerial8flushAllEv
+                0x00000000000023a8       0x34 /home/mcbride.342/workspace_v11/tivac_EK-TM4C123GXL_core/Debug/libtivac_EK-TM4C123GXL_core.a(HardwareSerial.o)
+                0x00000000000023a8                HardwareSerial::flushAll()
+ .text._ZN14HardwareSerial13primeTransmitEm
+                0x00000000000023dc       0x80 /home/mcbride.342/workspace_v11/tivac_EK-TM4C123GXL_core/Debug/libtivac_EK-TM4C123GXL_core.a(HardwareSerial.o)
+                0x00000000000023dc                HardwareSerial::primeTransmit(unsigned long)
+ .text._ZN14HardwareSerial5writeEh
+                0x000000000000245c       0x60 /home/mcbride.342/workspace_v11/tivac_EK-TM4C123GXL_core/Debug/libtivac_EK-TM4C123GXL_core.a(HardwareSerial.o)
+                0x000000000000245c                HardwareSerial::write(unsigned char)
+ .text._ZN14HardwareSerial5beginEm
+                0x00000000000024bc      0x110 /home/mcbride.342/workspace_v11/tivac_EK-TM4C123GXL_core/Debug/libtivac_EK-TM4C123GXL_core.a(HardwareSerial.o)
+                0x00000000000024bc                HardwareSerial::begin(unsigned long)
+ .text._ZN14HardwareSerial14UARTIntHandlerEv
+                0x00000000000025cc       0xd4 /home/mcbride.342/workspace_v11/tivac_EK-TM4C123GXL_core/Debug/libtivac_EK-TM4C123GXL_core.a(HardwareSerial.o)
+                0x00000000000025cc                HardwareSerial::UARTIntHandler()
+ .text.UARTIntHandler
+                0x00000000000026a0        0xc /home/mcbride.342/workspace_v11/tivac_EK-TM4C123GXL_core/Debug/libtivac_EK-TM4C123GXL_core.a(HardwareSerial.o)
+                0x00000000000026a0                UARTIntHandler
+ .text.UARTIntHandler1
+                0x00000000000026ac        0xc /home/mcbride.342/workspace_v11/tivac_EK-TM4C123GXL_core/Debug/libtivac_EK-TM4C123GXL_core.a(HardwareSerial.o)
+                0x00000000000026ac                UARTIntHandler1
+ .text.UARTIntHandler2
+                0x00000000000026b8        0xc /home/mcbride.342/workspace_v11/tivac_EK-TM4C123GXL_core/Debug/libtivac_EK-TM4C123GXL_core.a(HardwareSerial.o)
+                0x00000000000026b8                UARTIntHandler2
+ .text.UARTIntHandler3
+                0x00000000000026c4        0xc /home/mcbride.342/workspace_v11/tivac_EK-TM4C123GXL_core/Debug/libtivac_EK-TM4C123GXL_core.a(HardwareSerial.o)
+                0x00000000000026c4                UARTIntHandler3
+ .text.UARTIntHandler4
+                0x00000000000026d0        0xc /home/mcbride.342/workspace_v11/tivac_EK-TM4C123GXL_core/Debug/libtivac_EK-TM4C123GXL_core.a(HardwareSerial.o)
+                0x00000000000026d0                UARTIntHandler4
+ .text.UARTIntHandler5
+                0x00000000000026dc        0xc /home/mcbride.342/workspace_v11/tivac_EK-TM4C123GXL_core/Debug/libtivac_EK-TM4C123GXL_core.a(HardwareSerial.o)
+                0x00000000000026dc                UARTIntHandler5
+ .text.UARTIntHandler6
+                0x00000000000026e8        0xc /home/mcbride.342/workspace_v11/tivac_EK-TM4C123GXL_core/Debug/libtivac_EK-TM4C123GXL_core.a(HardwareSerial.o)
+                0x00000000000026e8                UARTIntHandler6
+ .text.UARTIntHandler7
+                0x00000000000026f4        0xc /home/mcbride.342/workspace_v11/tivac_EK-TM4C123GXL_core/Debug/libtivac_EK-TM4C123GXL_core.a(HardwareSerial.o)
+                0x00000000000026f4                UARTIntHandler7
+ .text._Z11serialEventv
+                0x0000000000002700        0x2 /home/mcbride.342/workspace_v11/tivac_EK-TM4C123GXL_core/Debug/libtivac_EK-TM4C123GXL_core.a(HardwareSerial.o)
+                0x0000000000002700                serialEvent()
+ .text._Z12serialEvent1v
+                0x0000000000002702        0x2 /home/mcbride.342/workspace_v11/tivac_EK-TM4C123GXL_core/Debug/libtivac_EK-TM4C123GXL_core.a(HardwareSerial.o)
+                0x0000000000002702                serialEvent1()
+ .text._Z12serialEvent2v
+                0x0000000000002704        0x2 /home/mcbride.342/workspace_v11/tivac_EK-TM4C123GXL_core/Debug/libtivac_EK-TM4C123GXL_core.a(HardwareSerial.o)
+                0x0000000000002704                serialEvent2()
+ .text._Z12serialEvent3v
+                0x0000000000002706        0x2 /home/mcbride.342/workspace_v11/tivac_EK-TM4C123GXL_core/Debug/libtivac_EK-TM4C123GXL_core.a(HardwareSerial.o)
+                0x0000000000002706                serialEvent3()
+ .text._Z12serialEvent4v
+                0x0000000000002708        0x2 /home/mcbride.342/workspace_v11/tivac_EK-TM4C123GXL_core/Debug/libtivac_EK-TM4C123GXL_core.a(HardwareSerial.o)
+                0x0000000000002708                serialEvent4()
+ .text._Z12serialEvent5v
+                0x000000000000270a        0x2 /home/mcbride.342/workspace_v11/tivac_EK-TM4C123GXL_core/Debug/libtivac_EK-TM4C123GXL_core.a(HardwareSerial.o)
+                0x000000000000270a                serialEvent5()
+ .text._Z12serialEvent6v
+                0x000000000000270c        0x2 /home/mcbride.342/workspace_v11/tivac_EK-TM4C123GXL_core/Debug/libtivac_EK-TM4C123GXL_core.a(HardwareSerial.o)
+                0x000000000000270c                serialEvent6()
+ .text._Z12serialEvent7v
+                0x000000000000270e        0x2 /home/mcbride.342/workspace_v11/tivac_EK-TM4C123GXL_core/Debug/libtivac_EK-TM4C123GXL_core.a(HardwareSerial.o)
+                0x000000000000270e                serialEvent7()
+ .text._Z14serialEventRunv
+                0x0000000000002710       0x84 /home/mcbride.342/workspace_v11/tivac_EK-TM4C123GXL_core/Debug/libtivac_EK-TM4C123GXL_core.a(HardwareSerial.o)
+                0x0000000000002710                serialEventRun()
+ .text.startup._GLOBAL__sub_I__ZN14HardwareSerialC2Ev
+                0x0000000000002794       0x64 /home/mcbride.342/workspace_v11/tivac_EK-TM4C123GXL_core/Debug/libtivac_EK-TM4C123GXL_core.a(HardwareSerial.o)
+ .text._init    0x00000000000027f8      0x140 /home/mcbride.342/workspace_v11/tivac_EK-TM4C123GXL_core/Debug/libtivac_EK-TM4C123GXL_core.a(main.o)
+                0x00000000000027f8                _init
+ .text.startup.main
+                0x0000000000002938       0x1c /home/mcbride.342/workspace_v11/tivac_EK-TM4C123GXL_core/Debug/libtivac_EK-TM4C123GXL_core.a(main.o)
+                0x0000000000002938                main
+ .text._Znwj    0x0000000000002954        0x4 /home/mcbride.342/workspace_v11/tivac_EK-TM4C123GXL_core/Debug/libtivac_EK-TM4C123GXL_core.a(new.o)
+                0x0000000000002954                operator new(unsigned int)
+ .text.__cxa_pure_virtual
+                0x0000000000002958        0x2 /home/mcbride.342/workspace_v11/tivac_EK-TM4C123GXL_core/Debug/libtivac_EK-TM4C123GXL_core.a(new.o)
+                0x0000000000002958                __cxa_pure_virtual
+ .text._ZN5Print5writeEPKhj
+                0x000000000000295a       0x22 /home/mcbride.342/workspace_v11/tivac_EK-TM4C123GXL_core/Debug/libtivac_EK-TM4C123GXL_core.a(Print.o)
+                0x000000000000295a                Print::write(unsigned char const*, unsigned int)
+ .text._ZN5Print5writeEPKc
+                0x000000000000297c       0x20 /home/mcbride.342/workspace_v11/tivac_EK-TM4C123GXL_core/Debug/libtivac_EK-TM4C123GXL_core.a(Print.o)
+                0x000000000000297c                Print::write(char const*)
+ .text._ZN5Print5printEPKc
+                0x000000000000299c        0x8 /home/mcbride.342/workspace_v11/tivac_EK-TM4C123GXL_core/Debug/libtivac_EK-TM4C123GXL_core.a(Print.o)
+                0x000000000000299c                Print::print(char const*)
+ .text._EEPROMWaitForDone
+                0x00000000000029a4       0x10 /home/mcbride.342/.energia15/packages/energia/hardware/tivac/1.0.4/system/driverlib/libdriverlib.a(eeprom.o)
+ .text._EEPROMSectorMaskClear
+                0x00000000000029b4       0x34 /home/mcbride.342/.energia15/packages/energia/hardware/tivac/1.0.4/system/driverlib/libdriverlib.a(eeprom.o)
+ .text.EEPROMMassErase
+                0x00000000000029e8       0x58 /home/mcbride.342/.energia15/packages/energia/hardware/tivac/1.0.4/system/driverlib/libdriverlib.a(eeprom.o)
+                0x00000000000029e8                EEPROMMassErase
+ .text.GPIOPadConfigSet
+                0x0000000000002a40      0x130 /home/mcbride.342/.energia15/packages/energia/hardware/tivac/1.0.4/system/driverlib/libdriverlib.a(gpio.o)
+                0x0000000000002a40                GPIOPadConfigSet
+ .text.GPIOIntStatus
+                0x0000000000002b70        0xe /home/mcbride.342/.energia15/packages/energia/hardware/tivac/1.0.4/system/driverlib/libdriverlib.a(gpio.o)
+                0x0000000000002b70                GPIOIntStatus
+ .text.GPIOIntClear
+                0x0000000000002b7e        0x6 /home/mcbride.342/.energia15/packages/energia/hardware/tivac/1.0.4/system/driverlib/libdriverlib.a(gpio.o)
+                0x0000000000002b7e                GPIOIntClear
+ .text.I2CSlaveDataPut
+                0x0000000000002b84        0x6 /home/mcbride.342/.energia15/packages/energia/hardware/tivac/1.0.4/system/driverlib/libdriverlib.a(i2c.o)
+                0x0000000000002b84                I2CSlaveDataPut
+ .text.SysCtlPeripheralReset
+                0x0000000000002b8a       0x3a /home/mcbride.342/.energia15/packages/energia/hardware/tivac/1.0.4/system/driverlib/libdriverlib.a(sysctl.o)
+                0x0000000000002b8a                SysCtlPeripheralReset
+ .text.SysCtlLDODeepSleepSet
+                0x0000000000002bc4        0xc /home/mcbride.342/.energia15/packages/energia/hardware/tivac/1.0.4/system/driverlib/libdriverlib.a(sysctl.o)
+                0x0000000000002bc4                SysCtlLDODeepSleepSet
+ .text.SysCtlDeepSleepPowerSet
+                0x0000000000002bd0        0xc /home/mcbride.342/.energia15/packages/energia/hardware/tivac/1.0.4/system/driverlib/libdriverlib.a(sysctl.o)
+                0x0000000000002bd0                SysCtlDeepSleepPowerSet
+ .text.SysCtlReset
+                0x0000000000002bdc       0x10 /home/mcbride.342/.energia15/packages/energia/hardware/tivac/1.0.4/system/driverlib/libdriverlib.a(sysctl.o)
+                0x0000000000002bdc                SysCtlReset
+ .text.SysCtlDelay
+                0x0000000000002bec        0x8 /home/mcbride.342/.energia15/packages/energia/hardware/tivac/1.0.4/system/driverlib/libdriverlib.a(sysctl.o)
+                0x0000000000002bec                SysCtlDelay
+ .text.malloc   0x0000000000002bf4       0x10 /home/mcbride.342/.energia15/packages/energia/tools/arm-none-eabi-gcc/8.3.1-20190703/bin/../lib/gcc/arm-none-eabi/8.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc_nano.a(lib_a-malloc.o)
+                0x0000000000002bf4                malloc
+ .text.free     0x0000000000002c04       0x10 /home/mcbride.342/.energia15/packages/energia/tools/arm-none-eabi-gcc/8.3.1-20190703/bin/../lib/gcc/arm-none-eabi/8.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc_nano.a(lib_a-malloc.o)
+                0x0000000000002c04                free
+ .text._free_r  0x0000000000002c14       0x9c /home/mcbride.342/.energia15/packages/energia/tools/arm-none-eabi-gcc/8.3.1-20190703/bin/../lib/gcc/arm-none-eabi/8.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc_nano.a(lib_a-nano-freer.o)
+                0x0000000000002c14                _free_r
+ .text._malloc_r
+                0x0000000000002cb0       0xb4 /home/mcbride.342/.energia15/packages/energia/tools/arm-none-eabi-gcc/8.3.1-20190703/bin/../lib/gcc/arm-none-eabi/8.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc_nano.a(lib_a-nano-mallocr.o)
+                0x0000000000002cb0                _malloc_r
+ .text._sbrk_r  0x0000000000002d64       0x20 /home/mcbride.342/.energia15/packages/energia/tools/arm-none-eabi-gcc/8.3.1-20190703/bin/../lib/gcc/arm-none-eabi/8.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc_nano.a(lib_a-sbrkr.o)
+                0x0000000000002d64                _sbrk_r
+ .text          0x0000000000002d84       0x10 /home/mcbride.342/.energia15/packages/energia/tools/arm-none-eabi-gcc/8.3.1-20190703/bin/../lib/gcc/arm-none-eabi/8.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc_nano.a(lib_a-strlen.o)
+                0x0000000000002d84                strlen
+ .text.__malloc_lock
+                0x0000000000002d94        0xc /home/mcbride.342/.energia15/packages/energia/tools/arm-none-eabi-gcc/8.3.1-20190703/bin/../lib/gcc/arm-none-eabi/8.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc_nano.a(lib_a-mlock.o)
+                0x0000000000002d94                __malloc_lock
+ .text.__malloc_unlock
+                0x0000000000002da0        0xc /home/mcbride.342/.energia15/packages/energia/tools/arm-none-eabi-gcc/8.3.1-20190703/bin/../lib/gcc/arm-none-eabi/8.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc_nano.a(lib_a-mlock.o)
+                0x0000000000002da0                __malloc_unlock
+ .text.__retarget_lock_acquire_recursive
+                0x0000000000002dac        0x2 /home/mcbride.342/.energia15/packages/energia/tools/arm-none-eabi-gcc/8.3.1-20190703/bin/../lib/gcc/arm-none-eabi/8.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc_nano.a(lib_a-lock.o)
+                0x0000000000002dac                __retarget_lock_acquire_recursive
+ .text.__retarget_lock_release_recursive
+                0x0000000000002dae        0x2 /home/mcbride.342/.energia15/packages/energia/tools/arm-none-eabi-gcc/8.3.1-20190703/bin/../lib/gcc/arm-none-eabi/8.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc_nano.a(lib_a-lock.o)
+                0x0000000000002dae                __retarget_lock_release_recursive
+ *(.glue_7t)
+ .glue_7t       0x0000000000002db0        0x0 linker stubs
+ *(.glue_7)
+ .glue_7        0x0000000000002db0        0x0 linker stubs
+ *(.rodata .rodata* .gnu.linkonce.r.*)
+ .rodata        0x0000000000002db0        0xe ./i2c_nb_ds_v1.o
+ *fill*         0x0000000000002dbe        0x2 
+ .rodata._ZL17g_uli2cMasterBase
+                0x0000000000002dc0       0x10 ./Wire_nonblocking_v2.o
+ .rodata._ZL16g_uli2cSlaveBase
+                0x0000000000002dd0       0x10 ./Wire_nonblocking_v2.o
+ .rodata._ZL13g_uli2cPeriph
+                0x0000000000002de0       0x10 ./Wire_nonblocking_v2.o
+ .rodata._ZL13g_uli2cConfig
+                0x0000000000002df0       0x20 ./Wire_nonblocking_v2.o
+ .rodata._ZL11g_uli2cBase
+                0x0000000000002e10       0x10 ./Wire_nonblocking_v2.o
+ .rodata._ZL14g_uli2cSDAPins
+                0x0000000000002e20       0x10 ./Wire_nonblocking_v2.o
+ .rodata._ZL14g_uli2cSCLPins
+                0x0000000000002e30       0x10 ./Wire_nonblocking_v2.o
+ .rodata._ZTV7TwoWire
+                0x0000000000002e40       0x24 ./Wire_nonblocking_v2.o
+                0x0000000000002e40                vtable for TwoWire
+ .rodata._ZTV6Stream
+                0x0000000000002e64       0x24 ./Wire_nonblocking_v2.o
+                0x0000000000002e64                vtable for Stream
+ .rodata.digital_pin_to_bit_mask
+                0x0000000000002e88       0x29 /home/mcbride.342/workspace_v11/tivac_EK-TM4C123GXL_core/Debug/libtivac_EK-TM4C123GXL_core.a(wiring_digital.o)
+                0x0000000000002e88                digital_pin_to_bit_mask
+ .rodata.digital_pin_to_port
+                0x0000000000002eb1       0x29 /home/mcbride.342/workspace_v11/tivac_EK-TM4C123GXL_core/Debug/libtivac_EK-TM4C123GXL_core.a(wiring_digital.o)
+                0x0000000000002eb1                digital_pin_to_port
+ *fill*         0x0000000000002eda        0x2 
+ .rodata.port_to_base
+                0x0000000000002edc       0x1c /home/mcbride.342/workspace_v11/tivac_EK-TM4C123GXL_core/Debug/libtivac_EK-TM4C123GXL_core.a(wiring_digital.o)
+                0x0000000000002edc                port_to_base
+ .rodata._ZL11g_ulUARTInt
+                0x0000000000002ef8       0x20 /home/mcbride.342/workspace_v11/tivac_EK-TM4C123GXL_core/Debug/libtivac_EK-TM4C123GXL_core.a(HardwareSerial.o)
+ .rodata._ZL12g_ulUARTBase
+                0x0000000000002f18       0x20 /home/mcbride.342/workspace_v11/tivac_EK-TM4C123GXL_core/Debug/libtivac_EK-TM4C123GXL_core.a(HardwareSerial.o)
+ .rodata._ZL12g_ulUARTPins
+                0x0000000000002f38       0x20 /home/mcbride.342/workspace_v11/tivac_EK-TM4C123GXL_core/Debug/libtivac_EK-TM4C123GXL_core.a(HardwareSerial.o)
+ .rodata._ZL12g_ulUARTPort
+                0x0000000000002f58       0x20 /home/mcbride.342/workspace_v11/tivac_EK-TM4C123GXL_core/Debug/libtivac_EK-TM4C123GXL_core.a(HardwareSerial.o)
+ .rodata._ZL14g_ulUARTConfig
+                0x0000000000002f78       0x40 /home/mcbride.342/workspace_v11/tivac_EK-TM4C123GXL_core/Debug/libtivac_EK-TM4C123GXL_core.a(HardwareSerial.o)
+ .rodata._ZL14g_ulUARTPeriph
+                0x0000000000002fb8       0x20 /home/mcbride.342/workspace_v11/tivac_EK-TM4C123GXL_core/Debug/libtivac_EK-TM4C123GXL_core.a(HardwareSerial.o)
+ .rodata._ZTV14HardwareSerial
+                0x0000000000002fd8       0x24 /home/mcbride.342/workspace_v11/tivac_EK-TM4C123GXL_core/Debug/libtivac_EK-TM4C123GXL_core.a(HardwareSerial.o)
+                0x0000000000002fd8                vtable for HardwareSerial
+ .rodata._ZTV5Print
+                0x0000000000002ffc       0x18 /home/mcbride.342/workspace_v11/tivac_EK-TM4C123GXL_core/Debug/libtivac_EK-TM4C123GXL_core.a(Print.o)
+                0x0000000000002ffc                vtable for Print
+ *(.ARM.extab* .gnu.linkonce.armextab.*)
+                0x0000000000003014                . = ALIGN (0x4)
+ *(.init)
+                0x0000000000003014                . = ALIGN (0x4)
+                0x0000000000003014                __preinit_array_start = .
+ *(SORT_BY_NAME(.preinit_array*))
+ *(.preinit_array)
+                0x0000000000003014                __preinit_array_end = .
+                0x0000000000003014                . = ALIGN (0x4)
+                0x0000000000003014                __init_array_start = .
+ *(SORT_BY_NAME(.init_array.*))
+ *(.init_array)
+ .init_array    0x0000000000003014        0x4 ./i2c_nb_ds_v1.o
+ .init_array    0x0000000000003018        0x4 ./Wire_nonblocking_v2.o
+ .init_array    0x000000000000301c        0x4 /home/mcbride.342/workspace_v11/tivac_EK-TM4C123GXL_core/Debug/libtivac_EK-TM4C123GXL_core.a(HardwareSerial.o)
+                0x0000000000003020                __init_array_end = .
+                0x0000000000003020                . = ALIGN (0x4)
+ *(.fini)
+                0x0000000000003020                . = ALIGN (0x4)
+                0x0000000000003020                __fini_array_start = .
+ *(.fini_array)
+ *(SORT_BY_NAME(.fini_array.*))
+                0x0000000000003020                __fini_array_end = .
+                0x0000000000003020                . = ALIGN (0x4)
+                0x0000000000003020                _etext = .
+
+.vfp11_veneer   0x0000000000003020        0x0
+ .vfp11_veneer  0x0000000000003020        0x0 linker stubs
+
+.v4_bx          0x0000000000003020        0x0
+ .v4_bx         0x0000000000003020        0x0 linker stubs
+
+.iplt           0x0000000000003020        0x0
+ .iplt          0x0000000000003020        0x0 ./i2c_nb_ds_v1.o
+
+.rel.dyn        0x0000000000003020        0x0
+ .rel.iplt      0x0000000000003020        0x0 ./i2c_nb_ds_v1.o
+
+.data           0x0000000020000000       0x78 load address 0x0000000000003020
+                0x0000000020000000                . = ALIGN (0x4)
+                0x0000000020000000                _data = .
+ *(vtable)
+ *(.data .data* .gnu.linkonce.d.*)
+ .data.keep_checking_1wb
+                0x0000000020000000        0x1 ./i2c_nb_ds_v1.o
+                0x0000000020000000                keep_checking_1wb
+ .data.addr1    0x0000000020000001        0x8 ./i2c_nb_ds_v1.o
+                0x0000000020000001                addr1
+ *fill*         0x0000000020000009        0x3 
+ .data.i2c_max_tries
+                0x000000002000000c        0x4 ./i2c_nb_ds_v1.o
+                0x000000002000000c                i2c_max_tries
+ .data.is_high  0x0000000020000010        0x1 ./i2c_nb_ds_v1.o
+                0x0000000020000010                is_high
+ .data.is_high_2
+                0x0000000020000011        0x1 ./i2c_nb_ds_v1.o
+                0x0000000020000011                is_high_2
+ .data.keep_checking
+                0x0000000020000012        0x1 ./i2c_nb_ds_v1.o
+                0x0000000020000012                keep_checking
+ .data.mAddress
+                0x0000000020000013        0x1 ./i2c_nb_ds_v1.o
+                0x0000000020000013                mAddress
+ .data._impure_ptr
+                0x0000000020000014        0x4 /home/mcbride.342/.energia15/packages/energia/tools/arm-none-eabi-gcc/8.3.1-20190703/bin/../lib/gcc/arm-none-eabi/8.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc_nano.a(lib_a-impure.o)
+                0x0000000020000014                _impure_ptr
+ .data.impure_data
+                0x0000000020000018       0x60 /home/mcbride.342/.energia15/packages/energia/tools/arm-none-eabi-gcc/8.3.1-20190703/bin/../lib/gcc/arm-none-eabi/8.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc_nano.a(lib_a-impure.o)
+                0x0000000020000078                _edata = .
+
+.igot.plt       0x0000000020000078        0x0 load address 0x0000000000003098
+ .igot.plt      0x0000000020000078        0x0 ./i2c_nb_ds_v1.o
+
+.bss            0x0000000020000078     0x1d08 load address 0x0000000000003098
+                0x0000000020000078                . = ALIGN (0x4)
+                0x0000000020000078                _bss = .
+ *(.bss .bss*)
+ .bss.test_1wb_sm
+                0x0000000020000078        0x1 ./i2c_nb_ds_v1.o
+                0x0000000020000078                test_1wb_sm
+ *fill*         0x0000000020000079        0x3 
+ .bss.i2c_rtries
+                0x000000002000007c        0x4 ./i2c_nb_ds_v1.o
+                0x000000002000007c                i2c_rtries
+ .bss.PREV_CHECK1WB_STATE
+                0x0000000020000080        0x1 ./i2c_nb_ds_v1.o
+                0x0000000020000080                PREV_CHECK1WB_STATE
+ .bss.PREV_WIREREAD_STATE
+                0x0000000020000081        0x1 ./i2c_nb_ds_v1.o
+                0x0000000020000081                PREV_WIREREAD_STATE
+ .bss.test_wire_read
+                0x0000000020000082        0x1 ./i2c_nb_ds_v1.o
+                0x0000000020000082                test_wire_read
+ .bss.i2c_fail  0x0000000020000083        0x1 ./i2c_nb_ds_v1.o
+                0x0000000020000083                i2c_fail
+ .bss.wireread_fail
+                0x0000000020000084        0x1 ./i2c_nb_ds_v1.o
+                0x0000000020000084                wireread_fail
+ *fill*         0x0000000020000085        0x3 
+ .bss.read_byte_iter
+                0x0000000020000088        0x4 ./i2c_nb_ds_v1.o
+                0x0000000020000088                read_byte_iter
+ .bss.wb_tries  0x000000002000008c        0x4 ./i2c_nb_ds_v1.o
+                0x000000002000008c                wb_tries
+ .bss.read_temp_val
+                0x0000000020000090        0x1 ./i2c_nb_ds_v1.o
+                0x0000000020000090                read_temp_val
+ .bss.i2c_rstate_status
+                0x0000000020000091        0x1 ./i2c_nb_ds_v1.o
+                0x0000000020000091                i2c_rstate_status
+ .bss.read_reg_val
+                0x0000000020000092        0x1 ./i2c_nb_ds_v1.o
+                0x0000000020000092                read_reg_val
+ .bss.status_reg_val
+                0x0000000020000093        0x1 ./i2c_nb_ds_v1.o
+                0x0000000020000093                status_reg_val
+ .bss.avail     0x0000000020000094        0x4 ./i2c_nb_ds_v1.o
+                0x0000000020000094                avail
+ .bss.did_check1wb_fail
+                0x0000000020000098        0x1 ./i2c_nb_ds_v1.o
+                0x0000000020000098                did_check1wb_fail
+ .bss.CHECK1WB_STATE
+                0x0000000020000099        0x1 ./i2c_nb_ds_v1.o
+                0x0000000020000099                CHECK1WB_STATE
+ .bss.WIREREAD_STATE
+                0x000000002000009a        0x1 ./i2c_nb_ds_v1.o
+                0x000000002000009a                WIREREAD_STATE
+ .bss.I2C_RSTATE
+                0x000000002000009b        0x1 ./i2c_nb_ds_v1.o
+                0x000000002000009b                I2C_RSTATE
+ .bss.read_1wire_array
+                0x000000002000009c        0x9 ./i2c_nb_ds_v1.o
+                0x000000002000009c                read_1wire_array
+ .bss.BRIDGE_STATE
+                0x00000000200000a5        0x1 ./i2c_nb_ds_v1.o
+                0x00000000200000a5                BRIDGE_STATE
+ .bss.I2C_WSTATE
+                0x00000000200000a6        0x1 ./i2c_nb_ds_v1.o
+                0x00000000200000a6                I2C_WSTATE
+ *fill*         0x00000000200000a7        0x1 
+ .bss.LED_time  0x00000000200000a8        0x4 ./i2c_nb_ds_v1.o
+                0x00000000200000a8                LED_time
+ .bss.PREV_BRIDGE_STATE
+                0x00000000200000ac        0x1 ./i2c_nb_ds_v1.o
+                0x00000000200000ac                PREV_BRIDGE_STATE
+ .bss.PREV_I2C_RSTATE
+                0x00000000200000ad        0x1 ./i2c_nb_ds_v1.o
+                0x00000000200000ad                PREV_I2C_RSTATE
+ .bss.PREV_I2C_WSTATE
+                0x00000000200000ae        0x1 ./i2c_nb_ds_v1.o
+                0x00000000200000ae                PREV_I2C_WSTATE
+ .bss.PREV_WIREWRITE_STATE
+                0x00000000200000af        0x1 ./i2c_nb_ds_v1.o
+                0x00000000200000af                PREV_WIREWRITE_STATE
+ .bss.WIREWRITE_STATE
+                0x00000000200000b0        0x1 ./i2c_nb_ds_v1.o
+                0x00000000200000b0                WIREWRITE_STATE
+ .bss.addr      0x00000000200000b1        0x8 ./i2c_nb_ds_v1.o
+                0x00000000200000b1                addr
+ .bss.avail_failed
+                0x00000000200000b9        0x1 ./i2c_nb_ds_v1.o
+                0x00000000200000b9                avail_failed
+ *fill*         0x00000000200000ba        0x2 
+ .bss.celsius   0x00000000200000bc      0x640 ./i2c_nb_ds_v1.o
+                0x00000000200000bc                celsius
+ .bss.celsius_iter
+                0x00000000200006fc        0x4 ./i2c_nb_ds_v1.o
+                0x00000000200006fc                celsius_iter
+ .bss.celsius_real
+                0x0000000020000700        0x4 ./i2c_nb_ds_v1.o
+                0x0000000020000700                celsius_real
+ .bss.channel_read_val
+                0x0000000020000704        0x1 ./i2c_nb_ds_v1.o
+                0x0000000020000704                channel_read_val
+ .bss.config_read_val
+                0x0000000020000705        0x1 ./i2c_nb_ds_v1.o
+                0x0000000020000705                config_read_val
+ .bss.crcs      0x0000000020000706      0x190 ./i2c_nb_ds_v1.o
+                0x0000000020000706                crcs
+ *fill*         0x0000000020000896        0x2 
+ .bss.got_to_readdata
+                0x0000000020000898        0x4 ./i2c_nb_ds_v1.o
+                0x0000000020000898                got_to_readdata
+ .bss.got_to_reads
+                0x000000002000089c        0x4 ./i2c_nb_ds_v1.o
+                0x000000002000089c                got_to_reads
+ .bss.i2c_wstate_status
+                0x00000000200008a0        0x1 ./i2c_nb_ds_v1.o
+                0x00000000200008a0                i2c_wstate_status
+ *fill*         0x00000000200008a1        0x3 
+ .bss.i2c_wtries
+                0x00000000200008a4        0x4 ./i2c_nb_ds_v1.o
+                0x00000000200008a4                i2c_wtries
+ .bss.packet_time
+                0x00000000200008a8        0x4 ./i2c_nb_ds_v1.o
+                0x00000000200008a8                packet_time
+ .bss.ppd_set   0x00000000200008ac        0x1 ./i2c_nb_ds_v1.o
+                0x00000000200008ac                ppd_set
+ .bss.real_data_read
+                0x00000000200008ad      0xe10 ./i2c_nb_ds_v1.o
+                0x00000000200008ad                real_data_read
+ .bss.req_val   0x00000000200016bd        0x1 ./i2c_nb_ds_v1.o
+                0x00000000200016bd                req_val
+ .bss.rx_read_index
+                0x00000000200016be        0x1 ./i2c_nb_ds_v1.o
+                0x00000000200016be                rx_read_index
+ .bss.rx_stat_temp
+                0x00000000200016bf        0x1 ./i2c_nb_ds_v1.o
+                0x00000000200016bf                rx_stat_temp
+ .bss.rx_write_index
+                0x00000000200016c0        0x1 ./i2c_nb_ds_v1.o
+                0x00000000200016c0                rx_write_index
+ *fill*         0x00000000200016c1        0x3 
+ .bss.select_byte
+                0x00000000200016c4        0x4 ./i2c_nb_ds_v1.o
+                0x00000000200016c4                select_byte
+ .bss.status_1wb
+                0x00000000200016c8        0x2 ./i2c_nb_ds_v1.o
+                0x00000000200016c8                status_1wb
+ *fill*         0x00000000200016ca        0x2 
+ .bss.success_reads
+                0x00000000200016cc        0x4 ./i2c_nb_ds_v1.o
+                0x00000000200016cc                success_reads
+ .bss.timer_post_reset
+                0x00000000200016d0        0x4 ./i2c_nb_ds_v1.o
+                0x00000000200016d0                timer_post_reset
+ .bss.together_stat_temp
+                0x00000000200016d4        0x1 ./i2c_nb_ds_v1.o
+                0x00000000200016d4                together_stat_temp
+ *fill*         0x00000000200016d5        0x3 
+ .bss.tots_reads
+                0x00000000200016d8        0x4 ./i2c_nb_ds_v1.o
+                0x00000000200016d8                tots_reads
+ .bss.tx_read_index
+                0x00000000200016dc        0x1 ./i2c_nb_ds_v1.o
+                0x00000000200016dc                tx_read_index
+ .bss.tx_stat_temp
+                0x00000000200016dd        0x1 ./i2c_nb_ds_v1.o
+                0x00000000200016dd                tx_stat_temp
+ .bss.tx_write_index
+                0x00000000200016de        0x1 ./i2c_nb_ds_v1.o
+                0x00000000200016de                tx_write_index
+ *fill*         0x00000000200016df        0x1 
+ .bss.update_time
+                0x00000000200016e0        0x4 ./i2c_nb_ds_v1.o
+                0x00000000200016e0                update_time
+ .bss.which_sensor
+                0x00000000200016e4        0x4 ./i2c_nb_ds_v1.o
+                0x00000000200016e4                which_sensor
+ .bss.wire_     0x00000000200016e8        0x4 ./i2c_nb_ds_v1.o
+                0x00000000200016e8                wire_
+ .bss.wirewrite_fail
+                0x00000000200016ec        0x1 ./i2c_nb_ds_v1.o
+                0x00000000200016ec                wirewrite_fail
+ *fill*         0x00000000200016ed        0x3 
+ .bss.Wire0     0x00000000200016f0       0xac ./Wire_nonblocking_v2.o
+                0x00000000200016f0                Wire0
+ .bss.Wire1     0x000000002000179c       0xac ./Wire_nonblocking_v2.o
+                0x000000002000179c                Wire1
+ .bss.Wire2     0x0000000020001848       0xac ./Wire_nonblocking_v2.o
+                0x0000000020001848                Wire2
+ .bss.Wire3     0x00000000200018f4       0xac ./Wire_nonblocking_v2.o
+                0x00000000200018f4                Wire3
+ .bss.heap_end.8046
+                0x00000000200019a0        0x4 /home/mcbride.342/workspace_v11/tivac_EK-TM4C123GXL_core/Debug/libtivac_EK-TM4C123GXL_core.a(startup_gcc.o)
+ .bss.cbFuncsA  0x00000000200019a4       0x20 /home/mcbride.342/workspace_v11/tivac_EK-TM4C123GXL_core/Debug/libtivac_EK-TM4C123GXL_core.a(WInterrupts.o)
+ .bss.cbFuncsB  0x00000000200019c4       0x20 /home/mcbride.342/workspace_v11/tivac_EK-TM4C123GXL_core/Debug/libtivac_EK-TM4C123GXL_core.a(WInterrupts.o)
+ .bss.cbFuncsC  0x00000000200019e4       0x20 /home/mcbride.342/workspace_v11/tivac_EK-TM4C123GXL_core/Debug/libtivac_EK-TM4C123GXL_core.a(WInterrupts.o)
+ .bss.cbFuncsD  0x0000000020001a04       0x20 /home/mcbride.342/workspace_v11/tivac_EK-TM4C123GXL_core/Debug/libtivac_EK-TM4C123GXL_core.a(WInterrupts.o)
+ .bss.cbFuncsE  0x0000000020001a24       0x20 /home/mcbride.342/workspace_v11/tivac_EK-TM4C123GXL_core/Debug/libtivac_EK-TM4C123GXL_core.a(WInterrupts.o)
+ .bss.cbFuncsF  0x0000000020001a44       0x20 /home/mcbride.342/workspace_v11/tivac_EK-TM4C123GXL_core/Debug/libtivac_EK-TM4C123GXL_core.a(WInterrupts.o)
+ .bss.cbFuncsG  0x0000000020001a64       0x20 /home/mcbride.342/workspace_v11/tivac_EK-TM4C123GXL_core/Debug/libtivac_EK-TM4C123GXL_core.a(WInterrupts.o)
+ .bss.cbFuncsH  0x0000000020001a84       0x20 /home/mcbride.342/workspace_v11/tivac_EK-TM4C123GXL_core/Debug/libtivac_EK-TM4C123GXL_core.a(WInterrupts.o)
+ .bss.cbFuncsJ  0x0000000020001aa4       0x20 /home/mcbride.342/workspace_v11/tivac_EK-TM4C123GXL_core/Debug/libtivac_EK-TM4C123GXL_core.a(WInterrupts.o)
+ .bss.cbFuncsK  0x0000000020001ac4       0x20 /home/mcbride.342/workspace_v11/tivac_EK-TM4C123GXL_core/Debug/libtivac_EK-TM4C123GXL_core.a(WInterrupts.o)
+ .bss.cbFuncsL  0x0000000020001ae4       0x20 /home/mcbride.342/workspace_v11/tivac_EK-TM4C123GXL_core/Debug/libtivac_EK-TM4C123GXL_core.a(WInterrupts.o)
+ .bss.cbFuncsM  0x0000000020001b04       0x20 /home/mcbride.342/workspace_v11/tivac_EK-TM4C123GXL_core/Debug/libtivac_EK-TM4C123GXL_core.a(WInterrupts.o)
+ .bss.cbFuncsN  0x0000000020001b24       0x20 /home/mcbride.342/workspace_v11/tivac_EK-TM4C123GXL_core/Debug/libtivac_EK-TM4C123GXL_core.a(WInterrupts.o)
+ .bss.cbFuncsP  0x0000000020001b44       0x20 /home/mcbride.342/workspace_v11/tivac_EK-TM4C123GXL_core/Debug/libtivac_EK-TM4C123GXL_core.a(WInterrupts.o)
+ .bss.cbFuncsQ  0x0000000020001b64       0x20 /home/mcbride.342/workspace_v11/tivac_EK-TM4C123GXL_core/Debug/libtivac_EK-TM4C123GXL_core.a(WInterrupts.o)
+ .bss.SysTickCbFuncs
+                0x0000000020001b84       0x20 /home/mcbride.342/workspace_v11/tivac_EK-TM4C123GXL_core/Debug/libtivac_EK-TM4C123GXL_core.a(wiring.o)
+ .bss.milliseconds
+                0x0000000020001ba4        0x4 /home/mcbride.342/workspace_v11/tivac_EK-TM4C123GXL_core/Debug/libtivac_EK-TM4C123GXL_core.a(wiring.o)
+ .bss.Serial    0x0000000020001ba8       0x38 /home/mcbride.342/workspace_v11/tivac_EK-TM4C123GXL_core/Debug/libtivac_EK-TM4C123GXL_core.a(HardwareSerial.o)
+                0x0000000020001ba8                Serial
+ .bss.Serial1   0x0000000020001be0       0x38 /home/mcbride.342/workspace_v11/tivac_EK-TM4C123GXL_core/Debug/libtivac_EK-TM4C123GXL_core.a(HardwareSerial.o)
+                0x0000000020001be0                Serial1
+ .bss.Serial2   0x0000000020001c18       0x38 /home/mcbride.342/workspace_v11/tivac_EK-TM4C123GXL_core/Debug/libtivac_EK-TM4C123GXL_core.a(HardwareSerial.o)
+                0x0000000020001c18                Serial2
+ .bss.Serial3   0x0000000020001c50       0x38 /home/mcbride.342/workspace_v11/tivac_EK-TM4C123GXL_core/Debug/libtivac_EK-TM4C123GXL_core.a(HardwareSerial.o)
+                0x0000000020001c50                Serial3
+ .bss.Serial4   0x0000000020001c88       0x38 /home/mcbride.342/workspace_v11/tivac_EK-TM4C123GXL_core/Debug/libtivac_EK-TM4C123GXL_core.a(HardwareSerial.o)
+                0x0000000020001c88                Serial4
+ .bss.Serial5   0x0000000020001cc0       0x38 /home/mcbride.342/workspace_v11/tivac_EK-TM4C123GXL_core/Debug/libtivac_EK-TM4C123GXL_core.a(HardwareSerial.o)
+                0x0000000020001cc0                Serial5
+ .bss.Serial6   0x0000000020001cf8       0x38 /home/mcbride.342/workspace_v11/tivac_EK-TM4C123GXL_core/Debug/libtivac_EK-TM4C123GXL_core.a(HardwareSerial.o)
+                0x0000000020001cf8                Serial6
+ .bss.Serial7   0x0000000020001d30       0x38 /home/mcbride.342/workspace_v11/tivac_EK-TM4C123GXL_core/Debug/libtivac_EK-TM4C123GXL_core.a(HardwareSerial.o)
+                0x0000000020001d30                Serial7
+ .bss.__malloc_free_list
+                0x0000000020001d68        0x4 /home/mcbride.342/.energia15/packages/energia/tools/arm-none-eabi-gcc/8.3.1-20190703/bin/../lib/gcc/arm-none-eabi/8.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc_nano.a(lib_a-nano-mallocr.o)
+                0x0000000020001d68                __malloc_free_list
+ .bss.__malloc_sbrk_start
+                0x0000000020001d6c        0x4 /home/mcbride.342/.energia15/packages/energia/tools/arm-none-eabi-gcc/8.3.1-20190703/bin/../lib/gcc/arm-none-eabi/8.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc_nano.a(lib_a-nano-mallocr.o)
+                0x0000000020001d6c                __malloc_sbrk_start
+ *(COMMON)
+ COMMON         0x0000000020001d70        0x4 /home/mcbride.342/.energia15/packages/energia/tools/arm-none-eabi-gcc/8.3.1-20190703/bin/../lib/gcc/arm-none-eabi/8.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc_nano.a(lib_a-reent.o)
+                0x0000000020001d70                errno
+ COMMON         0x0000000020001d74        0x9 /home/mcbride.342/.energia15/packages/energia/tools/arm-none-eabi-gcc/8.3.1-20190703/bin/../lib/gcc/arm-none-eabi/8.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc_nano.a(lib_a-lock.o)
+                0x0000000020001d74                __lock___atexit_recursive_mutex
+                0x0000000020001d75                __lock___arc4random_mutex
+                0x0000000020001d76                __lock___env_recursive_mutex
+                0x0000000020001d77                __lock___sinit_recursive_mutex
+                0x0000000020001d78                __lock___malloc_recursive_mutex
+                0x0000000020001d79                __lock___at_quick_exit_mutex
+                0x0000000020001d7a                __lock___dd_hash_mutex
+                0x0000000020001d7b                __lock___tz_mutex
+                0x0000000020001d7c                __lock___sfp_recursive_mutex
+                0x0000000020001d80                . = ALIGN (0x4)
+ *fill*         0x0000000020001d7d        0x3 
+                0x0000000020001d80                _ebss = .
+                0x0000000020001d80                . = ALIGN (0x8)
+                [!provide]                        PROVIDE (__exidx_start = .)
+
+.ARM.exidx
+ *(.ARM.exidx* .gnu.linkonce.armexidx.*)
+                [!provide]                        PROVIDE (__exidx_end = .)
+                0x0000000020001d80                . = ALIGN (0x4)
+                0x0000000020001d80                _end = .
+                0x0000000020001d80                PROVIDE (end = _end)
+                0x0000000020008000                PROVIDE (_estack = (ORIGIN (ram) + LENGTH (ram)))
+LOAD /home/mcbride.342/workspace_v11/tivac_EK-TM4C123GXL_core/Debug/libtivac_EK-TM4C123GXL_core.a
+LOAD /home/mcbride.342/.energia15/packages/energia/hardware/tivac/1.0.4/system/driverlib/libdriverlib.a
+LOAD /home/mcbride.342/.energia15/packages/energia/tools/arm-none-eabi-gcc/8.3.1-20190703/bin/../lib/gcc/arm-none-eabi/8.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libm.a
+LOAD /home/mcbride.342/.energia15/packages/energia/tools/arm-none-eabi-gcc/8.3.1-20190703/bin/../lib/gcc/arm-none-eabi/8.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc_nano.a
+LOAD /home/mcbride.342/.energia15/packages/energia/tools/arm-none-eabi-gcc/8.3.1-20190703/bin/../lib/gcc/arm-none-eabi/8.3.1/thumb/v7e-m+fp/hard/libgcc.a
+END GROUP
+OUTPUT(i2c_nb_ds_v1.out elf32-littlearm)
+
+.debug_info     0x0000000000000000    0x1db09
+ .debug_info    0x0000000000000000     0x437d ./i2c_nb_ds_v1.o
+ .debug_info    0x000000000000437d     0x60a4 ./Wire_nonblocking_v2.o
+ .debug_info    0x000000000000a421     0x139f /home/mcbride.342/workspace_v11/tivac_EK-TM4C123GXL_core/Debug/libtivac_EK-TM4C123GXL_core.a(startup_gcc.o)
+ .debug_info    0x000000000000b7c0     0x108d /home/mcbride.342/workspace_v11/tivac_EK-TM4C123GXL_core/Debug/libtivac_EK-TM4C123GXL_core.a(WInterrupts.o)
+ .debug_info    0x000000000000c84d      0xf5f /home/mcbride.342/workspace_v11/tivac_EK-TM4C123GXL_core/Debug/libtivac_EK-TM4C123GXL_core.a(wiring.o)
+ .debug_info    0x000000000000d7ac      0xeda /home/mcbride.342/workspace_v11/tivac_EK-TM4C123GXL_core/Debug/libtivac_EK-TM4C123GXL_core.a(wiring_digital.o)
+ .debug_info    0x000000000000e686     0x56b2 /home/mcbride.342/workspace_v11/tivac_EK-TM4C123GXL_core/Debug/libtivac_EK-TM4C123GXL_core.a(HardwareSerial.o)
+ .debug_info    0x0000000000013d38     0x345b /home/mcbride.342/workspace_v11/tivac_EK-TM4C123GXL_core/Debug/libtivac_EK-TM4C123GXL_core.a(main.o)
+ .debug_info    0x0000000000017193     0x11ad /home/mcbride.342/workspace_v11/tivac_EK-TM4C123GXL_core/Debug/libtivac_EK-TM4C123GXL_core.a(new.o)
+ .debug_info    0x0000000000018340     0x57c9 /home/mcbride.342/workspace_v11/tivac_EK-TM4C123GXL_core/Debug/libtivac_EK-TM4C123GXL_core.a(Print.o)
+
+.debug_abbrev   0x0000000000000000     0x3020
+ .debug_abbrev  0x0000000000000000      0x5fe ./i2c_nb_ds_v1.o
+ .debug_abbrev  0x00000000000005fe      0x73c ./Wire_nonblocking_v2.o
+ .debug_abbrev  0x0000000000000d3a      0x33d /home/mcbride.342/workspace_v11/tivac_EK-TM4C123GXL_core/Debug/libtivac_EK-TM4C123GXL_core.a(startup_gcc.o)
+ .debug_abbrev  0x0000000000001077      0x2e6 /home/mcbride.342/workspace_v11/tivac_EK-TM4C123GXL_core/Debug/libtivac_EK-TM4C123GXL_core.a(WInterrupts.o)
+ .debug_abbrev  0x000000000000135d      0x343 /home/mcbride.342/workspace_v11/tivac_EK-TM4C123GXL_core/Debug/libtivac_EK-TM4C123GXL_core.a(wiring.o)
+ .debug_abbrev  0x00000000000016a0      0x2bc /home/mcbride.342/workspace_v11/tivac_EK-TM4C123GXL_core/Debug/libtivac_EK-TM4C123GXL_core.a(wiring_digital.o)
+ .debug_abbrev  0x000000000000195c      0x7e0 /home/mcbride.342/workspace_v11/tivac_EK-TM4C123GXL_core/Debug/libtivac_EK-TM4C123GXL_core.a(HardwareSerial.o)
+ .debug_abbrev  0x000000000000213c      0x402 /home/mcbride.342/workspace_v11/tivac_EK-TM4C123GXL_core/Debug/libtivac_EK-TM4C123GXL_core.a(main.o)
+ .debug_abbrev  0x000000000000253e      0x3a5 /home/mcbride.342/workspace_v11/tivac_EK-TM4C123GXL_core/Debug/libtivac_EK-TM4C123GXL_core.a(new.o)
+ .debug_abbrev  0x00000000000028e3      0x73d /home/mcbride.342/workspace_v11/tivac_EK-TM4C123GXL_core/Debug/libtivac_EK-TM4C123GXL_core.a(Print.o)
+
+.debug_loc      0x0000000000000000     0x1a9f
+ .debug_loc     0x0000000000000000      0x2a7 ./i2c_nb_ds_v1.o
+ .debug_loc     0x00000000000002a7      0x153 /home/mcbride.342/workspace_v11/tivac_EK-TM4C123GXL_core/Debug/libtivac_EK-TM4C123GXL_core.a(startup_gcc.o)
+ .debug_loc     0x00000000000003fa      0x228 /home/mcbride.342/workspace_v11/tivac_EK-TM4C123GXL_core/Debug/libtivac_EK-TM4C123GXL_core.a(WInterrupts.o)
+ .debug_loc     0x0000000000000622       0xb9 /home/mcbride.342/workspace_v11/tivac_EK-TM4C123GXL_core/Debug/libtivac_EK-TM4C123GXL_core.a(wiring.o)
+ .debug_loc     0x00000000000006db      0x335 /home/mcbride.342/workspace_v11/tivac_EK-TM4C123GXL_core/Debug/libtivac_EK-TM4C123GXL_core.a(wiring_digital.o)
+ .debug_loc     0x0000000000000a10      0x32c /home/mcbride.342/workspace_v11/tivac_EK-TM4C123GXL_core/Debug/libtivac_EK-TM4C123GXL_core.a(HardwareSerial.o)
+ .debug_loc     0x0000000000000d3c       0x39 /home/mcbride.342/workspace_v11/tivac_EK-TM4C123GXL_core/Debug/libtivac_EK-TM4C123GXL_core.a(new.o)
+ .debug_loc     0x0000000000000d75      0xd2a /home/mcbride.342/workspace_v11/tivac_EK-TM4C123GXL_core/Debug/libtivac_EK-TM4C123GXL_core.a(Print.o)
+
+.debug_aranges  0x0000000000000000      0x6c8
+ .debug_aranges
+                0x0000000000000000      0x120 ./i2c_nb_ds_v1.o
+ .debug_aranges
+                0x0000000000000120      0x168 ./Wire_nonblocking_v2.o
+ .debug_aranges
+                0x0000000000000288       0x90 /home/mcbride.342/workspace_v11/tivac_EK-TM4C123GXL_core/Debug/libtivac_EK-TM4C123GXL_core.a(startup_gcc.o)
+ .debug_aranges
+                0x0000000000000318       0xa8 /home/mcbride.342/workspace_v11/tivac_EK-TM4C123GXL_core/Debug/libtivac_EK-TM4C123GXL_core.a(WInterrupts.o)
+ .debug_aranges
+                0x00000000000003c0       0x70 /home/mcbride.342/workspace_v11/tivac_EK-TM4C123GXL_core/Debug/libtivac_EK-TM4C123GXL_core.a(wiring.o)
+ .debug_aranges
+                0x0000000000000430       0x30 /home/mcbride.342/workspace_v11/tivac_EK-TM4C123GXL_core/Debug/libtivac_EK-TM4C123GXL_core.a(wiring_digital.o)
+ .debug_aranges
+                0x0000000000000460       0xf8 /home/mcbride.342/workspace_v11/tivac_EK-TM4C123GXL_core/Debug/libtivac_EK-TM4C123GXL_core.a(HardwareSerial.o)
+ .debug_aranges
+                0x0000000000000558       0x28 /home/mcbride.342/workspace_v11/tivac_EK-TM4C123GXL_core/Debug/libtivac_EK-TM4C123GXL_core.a(main.o)
+ .debug_aranges
+                0x0000000000000580       0x48 /home/mcbride.342/workspace_v11/tivac_EK-TM4C123GXL_core/Debug/libtivac_EK-TM4C123GXL_core.a(new.o)
+ .debug_aranges
+                0x00000000000005c8      0x100 /home/mcbride.342/workspace_v11/tivac_EK-TM4C123GXL_core/Debug/libtivac_EK-TM4C123GXL_core.a(Print.o)
+
+.debug_ranges   0x0000000000000000      0x7e8
+ .debug_ranges  0x0000000000000000      0x128 ./i2c_nb_ds_v1.o
+ .debug_ranges  0x0000000000000128      0x158 ./Wire_nonblocking_v2.o
+ .debug_ranges  0x0000000000000280       0x80 /home/mcbride.342/workspace_v11/tivac_EK-TM4C123GXL_core/Debug/libtivac_EK-TM4C123GXL_core.a(startup_gcc.o)
+ .debug_ranges  0x0000000000000300       0x98 /home/mcbride.342/workspace_v11/tivac_EK-TM4C123GXL_core/Debug/libtivac_EK-TM4C123GXL_core.a(WInterrupts.o)
+ .debug_ranges  0x0000000000000398       0x90 /home/mcbride.342/workspace_v11/tivac_EK-TM4C123GXL_core/Debug/libtivac_EK-TM4C123GXL_core.a(wiring.o)
+ .debug_ranges  0x0000000000000428       0x20 /home/mcbride.342/workspace_v11/tivac_EK-TM4C123GXL_core/Debug/libtivac_EK-TM4C123GXL_core.a(wiring_digital.o)
+ .debug_ranges  0x0000000000000448      0x160 /home/mcbride.342/workspace_v11/tivac_EK-TM4C123GXL_core/Debug/libtivac_EK-TM4C123GXL_core.a(HardwareSerial.o)
+ .debug_ranges  0x00000000000005a8       0x18 /home/mcbride.342/workspace_v11/tivac_EK-TM4C123GXL_core/Debug/libtivac_EK-TM4C123GXL_core.a(main.o)
+ .debug_ranges  0x00000000000005c0       0x38 /home/mcbride.342/workspace_v11/tivac_EK-TM4C123GXL_core/Debug/libtivac_EK-TM4C123GXL_core.a(new.o)
+ .debug_ranges  0x00000000000005f8      0x1f0 /home/mcbride.342/workspace_v11/tivac_EK-TM4C123GXL_core/Debug/libtivac_EK-TM4C123GXL_core.a(Print.o)
+
+.debug_line     0x0000000000000000     0x6476
+ .debug_line    0x0000000000000000     0x1701 ./i2c_nb_ds_v1.o
+ .debug_line    0x0000000000001701     0x11c5 ./Wire_nonblocking_v2.o
+ .debug_line    0x00000000000028c6      0x590 /home/mcbride.342/workspace_v11/tivac_EK-TM4C123GXL_core/Debug/libtivac_EK-TM4C123GXL_core.a(startup_gcc.o)
+ .debug_line    0x0000000000002e56      0x6cf /home/mcbride.342/workspace_v11/tivac_EK-TM4C123GXL_core/Debug/libtivac_EK-TM4C123GXL_core.a(WInterrupts.o)
+ .debug_line    0x0000000000003525      0x6d4 /home/mcbride.342/workspace_v11/tivac_EK-TM4C123GXL_core/Debug/libtivac_EK-TM4C123GXL_core.a(wiring.o)
+ .debug_line    0x0000000000003bf9      0x42f /home/mcbride.342/workspace_v11/tivac_EK-TM4C123GXL_core/Debug/libtivac_EK-TM4C123GXL_core.a(wiring_digital.o)
+ .debug_line    0x0000000000004028      0xd99 /home/mcbride.342/workspace_v11/tivac_EK-TM4C123GXL_core/Debug/libtivac_EK-TM4C123GXL_core.a(HardwareSerial.o)
+ .debug_line    0x0000000000004dc1      0x680 /home/mcbride.342/workspace_v11/tivac_EK-TM4C123GXL_core/Debug/libtivac_EK-TM4C123GXL_core.a(main.o)
+ .debug_line    0x0000000000005441      0x464 /home/mcbride.342/workspace_v11/tivac_EK-TM4C123GXL_core/Debug/libtivac_EK-TM4C123GXL_core.a(new.o)
+ .debug_line    0x00000000000058a5      0xbd1 /home/mcbride.342/workspace_v11/tivac_EK-TM4C123GXL_core/Debug/libtivac_EK-TM4C123GXL_core.a(Print.o)
+
+.debug_str      0x0000000000000000     0x4c93
+ .debug_str     0x0000000000000000     0x1ed6 ./i2c_nb_ds_v1.o
+                                       0x20ed (size before relaxing)
+ .debug_str     0x0000000000001ed6     0x1a01 ./Wire_nonblocking_v2.o
+                                       0x2e94 (size before relaxing)
+ .debug_str     0x00000000000038d7      0x46d /home/mcbride.342/workspace_v11/tivac_EK-TM4C123GXL_core/Debug/libtivac_EK-TM4C123GXL_core.a(startup_gcc.o)
+                                        0xb41 (size before relaxing)
+ .debug_str     0x0000000000003d44      0x232 /home/mcbride.342/workspace_v11/tivac_EK-TM4C123GXL_core/Debug/libtivac_EK-TM4C123GXL_core.a(WInterrupts.o)
+                                        0x9fb (size before relaxing)
+ .debug_str     0x0000000000003f76      0x147 /home/mcbride.342/workspace_v11/tivac_EK-TM4C123GXL_core/Debug/libtivac_EK-TM4C123GXL_core.a(wiring.o)
+                                        0x918 (size before relaxing)
+ .debug_str     0x00000000000040bd       0x8b /home/mcbride.342/workspace_v11/tivac_EK-TM4C123GXL_core/Debug/libtivac_EK-TM4C123GXL_core.a(wiring_digital.o)
+                                        0x86a (size before relaxing)
+ .debug_str     0x0000000000004148      0x638 /home/mcbride.342/workspace_v11/tivac_EK-TM4C123GXL_core/Debug/libtivac_EK-TM4C123GXL_core.a(HardwareSerial.o)
+                                       0x29e2 (size before relaxing)
+ .debug_str     0x0000000000004780       0x63 /home/mcbride.342/workspace_v11/tivac_EK-TM4C123GXL_core/Debug/libtivac_EK-TM4C123GXL_core.a(main.o)
+                                       0x1447 (size before relaxing)
+ .debug_str     0x00000000000047e3      0x106 /home/mcbride.342/workspace_v11/tivac_EK-TM4C123GXL_core/Debug/libtivac_EK-TM4C123GXL_core.a(new.o)
+                                        0x891 (size before relaxing)
+ .debug_str     0x00000000000048e9      0x3aa /home/mcbride.342/workspace_v11/tivac_EK-TM4C123GXL_core/Debug/libtivac_EK-TM4C123GXL_core.a(Print.o)
+                                       0x2380 (size before relaxing)
+
+.comment        0x0000000000000000       0xe6
+ .comment       0x0000000000000000       0x76 ./i2c_nb_ds_v1.o
+                                         0x77 (size before relaxing)
+ .comment       0x0000000000000076       0x77 ./Wire_nonblocking_v2.o
+ .comment       0x0000000000000076       0x77 /home/mcbride.342/workspace_v11/tivac_EK-TM4C123GXL_core/Debug/libtivac_EK-TM4C123GXL_core.a(startup_gcc.o)
+ .comment       0x0000000000000076       0x77 /home/mcbride.342/workspace_v11/tivac_EK-TM4C123GXL_core/Debug/libtivac_EK-TM4C123GXL_core.a(WInterrupts.o)
+ .comment       0x0000000000000076       0x77 /home/mcbride.342/workspace_v11/tivac_EK-TM4C123GXL_core/Debug/libtivac_EK-TM4C123GXL_core.a(wiring.o)
+ .comment       0x0000000000000076       0x77 /home/mcbride.342/workspace_v11/tivac_EK-TM4C123GXL_core/Debug/libtivac_EK-TM4C123GXL_core.a(wiring_digital.o)
+ .comment       0x0000000000000076       0x77 /home/mcbride.342/workspace_v11/tivac_EK-TM4C123GXL_core/Debug/libtivac_EK-TM4C123GXL_core.a(HardwareSerial.o)
+ .comment       0x0000000000000076       0x77 /home/mcbride.342/workspace_v11/tivac_EK-TM4C123GXL_core/Debug/libtivac_EK-TM4C123GXL_core.a(main.o)
+ .comment       0x0000000000000076       0x77 /home/mcbride.342/workspace_v11/tivac_EK-TM4C123GXL_core/Debug/libtivac_EK-TM4C123GXL_core.a(new.o)
+ .comment       0x0000000000000076       0x77 /home/mcbride.342/workspace_v11/tivac_EK-TM4C123GXL_core/Debug/libtivac_EK-TM4C123GXL_core.a(Print.o)
+ .comment       0x0000000000000076       0x70 /home/mcbride.342/.energia15/packages/energia/hardware/tivac/1.0.4/system/driverlib/libdriverlib.a(eeprom.o)
+                                         0x71 (size before relaxing)
+ .comment       0x00000000000000e6       0x71 /home/mcbride.342/.energia15/packages/energia/hardware/tivac/1.0.4/system/driverlib/libdriverlib.a(gpio.o)
+ .comment       0x00000000000000e6       0x71 /home/mcbride.342/.energia15/packages/energia/hardware/tivac/1.0.4/system/driverlib/libdriverlib.a(i2c.o)
+ .comment       0x00000000000000e6       0x71 /home/mcbride.342/.energia15/packages/energia/hardware/tivac/1.0.4/system/driverlib/libdriverlib.a(sysctl.o)
+
+.ARM.attributes
+                0x0000000000000000       0x32
+ .ARM.attributes
+                0x0000000000000000       0x34 ./i2c_nb_ds_v1.o
+ .ARM.attributes
+                0x0000000000000034       0x34 ./Wire_nonblocking_v2.o
+ .ARM.attributes
+                0x0000000000000068       0x34 /home/mcbride.342/workspace_v11/tivac_EK-TM4C123GXL_core/Debug/libtivac_EK-TM4C123GXL_core.a(startup_gcc.o)
+ .ARM.attributes
+                0x000000000000009c       0x34 /home/mcbride.342/workspace_v11/tivac_EK-TM4C123GXL_core/Debug/libtivac_EK-TM4C123GXL_core.a(WInterrupts.o)
+ .ARM.attributes
+                0x00000000000000d0       0x34 /home/mcbride.342/workspace_v11/tivac_EK-TM4C123GXL_core/Debug/libtivac_EK-TM4C123GXL_core.a(wiring.o)
+ .ARM.attributes
+                0x0000000000000104       0x34 /home/mcbride.342/workspace_v11/tivac_EK-TM4C123GXL_core/Debug/libtivac_EK-TM4C123GXL_core.a(wiring_digital.o)
+ .ARM.attributes
+                0x0000000000000138       0x34 /home/mcbride.342/workspace_v11/tivac_EK-TM4C123GXL_core/Debug/libtivac_EK-TM4C123GXL_core.a(HardwareSerial.o)
+ .ARM.attributes
+                0x000000000000016c       0x34 /home/mcbride.342/workspace_v11/tivac_EK-TM4C123GXL_core/Debug/libtivac_EK-TM4C123GXL_core.a(main.o)
+ .ARM.attributes
+                0x00000000000001a0       0x34 /home/mcbride.342/workspace_v11/tivac_EK-TM4C123GXL_core/Debug/libtivac_EK-TM4C123GXL_core.a(new.o)
+ .ARM.attributes
+                0x00000000000001d4       0x34 /home/mcbride.342/workspace_v11/tivac_EK-TM4C123GXL_core/Debug/libtivac_EK-TM4C123GXL_core.a(Print.o)
+ .ARM.attributes
+                0x0000000000000208       0x3b /home/mcbride.342/.energia15/packages/energia/hardware/tivac/1.0.4/system/driverlib/libdriverlib.a(eeprom.o)
+ .ARM.attributes
+                0x0000000000000243       0x3b /home/mcbride.342/.energia15/packages/energia/hardware/tivac/1.0.4/system/driverlib/libdriverlib.a(gpio.o)
+ .ARM.attributes
+                0x000000000000027e       0x3b /home/mcbride.342/.energia15/packages/energia/hardware/tivac/1.0.4/system/driverlib/libdriverlib.a(i2c.o)
+ .ARM.attributes
+                0x00000000000002b9       0x3b /home/mcbride.342/.energia15/packages/energia/hardware/tivac/1.0.4/system/driverlib/libdriverlib.a(sysctl.o)
+ .ARM.attributes
+                0x00000000000002f4       0x34 /home/mcbride.342/.energia15/packages/energia/tools/arm-none-eabi-gcc/8.3.1-20190703/bin/../lib/gcc/arm-none-eabi/8.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc_nano.a(lib_a-malloc.o)
+ .ARM.attributes
+                0x0000000000000328       0x34 /home/mcbride.342/.energia15/packages/energia/tools/arm-none-eabi-gcc/8.3.1-20190703/bin/../lib/gcc/arm-none-eabi/8.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc_nano.a(lib_a-nano-freer.o)
+ .ARM.attributes
+                0x000000000000035c       0x34 /home/mcbride.342/.energia15/packages/energia/tools/arm-none-eabi-gcc/8.3.1-20190703/bin/../lib/gcc/arm-none-eabi/8.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc_nano.a(lib_a-nano-mallocr.o)
+ .ARM.attributes
+                0x0000000000000390       0x34 /home/mcbride.342/.energia15/packages/energia/tools/arm-none-eabi-gcc/8.3.1-20190703/bin/../lib/gcc/arm-none-eabi/8.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc_nano.a(lib_a-sbrkr.o)
+ .ARM.attributes
+                0x00000000000003c4       0x17 /home/mcbride.342/.energia15/packages/energia/tools/arm-none-eabi-gcc/8.3.1-20190703/bin/../lib/gcc/arm-none-eabi/8.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc_nano.a(lib_a-strlen.o)
+ .ARM.attributes
+                0x00000000000003db       0x32 /home/mcbride.342/.energia15/packages/energia/tools/arm-none-eabi-gcc/8.3.1-20190703/bin/../lib/gcc/arm-none-eabi/8.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc_nano.a(lib_a-impure.o)
+ .ARM.attributes
+                0x000000000000040d       0x34 /home/mcbride.342/.energia15/packages/energia/tools/arm-none-eabi-gcc/8.3.1-20190703/bin/../lib/gcc/arm-none-eabi/8.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc_nano.a(lib_a-mlock.o)
+ .ARM.attributes
+                0x0000000000000441       0x34 /home/mcbride.342/.energia15/packages/energia/tools/arm-none-eabi-gcc/8.3.1-20190703/bin/../lib/gcc/arm-none-eabi/8.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc_nano.a(lib_a-reent.o)
+ .ARM.attributes
+                0x0000000000000475       0x34 /home/mcbride.342/.energia15/packages/energia/tools/arm-none-eabi-gcc/8.3.1-20190703/bin/../lib/gcc/arm-none-eabi/8.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc_nano.a(lib_a-lock.o)
+
+.debug_frame    0x0000000000000000     0x172c
+ .debug_frame   0x0000000000000000      0x344 ./i2c_nb_ds_v1.o
+ .debug_frame   0x0000000000000344      0x620 ./Wire_nonblocking_v2.o
+ .debug_frame   0x0000000000000964      0x1b0 /home/mcbride.342/workspace_v11/tivac_EK-TM4C123GXL_core/Debug/libtivac_EK-TM4C123GXL_core.a(startup_gcc.o)
+ .debug_frame   0x0000000000000b14      0x164 /home/mcbride.342/workspace_v11/tivac_EK-TM4C123GXL_core/Debug/libtivac_EK-TM4C123GXL_core.a(WInterrupts.o)
+ .debug_frame   0x0000000000000c78      0x144 /home/mcbride.342/workspace_v11/tivac_EK-TM4C123GXL_core/Debug/libtivac_EK-TM4C123GXL_core.a(wiring.o)
+ .debug_frame   0x0000000000000dbc       0x74 /home/mcbride.342/workspace_v11/tivac_EK-TM4C123GXL_core/Debug/libtivac_EK-TM4C123GXL_core.a(wiring_digital.o)
+ .debug_frame   0x0000000000000e30      0x314 /home/mcbride.342/workspace_v11/tivac_EK-TM4C123GXL_core/Debug/libtivac_EK-TM4C123GXL_core.a(HardwareSerial.o)
+ .debug_frame   0x0000000000001144       0x48 /home/mcbride.342/workspace_v11/tivac_EK-TM4C123GXL_core/Debug/libtivac_EK-TM4C123GXL_core.a(main.o)
+ .debug_frame   0x000000000000118c       0x90 /home/mcbride.342/workspace_v11/tivac_EK-TM4C123GXL_core/Debug/libtivac_EK-TM4C123GXL_core.a(new.o)
+ .debug_frame   0x000000000000121c      0x310 /home/mcbride.342/workspace_v11/tivac_EK-TM4C123GXL_core/Debug/libtivac_EK-TM4C123GXL_core.a(Print.o)
+ .debug_frame   0x000000000000152c       0x30 /home/mcbride.342/.energia15/packages/energia/tools/arm-none-eabi-gcc/8.3.1-20190703/bin/../lib/gcc/arm-none-eabi/8.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc_nano.a(lib_a-malloc.o)
+ .debug_frame   0x000000000000155c       0x38 /home/mcbride.342/.energia15/packages/energia/tools/arm-none-eabi-gcc/8.3.1-20190703/bin/../lib/gcc/arm-none-eabi/8.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc_nano.a(lib_a-nano-freer.o)
+ .debug_frame   0x0000000000001594       0x30 /home/mcbride.342/.energia15/packages/energia/tools/arm-none-eabi-gcc/8.3.1-20190703/bin/../lib/gcc/arm-none-eabi/8.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc_nano.a(lib_a-nano-mallocr.o)
+ .debug_frame   0x00000000000015c4       0x2c /home/mcbride.342/.energia15/packages/energia/tools/arm-none-eabi-gcc/8.3.1-20190703/bin/../lib/gcc/arm-none-eabi/8.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc_nano.a(lib_a-sbrkr.o)
+ .debug_frame   0x00000000000015f0       0x30 /home/mcbride.342/.energia15/packages/energia/tools/arm-none-eabi-gcc/8.3.1-20190703/bin/../lib/gcc/arm-none-eabi/8.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc_nano.a(lib_a-mlock.o)
+ .debug_frame   0x0000000000001620       0x5c /home/mcbride.342/.energia15/packages/energia/tools/arm-none-eabi-gcc/8.3.1-20190703/bin/../lib/gcc/arm-none-eabi/8.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc_nano.a(lib_a-reent.o)
+ .debug_frame   0x000000000000167c       0xb0 /home/mcbride.342/.energia15/packages/energia/tools/arm-none-eabi-gcc/8.3.1-20190703/bin/../lib/gcc/arm-none-eabi/8.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libc_nano.a(lib_a-lock.o)

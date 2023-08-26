@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<?ccsproject version="1.0"?>
+<projectOptions>
+	<ccsVersion value="11.2.0"/>
+	<deviceVariant value="Cortex M.TM4C123GH6PM"/>
+	<deviceFamily value="TMS470"/>
+	<deviceEndianness value="little"/>
+	<codegenToolVersion value="GNU_8.3.1:Energia"/>
+	<isElfFormat value="true"/>
+	<connection value="common/targetdb/connections/Stellaris_ICDI_Connection.xml"/>
+	<rts value=""/>
+	<createSlaveProjects value=""/>
+	<ignoreDefaultDeviceSettings value="true"/>
+	<origin value="/home/mcbride.342/HELIX/test_nonblocking_code/i2c_nb_ds_v1/i2c_nb_ds_v1.ino"/>
+	<filesToOpen value="i2c_nb_ds_v1.ino"/>
+	<isTargetManual value="false"/>
+</projectOptions>
