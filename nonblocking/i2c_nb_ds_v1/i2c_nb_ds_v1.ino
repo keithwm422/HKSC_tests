@@ -1,7 +1,7 @@
 #include "Wire_nonblocking_v2.h"
 #include <sysctl.h>
 
-TwoWire *wire_ = new TwoWire(2);
+TwoWire *wire_ = new TwoWire(2);  // pueo RF ON is line 2 and is also the 1wire i2c click dev board
 uint8_t mAddress=0x18;
 // temp addresses at OSU
 byte addr1[8]={0x28,0x64,0x27,0xD2,0x75,0x22,0x01,0x7A};
@@ -954,7 +954,7 @@ void print_celsius(){
   else if (cfg == 0x40) raw = raw & ~1; // 11 bit res, 375 ms
   float celsius_1 = (float)raw / 16.0;
   celsius[celsius_iter][which_sensor]=celsius_1;
-  //Serial.println(celsius,4);
+  Serial.println(celsius_1,4);
   uint8_t crc=0;
   for (uint8_t i=0; i<8;i++){
     uint8_t inbyte = read_1wire_array[i];
