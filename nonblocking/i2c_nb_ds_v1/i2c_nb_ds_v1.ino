@@ -9,11 +9,11 @@ byte addr2[8]={0x28,0x6A,0xC6,0x79,0x97,0x06,0x03,0x8D};
 byte addr3[8]={0x28,0x0E,0xA4,0x79,0x97,0x06,0x03,0x00};
 byte addr4[8]={0x28,0x75,0xBC,0x79,0x97,0x06,0x03,0x22};
 unsigned long update_time=0;
-#define UPDATE_PERIOD 10000
+#define UPDATE_PERIOD 1000
 unsigned long LED_time=0;
 #define LED_PERIOD 1000
 unsigned long packet_time=0;
-#define PACKET_PERIOD 20000
+#define PACKET_PERIOD 2000
 bool ppd_set=false;
 uint8_t read_1wire_array[9]={0};
 #define NUM_TEMP_SENSORS 1
@@ -204,7 +204,7 @@ void loop() {
     }
     case SENSOR_STATE_RESET:{
       if(write_a_reset()){
-        timer_post_reset = millis() + 100; // 100 is the ms to wait before the bridge should be accessed.
+        timer_post_reset = millis() + 2000; // 100 is the ms to wait before the bridge should be accessed.
         PREV_BRIDGE_STATE=(SensorState) BRIDGE_STATE;
         BRIDGE_STATE=(SensorState) ((unsigned char) BRIDGE_STATE + 1);  // fall through
         break;
@@ -297,7 +297,7 @@ void loop() {
     }
     case SENSOR_STATE_CONVERTWIRE:{  // theoretically gets here if wirereset went fine, ppd was detected. this takes some time to do. make timer start here
       if(wire_convert()){
-        timer_post_reset = millis() + 100; // 100 is the ms to wait before the probe is done converting
+        timer_post_reset = millis() + 750; // 100 is the ms to wait before the probe is done converting
         PREV_BRIDGE_STATE=(SensorState) BRIDGE_STATE;
         BRIDGE_STATE=(SensorState) ((unsigned char) BRIDGE_STATE + 1);  // keep going if this was fine
         break;
@@ -624,6 +624,7 @@ bool write_a_reset(){
   if(write_i2c_one_byte(0xF0)) return true;
   else return false;
 }
+//  wire_ds->write(config | (~config)<<4); for active Pullup use 1<<0
 bool write_a_config(){
   if(write_i2c_two_bytes(0xD2,0xE1)) return true;
   else return false;
