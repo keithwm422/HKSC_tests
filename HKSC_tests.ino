@@ -11,6 +11,7 @@
 #include <inc/hw_gpio.h>
 #include <inc/hw_ints.h>
 #include <inc/hw_pwm.h>
+#include "inc/hw_flash.h"
 #include <driverlib/i2c.h>
 #include <driverlib/sysctl.h>
 #include <driverlib/gpio.h>
@@ -27,6 +28,45 @@
 #include <string.h>
 #include "Wire.h"
 #define  WIRE_INTERFACES_COUNT 4
+
+#include "src/HSK_lib/Core_protocol.h"
+#include "src/HSK_lib/PacketSerial.h"
+#include "src/HSK_lib/HSK_protocol.h"
+using namespace HSK_cmd;
+
+// SFC stuff
+#define DOWNBAUD 1152000 // Baudrate to the SFC
+#define FIRST_LOCAL_COMMAND 2 // value of hdr->cmd that is the first command local to the board
+#define NUM_LOCAL_CONTROLS 8 // how many commands total are local to the board
+/* Declare instances of PacketSerial to set up the serial lines */
+PacketSerial downStream1; // SFC
+/* Name of this device */
+housekeeping_id myID = eHKSC; // CHANGE THIS TO THE ID OF SUBHSK Board
+/* Outgoing buffer, for up or downstream. Only gets used once a complete packet
+ * is received -- a command or forward is executed before anything else happens,
+ * so there shouldn't be any over-writing here. */
+uint8_t outgoingPacket [MAX_PACKET_LENGTH] ={0}; 
+/* Use pointers for all device's housekeeping headers and the autopriorityperiods*/
+housekeeping_hdr_t * hdr_in{nullptr};     housekeeping_hdr_t * hdr_out{nullptr};
+housekeeping_err_t * hdr_err{nullptr};   housekeeping_prio_t * hdr_prio{nullptr};
+uint8_t numDevices = 0;           // Keep track of how many devices are upstream
+uint8_t commandPriority[NUM_LOCAL_CONTROLS] = {0};     // Each command's priority takes up one byte
+PacketSerial *serialDevices = &downStream1;
+uint8_t addressList = 0; // List of all downstream devices
+
+/* Utility variables for internal use */
+size_t hdr_size = sizeof(housekeeping_hdr_t)/sizeof(hdr_out->src); // size of the header
+uint8_t numSends = 0; // Used to keep track of number of priority commands executed
+uint16_t currentPacketCount=0;
+static_assert(sizeof(float) == 4);
+
+
+//Big test packet for SFC comms dev
+#define PACKET_UPDATE_PERIOD 6000
+unsigned long PacketUpdateTime=0; // unprompted packet timer
+uint8_t packet_fake[100]={0}; // array for using existing functions to implement command and send packet. This is called 'fake' header because it is forcing this hsk board to run code AS IF it received a packet with the contents of "a fake header" 
+uint8_t Bigpacket[220]={0};
+int clear_buffers_with_this=0;
 
 // declare 2 two wire objs but YOU ONLY NEED ONE! CHECK WHICH ONE TO USE THOROUGHLY.
 
@@ -102,7 +142,18 @@ uint8_t PWR_DAC_write[3]={0x2F,0xFF,0x00}; // after I2C address, need 3 bytes, w
 #define ADC_CONST_DX 1.25
 #define ADC_CONST_DY ADC_CONST_B
 float adc_const_m=ADC_CONST_DY/ADC_CONST_DX;
+unsigned long PWR_ANA_time = 0;
+#define PWR_ANA_PERIOD 1000
+unsigned long PWR_ANA_reread_time=0;
+#define PWR_ANA_REREAD_PERIOD 20
+uint8_t PWR_ANA_read_debug=0x00;
+bool PWR_ANA_read_real=false;
 
+int PWR_ANA_chip_num=0; // mux_IC_num(ana);
+int PWR_ANA_arg_chip_num=0; // calc_mux_channel(chip_num);
+int PWR_ANA_mux_channel=0; // calc_mux_channel(ana);
+int ana=0;
+int ana_prev=0;
 // need a struct per Patrick Allison
 /*****************/
 
@@ -136,319 +187,70 @@ uint16_t EXT_ANA_READS_1[25]={0}; // one extra because the last one is always th
 /*****************/
 //Serial7 is the CC_UART line
 
+// variables for packet construction
+uint32_t TempRead=0;  // internal uC temperature
 
 char one_byte;
 
+// time zeroed for reading things.
+unsigned long time_store=0;
 void setup() {
-  // put your setup code here, to run once:
-  Serial.begin(9600);
-  Serial.print("Hello, starting...");
-  Serial.print("\n");
+  // Serial port for downstream to SFC
+  Serial.begin(DOWNBAUD);
+  clear_buffers_with_this=0;
+  while(clear_buffers_with_this!=-1){
+    clear_buffers_with_this=Serial.read();
+  }
+  downStream1.setStream(&Serial);
+  downStream1.setPacketHandler(&checkHdr);
+  // Point to data in a way that it can be read as a header
+  hdr_out = (housekeeping_hdr_t *) outgoingPacket;
+  hdr_err = (housekeeping_err_t *) (outgoingPacket + hdr_size);
+  currentPacketCount=0;
+  // Test Packet setup 
+  PacketUpdateTime= millis() + PACKET_UPDATE_PERIOD;
+  for(int i=0;i<220;i++){
+    Bigpacket[i]=(uint8_t) i;
+  }
+  
+  // Setup I2C stuff
   //wire_1->begin();
   wire_RF_ON->begin();
   wire_PWR_CTRL->begin();
   wire_PWR_ANA->begin();
   wire_EXT_ANA->begin();
+
+  pinMode(EXT_ANA_RST_pin, OUTPUT);
+  digitalWrite(EXT_ANA_RST_pin, HIGH);  // this is really NOT RST, so leave high to not RST....
+  Serial2.begin(115200); // TURF UART  
+  Serial7.begin(9600); // Charge Controller UART
+
   //LED blinky start
   pinMode(LED, OUTPUT);
   digitalWrite(LED, HIGH);
   LED_time = millis();
-  pinMode(EXT_ANA_RST_pin, OUTPUT);
-  digitalWrite(EXT_ANA_RST_pin, HIGH);  // this is really NOT RST, so leave high to not RST....
-  Serial2.begin(115200); // TURF UART
-  
-  Serial7.begin(115200); // Charge Controller UART
 }
 
 void loop() {
-  while (Serial.available() > 0) {
-    one_byte = Serial.read();
-    Serial.print("\n");
-    if (one_byte == 49) Serial.print("1\n");
-    else if (one_byte == 50) { //2
-      // put some code here to execute this command like: your_writefunction_name(0xFF);
-      Serial.print("BAUD");
-      Serial.print("2\n");
-    }
-
-    else if (one_byte == 51) { //3 --> Configure ports to be outputs
-      //Serial.print(gpio_write(0x03, 0x00), DEC);
-      //Serial.print(gpio_write(0x01, 0xFF), DEC);
-      Serial.print(RF_ON_write(RF_ON_GPIO_ADDR0,0x03, 0x00), DEC);
-      Serial.print(RF_ON_write(RF_ON_GPIO_ADDR1,0x03, 0x00), DEC);
-      Serial.print(RF_ON_write(RF_ON_GPIO_ADDR2,0x03, 0x00), DEC);
-      Serial.print(RF_ON_write(RF_ON_GPIO_ADDR3,0x03, 0x00), DEC);
-      Serial.print(PWR_CTRL_write(PWR_CTRL_GPIO_ADDR0,0x03, 0x00), DEC);
-      Serial.print(PWR_CTRL_write(PWR_CTRL_GPIO_ADDR1,0x03, 0x00), DEC);
-      Serial.print(PWR_CTRL_write(PWR_CTRL_GPIO_ADDR2,0x03, 0x00), DEC);
-      Serial.print(PWR_CTRL_write(PWR_CTRL_GPIO_ADDR3,0x03, 0x00), DEC);
-      Serial.print("GPIO --> Configured\n");
-    }
-
-    else if (one_byte == 70) { //F --> All output ports set to high
-      Serial.print(RF_ON_write(RF_ON_GPIO_ADDR0,0x01, 0xFF), DEC);
-      Serial.print(RF_ON_write(RF_ON_GPIO_ADDR1,0x01, 0xFF), DEC);
-      Serial.print(RF_ON_write(RF_ON_GPIO_ADDR2,0x01, 0xFF), DEC);
-      Serial.print(RF_ON_write(RF_ON_GPIO_ADDR3,0x01, 0xFF), DEC);
-      Serial.print(PWR_CTRL_write(PWR_CTRL_GPIO_ADDR0,0x01, 0xFF), DEC);
-      Serial.print(PWR_CTRL_write(PWR_CTRL_GPIO_ADDR1,0x01, 0xFF), DEC);
-      Serial.print(PWR_CTRL_write(PWR_CTRL_GPIO_ADDR2,0x01, 0xFF), DEC);
-      Serial.print(PWR_CTRL_write(PWR_CTRL_GPIO_ADDR3,0x01, 0xFF), DEC);
-      Serial.print("GPIO --> ON\n");
-    }
-
-    else if (one_byte == 82) { //R --> Alll output ports set to low
-      RF_ON_write(RF_ON_GPIO_ADDR0,0x01, 0x00);
-      RF_ON_write(RF_ON_GPIO_ADDR1,0x01, 0x00);
-      RF_ON_write(RF_ON_GPIO_ADDR2,0x01, 0x00);
-      RF_ON_write(RF_ON_GPIO_ADDR3,0x01, 0x00);
-      PWR_CTRL_write(PWR_CTRL_GPIO_ADDR0,0x01, 0x00);
-      PWR_CTRL_write(PWR_CTRL_GPIO_ADDR1,0x01, 0x00);
-      PWR_CTRL_write(PWR_CTRL_GPIO_ADDR2,0x01, 0x00);
-      PWR_CTRL_write(PWR_CTRL_GPIO_ADDR3,0x01, 0x00);
-      Serial.print("GPIO --> Off\n");
-    }
-    
-    else if (one_byte == 90) { //Z --> Cool blinkies
-      //uint8_t addrs[4]={RF_ON_GPIO_ADDR0,RF_ON_GPIO_ADDR1,RF_ON_GPIO_ADDR2,RF_ON_GPIO_ADDR3};
-      uint8_t addrs[4]={PWR_CTRL_GPIO_ADDR0,PWR_CTRL_GPIO_ADDR1,PWR_CTRL_GPIO_ADDR2,PWR_CTRL_GPIO_ADDR3};
-      uint8_t writer=0x00;
-      int i=0;
-      while(i<4){
-        PWR_CTRL_write(addrs[i],0x01, writer);
-        //RF_ON_write(addrs[i],0x01, writer);
-        writer+=1;
-        delay(100);
-        if(writer==0){
-          i+=1;
-        }
-      }
-      Serial.print("GPIO --> Fun done\n");
-    }
-    else if (one_byte == 72) { //H --> PWR ANA - ctrl_top_mux ch0 select
-      Serial.println(PWR_ANA_mux_ctrl(0, PWR_ANA_MUX_ADDR_TOP), DEC); // this is to point to remote high byte
-    }
-    else if (one_byte == 73) { //I --> PWR ANA - ctrl_top_mux ch3 select
-      Serial.println(PWR_ANA_mux_ctrl(3, PWR_ANA_MUX_ADDR_TOP), DEC); // this is to point to remote high byte
-    }
-    else if (one_byte == 74) { //I --> PWR ANA - ctrl_top_mux ch4 select
-      Serial.println(PWR_ANA_mux_ctrl(4, PWR_ANA_MUX_ADDR_TOP), DEC); // this is to point to remote high byte
-    }
-
-    else if (one_byte == 71) { //G --> PWR ANA - just read value
-      bool try_read=PWR_ANA_read(2,PWR_ANA_ADC_ADDR);
-      if(try_read){
-        Serial.println("no more loops");
-      }
-      else{
-        Serial.println("loops");
-      }
-      Serial.print("\n");
-    }
-
-    else if (one_byte == 53) { //5 --> EXT ANA - ctrl I2C switch I2C0
-      Serial.println(EXT_ANA_I2C_MUX_write(0x01), DEC); // this control register // X X NINT1 NINT0 X X I2C1 I2C0 so 0x01 enables I2C0 with I2C1 disabled.
-      Serial.println(EXT_ANA_mux_ctrl(3, EXT_ANA_MUX_ADDR_TOP), BIN); // this is to point to remote high byte
-      bool try_conv=EXT_ANA_read(0,EXT_ANA_ADC_ADDR);
-      if(try_conv) Serial.println("read start");
-      bool try_read=EXT_ANA_read(2,EXT_ANA_ADC_ADDR);
-      if(try_read){
-        Serial.println("no more loops");
-        Serial.println(EXT_ANA_READS[24],DEC);
-      }
-      else{
-        Serial.println("loops");
-      }
-      Serial.print("\n");
-    }
-
-    else if (one_byte == 54) { //6 --> EXT ANA - ctrl I2C switch I2C1
-      Serial.println(EXT_ANA_I2C_MUX_write(0x02), DEC); // this control register // X X NINT1 NINT0 X X I2C1 I2C0 so 0x02 enables I2C1 with I2C0 disabled.
-      Serial.println(EXT_ANA_mux_ctrl(4, EXT_ANA_MUX_ADDR_TOP), DEC); // this is to point to remote high byte
-      bool try_read=EXT_ANA_read(2,EXT_ANA_ADC_ADDR);
-      if(try_read){
-        Serial.println("no more loops");
-      }
-      else{
-        Serial.println("loops");
-      }
-      Serial.print("\n");
-    }
-    /*else if (one_byte == 57) { //9 --> EXT ANA - ctrl I2C switch I2C0 and read every channel on a MUX_x
-      Serial.println(EXT_ANA_I2C_MUX_write(0x01), DEC); // this control register // X X NINT1 NINT0 X X I2C1 I2C0 so 0x01 enables I2C0 with I2C1 disabled.
-      Serial.println(EXT_ANA_mux_ctrl(5, EXT_ANA_MUX_ADDR_TOP), BIN); // this sets the input of the mux (channel 7 is MUX_1 0 through 7, channel 6 is MUX_2 0 through 7, channel 5 is MUX_3 0 through 7). 
-      // now set MUX_x to a channel...
-      Serial.println(EXT_ANA_mux_ctrl(3, EXT_ANA_MUX_ADDR2), DEC);
-      // now do an i2c read of ADC with no bytes requested, so that new conversion starts
-      bool try_conv=EXT_ANA_read(0,EXT_ANA_ADC_ADDR);
-      if(try_conv) Serial.println("read start");
-      bool try_read=EXT_ANA_read(2,EXT_ANA_ADC_ADDR);
-      if(try_read){
-        Serial.println("no more loops");
-      }
-      else{
-        Serial.println("loops");
-      }
-      Serial.print("\n");
-    }*/
-    else if (one_byte == 56) { //8 --> EXT ANA - ctrl I2C switch I2C0 and read every channel on a MUX_x
-      EXT_ANA_I2C_MUX_write(0x02); // this control register // X X NINT1 NINT0 X X I2C1 I2C0 so 0x01 enables I2C0 with I2C1 disabled. IC20-> pin 25-48, I2C1-> pin 1-24
-      for(int ana=0;ana<=23;ana++){
-        int chip_num=mux_IC_num(ana);
-        int arg_chip_num=calc_mux_channel(chip_num);
-        int mux_channel=calc_mux_channel(ana);
-        EXT_ANA_mux_ctrl(chip_num, EXT_ANA_MUX_ADDR_TOP);
-        EXT_ANA_mux_ctrl(mux_channel, EXT_ANA_MUX[arg_chip_num]);
-        delay(20);
-        bool try_conv=EXT_ANA_read(2,EXT_ANA_ADC_ADDR);
-        //EXT_ANA_read(2,EXT_ANA_ADC_ADDR);
-        delay(20);
-        bool try_read=EXT_ANA_read(2,EXT_ANA_ADC_ADDR);        
-        //delay(20);
-        //bool try_read2=EXT_ANA_read(2,EXT_ANA_ADC_ADDR);        
-        Serial.print(arg_chip_num,DEC);
-        Serial.print("|");
-        Serial.print(chip_num,DEC);
-        Serial.print("|");
-        Serial.print(ana,DEC);
-        Serial.print("|");
-        Serial.print(mux_channel,DEC);
-        Serial.print("|");
-        if(try_read){
-          EXT_ANA_READS[ana]=EXT_ANA_READS[24];// last one is most recent?
-          Serial.println(EXT_ANA_READS[ana]-32768,DEC);
-        }
-        else{
-          // reads sucked so try again with same ana?
-          ana--;
-          Serial.println("-1");
-          //try_read=EXT_ANA_read(2,EXT_ANA_ADC_ADDR);
-          //EXT_ANA_READS[ana]=EXT_ANA_READS[24];// last one is most recent?
-          //Serial.println(EXT_ANA_READS[ana],DEC);
-        }
-      }
-    }
-    else if (one_byte == 57) { //9 --> EXT ANA - ctrl I2C switch I2C0 and read every channel then I2C1 and read every channel
-      EXT_ANA_I2C_MUX_write(0x01); // this control register // X X NINT1 NINT0 X X I2C1 I2C0 so 0x01 enables I2C0 with I2C1 disabled. IC20-> pin 25-48, I2C1-> pin 1-24
-      for(int ana=0;ana<=23;ana++){
-        int chip_num=mux_IC_num(ana);
-        int arg_chip_num=calc_mux_channel(chip_num);
-        int mux_channel=calc_mux_channel(ana);
-        EXT_ANA_mux_ctrl(chip_num, EXT_ANA_MUX_ADDR_TOP);
-        EXT_ANA_mux_ctrl(mux_channel, EXT_ANA_MUX[arg_chip_num]);
-        delay(20);
-        bool try_conv=EXT_ANA_read(2,EXT_ANA_ADC_ADDR);
-        //EXT_ANA_read(2,EXT_ANA_ADC_ADDR);
-        delay(20);
-        bool try_read=EXT_ANA_read(2,EXT_ANA_ADC_ADDR);        
-        if(try_read){
-          EXT_ANA_READS[ana]=EXT_ANA_READS[24];// last one is most recent?
-          //Serial.println(EXT_ANA_READS[ana]-32768,DEC);
-        }
-        else{
-          // reads sucked so try again with same ana?
-          ana--;
-          Serial.println("-1");
-          //try_read=EXT_ANA_read(2,EXT_ANA_ADC_ADDR);
-          //EXT_ANA_READS[ana]=EXT_ANA_READS[24];// last one is most recent?
-          //Serial.println(EXT_ANA_READS[ana],DEC);
-        }
-      }
-      // copy EXT_ANA_READS to appr storage
-      for(int i=0; i<24; i++) {
-        EXT_ANA_READS_0[i]=EXT_ANA_READS[i];
-      }
-      // now repeat for I2C1
-      EXT_ANA_I2C_MUX_write(0x02); // this control register // X X NINT1 NINT0 X X I2C1 I2C0 so 0x01 enables I2C0 with I2C1 disabled. IC20-> pin 25-48, I2C1-> pin 1-24
-      for(int ana=0;ana<=23;ana++){
-        int chip_num=mux_IC_num(ana);
-        int arg_chip_num=calc_mux_channel(chip_num);
-        int mux_channel=calc_mux_channel(ana);
-        EXT_ANA_mux_ctrl(chip_num, EXT_ANA_MUX_ADDR_TOP);
-        EXT_ANA_mux_ctrl(mux_channel, EXT_ANA_MUX[arg_chip_num]);
-        delay(20);
-        bool try_conv=EXT_ANA_read(2,EXT_ANA_ADC_ADDR);
-        //EXT_ANA_read(2,EXT_ANA_ADC_ADDR);
-        delay(20);
-        bool try_read=EXT_ANA_read(2,EXT_ANA_ADC_ADDR);        
-        if(try_read){
-          EXT_ANA_READS[ana]=EXT_ANA_READS[24];// last one is most recent?
-          //Serial.println(EXT_ANA_READS[ana]-32768,DEC);
-        }
-        else{
-          // reads sucked so try again with same ana?
-          ana--;
-          Serial.println("-1");
-          //try_read=EXT_ANA_read(2,EXT_ANA_ADC_ADDR);
-          //EXT_ANA_READS[ana]=EXT_ANA_READS[24];// last one is most recent?
-          //Serial.println(EXT_ANA_READS[ana],DEC);
-        }
-      }
-      // copy EXT_ANA_READS to appr storage
-      for(int i=0; i<24; i++) {
-        EXT_ANA_READS_1[i]=EXT_ANA_READS[i];
-        Serial.print(EXT_ANA_READS_1[i]-32768,DEC);
-        Serial.print(",");
-      }
-      for(int i=0; i<24; i++) {
-        Serial.print(EXT_ANA_READS_0[i]-32768,DEC);
-        Serial.print(",");
-      }
-      Serial.print("\n");
-    }
-    else if (one_byte == 65) { //A --> PWR ANA - read every channel on a MUX_x
-      for(int ana=0;ana<=23;ana++){
-        int chip_num=mux_IC_num(ana);
-        int arg_chip_num=calc_mux_channel(chip_num);
-        int mux_channel=calc_mux_channel(ana);
-        PWR_ANA_mux_ctrl(chip_num, PWR_ANA_MUX_ADDR_TOP);
-        PWR_ANA_mux_ctrl(mux_channel, PWR_ANA_MUX[arg_chip_num]);
-        delay(20);
-        bool try_conv=PWR_ANA_read(2,PWR_ANA_ADC_ADDR);
-        //EXT_ANA_read(2,EXT_ANA_ADC_ADDR);
-        delay(20);
-        bool try_read=PWR_ANA_read(2,PWR_ANA_ADC_ADDR);        
-        //delay(20);
-        //Serial.print(arg_chip_num,DEC);
-        //Serial.print("|");
-        //Serial.print(chip_num,DEC);
-        //Serial.print("|");
-        //Serial.print(ana+25,DEC);
-        //Serial.print("|");
-        //Serial.print(mux_channel,DEC);
-        //Serial.print("|");
-        if(try_read){
-          PWR_ANA_READS[ana]=PWR_ANA_READS[24];// last one is most recent?
-          //Serial.println(PWR_ANA_READS[ana]-32768,DEC);
-        }
-        else{
-          // reads sucked so try again with same ana?
-          ana--;
-          Serial.println("-1");
-          //try_read=EXT_ANA_read(2,EXT_ANA_ADC_ADDR);
-          //EXT_ANA_READS[ana]=EXT_ANA_READS[24];// last one is most recent?
-          //Serial.println(EXT_ANA_READS[ana],DEC);
-        }
-      }
-      // copy EXT_ANA_READS to appr storage
-      for(int i=0; i<24; i++) {
-        PWR_ANA_READS_0[i]=PWR_ANA_READS[i];
-        Serial.print(PWR_ANA_READS_0[i]-32768,DEC);
-        Serial.print(",");
-      }
-    }
-    else {
-      Serial.print("Not a valid request\n");
-    }
-  }// end of commanding
-  //delay(3000);
-  if ((long) (millis() - LED_time) > 0) {
-    LED_time = millis() + LED_PERIOD;
+  if((long) (millis() - LED_time) > 0){
+    LED_time+= LED_PERIOD;
     switch_LED();
-    Serial7.print("A\r");
-    Serial2.print("A\r");
-    
+    TempRead=analogRead(TEMPSENSOR);
   }
+  // example send packet unprompted every PACKET_PERIOD
+  if((long)(millis() -PacketUpdateTime) > 0){
+    PacketUpdateTime+= PACKET_UPDATE_PERIOD;
+    housekeeping_hdr_t *packet_fake_hdr = (housekeeping_hdr_t *) packet_fake; // fakehdr is best way to send a packet
+    hdr_out = (housekeeping_hdr_t *) outgoingPacket;
+    packet_fake_hdr->dst=myID;
+    packet_fake_hdr->src=eSFC;
+    packet_fake_hdr->len=0; // this should always be 0, especially because the array is just enough to hold the header.
+    packet_fake_hdr->cmd=161;  // which command you want on the timer goes here.
+    // to construct a packet, pass it a fake header
+    handleLocalCommand(packet_fake_hdr, (uint8_t *) packet_fake_hdr + hdr_size, (uint8_t *) outgoingPacket);
+  }
+  /* Continuously read in one byte at a time until a packet is received */
+  if (downStream1.update() != 0) badPacketReceived(&downStream1);
   int ser7_val=Serial7.read();
   if(ser7_val != -1){
     Serial.print((char)ser7_val);
@@ -457,11 +259,368 @@ void loop() {
   if(ser2_val != -1){
     Serial.print((char)ser2_val);
   }
+  // Read PWR_ANA ADC wherever its pointing?
+  if((long) (millis() - PWR_ANA_time) > 0){
+    // iterate the position of the read, or something? because the next read completed is the previous read that was done ? interesting, read twice and store first read, and newest read?
+    // so we need to iterate the indexers and keep the previous?
+    PWR_ANA_chip_num=mux_IC_num(ana);  // goes to top mux
+    PWR_ANA_arg_chip_num=calc_mux_channel(PWR_ANA_chip_num); // goes to lower level mux
+    PWR_ANA_mux_channel=calc_mux_channel(ana); // goes to lower level mux channel
+    PWR_ANA_mux_ctrl(PWR_ANA_chip_num, PWR_ANA_MUX_ADDR_TOP);
+    PWR_ANA_mux_ctrl(PWR_ANA_mux_channel, PWR_ANA_MUX[PWR_ANA_arg_chip_num]);
+    PWR_ANA_time= millis() + PWR_ANA_PERIOD;
+    PWR_ANA_read_debug=PWR_ANA_read(2,PWR_ANA_ADC_ADDR);
+    // now we can do a real read for updated value...
+    //delay(20);
+    if(PWR_ANA_read_debug==0x00){
+      if(ana==0) ana_prev=23;
+      else ana_prev=ana-1;
+      PWR_ANA_READS[ana_prev] = PWR_ANA_READS[24];
+      PWR_ANA_reread_time=millis()+PWR_ANA_REREAD_PERIOD;
+      PWR_ANA_read_real=true;
+    }
+    else PWR_ANA_read_real=false;
+  }
+  if(PWR_ANA_read_real && (long) (millis() - PWR_ANA_reread_time) > 0){
+    PWR_ANA_read_debug=PWR_ANA_read(2,PWR_ANA_ADC_ADDR);
+    PWR_ANA_read_real=false;
+    if(PWR_ANA_read_debug==0x00){
+      // this was a good read so store it in appropriate place
+      PWR_ANA_READS[ana]= PWR_ANA_READS[24]; // most recent read is just ana
+      ana++;
+      if(ana>23) ana=0; // restart the mux scanning
+    }
 
-
+  }
+}
+/*******************************************************************************
+ * Packet handling functions
+ *******************************************************************************/
+void checkHdr(const void *sender, const uint8_t *buffer, size_t len) {
+  // Default header & error data values
+  hdr_out = (housekeeping_hdr_t *) outgoingPacket;
+  hdr_out->src = myID;          // Source of data packet
+  hdr_in = (housekeeping_hdr_t *)buffer;
+  hdr_prio = (housekeeping_prio_t *) (buffer + hdr_size);
+    // If an error occurs at this device from a message
+  if (hdr_in->dst == eBroadcast || hdr_in->dst==myID) hdr_err->dst = myID;
+  else hdr_err->dst = hdr_in->dst;
+  // If the checksum didn't match, throw a bad args error
+  // Check for data corruption
+  if (!(verifyChecksum((uint8_t *) buffer))) {
+      //error_badArgs(hdr_in, hdr_out, hdr_err);  
+      buildError(hdr_err, hdr_out, hdr_in, EBADARGS);
+      fillChecksum((uint8_t *) outgoingPacket);
+      downStream1.send(outgoingPacket, hdr_size + hdr_out->len + 1);
+      currentPacketCount++;
+  }
+  else {
+  // Check if the message is a broadcast or local command and only then execute it. 
+    if (hdr_in->dst == eBroadcast || hdr_in->dst==myID) {
+      if ((int)(hdr_in->cmd < 254) && (int)(hdr_in->cmd > 249)) handlePriority(hdr_in->cmd, (uint8_t *) outgoingPacket); // for doing a send of priority type.
+      else handleLocalCommand(hdr_in, (uint8_t *) hdr_in + hdr_size, (uint8_t *) outgoingPacket); // this constructs the outgoingpacket when its a localcommand and sends the packet.
+    } 
+  // If the message wasn't meant for this device pass it along (up is away from SFC and down and is to SFC
+    else forwardDown(buffer, len, sender);
+  }
+}
+// forward downstream to the SFC
+void forwardDown(const uint8_t * buffer, size_t len, const void * sender) {
+  downStream1.send(buffer, len);
+  checkDownBoundDst(sender);
+  currentPacketCount++;
 }
 
+/* checkDownBoundDst Function flow:
+ * --Checks to see if the downstream device that sent the message is known
+ *    --If not, add it to the list of known devices
+ *    --If yes, just carry on
+ * --Executed every time a packet is received from downStream
+ * 
+ * Function params:
+ * sender:    PacketSerial instance (serial line) where the message was received
+ * 
+ */
+void checkDownBoundDst(const void * sender) {
+  if (serialDevices == (PacketSerial *) sender){
+    if (addressList == 0) {
+      addressList = (uint8_t) hdr_in->src;
+      numDevices++;
+      return;
+    }
+  }
+}
+/* Function flow:
+ * --Find the device address that produced the error
+ * --Execute the bad length function & send the error to the SFC
+ * Function params:
+ * sender:    PacketSerial instance which triggered the error protocol
+ * Send an error if a packet is unreadable in some way */
+void badPacketReceived(PacketSerial * sender){
+  if (sender == serialDevices){
+    hdr_in->src = addressList;
+  }
+  hdr_out->src = myID;
+  buildError(hdr_err, hdr_out, hdr_in, EBADARGS);
+  fillChecksum((uint8_t *) outgoingPacket);
+  downStream1.send(outgoingPacket, hdr_size + hdr_out->len + 1);
+  currentPacketCount++;
+}
 
+// Function for building the error packets to send back when an error is found (see the Core_Protocol.h for the defs of the errors and the error typdefs).
+void buildError(housekeeping_err_t *err, housekeeping_hdr_t *respHdr, housekeeping_hdr_t * hdr, int error){
+  respHdr->cmd = eError;
+  respHdr->len = 4;
+  err->src = hdr->src;
+  err->dst = hdr->dst;
+  err->cmd = hdr->cmd;
+  err->error = error;
+}
+/***********************
+/*******************************************************************************
+ * END OF Packet handling functions
+ *******************************************************************************/
+
+// sending priority command function
+// probably can be cleaned up
+// Note: SendAll is 253 and SendLow is 250 so we made SendLow-> int priority=1 for checking the device's list of command's priorities.
+// got a priority request from destination dst
+void handlePriority(uint8_t prio_in, uint8_t * responsePacketBuffer){
+  housekeeping_hdr_t *respHdr = (housekeeping_hdr_t *) responsePacketBuffer;
+  uint8_t *respData = responsePacketBuffer + hdr_size;
+  int priority=0;
+  int retval = 0;
+  uint8_t sum = 0; // hdr length of data atatched from all those commands data
+//  respHdr->cmd = hdr_in->cmd;
+  // priority == 4 when this function is called is code for "eSendAll"
+  // otherwise priority=1,2,3 and that maps to eSendLowPriority+priority
+  if(prio_in==eSendAll) priority=4;
+  else priority = prio_in - 249;
+//  int retval;
+  respHdr->src = myID;
+  respHdr->dst = eSFC;
+  respHdr->cmd =  prio_in;
+  // go through every priority
+  for (int i=0;i<NUM_LOCAL_CONTROLS;i++) {
+    if (commandPriority[i] == (uint8_t)priority || priority==4) {
+      retval=handleLocalRead((uint8_t) i + FIRST_LOCAL_COMMAND, respData+sum);
+      // if that read overflowed the data???? fix later?
+      sum+= (uint8_t) retval;
+    }
+    else sum+=0;
+  }
+  respHdr->len=sum;
+  fillChecksum(responsePacketBuffer);
+  downStream1.send(responsePacketBuffer, respHdr->len + hdr_size + 1);
+  currentPacketCount++;
+}
+
+// function for when a "SetPriority" command is received by this device, adding that commands priority value to the array/list
+void setCommandPriority(housekeeping_prio_t * prio, uint8_t * respData, uint8_t len) {
+//  housekeeping_prio_t * set_prio = (housekeeping_prio_t *) prio;
+  commandPriority[prio->command-FIRST_LOCAL_COMMAND] = (uint8_t) prio->prio_type;
+  memcpy(respData, (uint8_t*)prio, len);
+}
+// Fn to handle a local command write.
+// This gets called when a local command is received
+// with data (len != 0).
+int handleLocalWrite(uint8_t localCommand, uint8_t * data, uint8_t len, uint8_t * respData) {
+  int retval = 0;
+  switch(localCommand) {
+  case eSetPriority: {
+    setCommandPriority((housekeeping_prio_t *)data,respData,len);
+    retval=len;
+    break;
+  }
+  case eConfigureGPIOs: {
+    uint8_t configure_in;
+    memcpy((uint8_t * ) &configure_in, data, len);
+    if(configure_in){
+      RF_ON_write(RF_ON_GPIO_ADDR0,0x03, 0x00);
+      RF_ON_write(RF_ON_GPIO_ADDR1,0x03, 0x00);
+      RF_ON_write(RF_ON_GPIO_ADDR2,0x03, 0x00);
+      RF_ON_write(RF_ON_GPIO_ADDR3,0x03, 0x00);
+      PWR_CTRL_write(PWR_CTRL_GPIO_ADDR0,0x03, 0x00);
+      PWR_CTRL_write(PWR_CTRL_GPIO_ADDR1,0x03, 0x00);
+      PWR_CTRL_write(PWR_CTRL_GPIO_ADDR2,0x03, 0x00);
+      PWR_CTRL_write(PWR_CTRL_GPIO_ADDR3,0x03, 0x00);
+    }
+    //else configure_in=0;
+    //Serial.print("GPIO --> Configured\n");
+    //retval=sizeof(configure_in);
+    retval=0;
+    break;
+  }
+  case eOutputsHigh: {
+    uint8_t outputs_in;
+    memcpy((uint8_t * ) &outputs_in, data, len);
+    if(outputs_in){
+      RF_ON_write(RF_ON_GPIO_ADDR0,0x01, 0xFF);
+      RF_ON_write(RF_ON_GPIO_ADDR1,0x01, 0xFF);
+      RF_ON_write(RF_ON_GPIO_ADDR2,0x01, 0xFF);
+      RF_ON_write(RF_ON_GPIO_ADDR3,0x01, 0xFF);
+      PWR_CTRL_write(PWR_CTRL_GPIO_ADDR0,0x01, 0xFF);
+      PWR_CTRL_write(PWR_CTRL_GPIO_ADDR1,0x01, 0xFF);
+      PWR_CTRL_write(PWR_CTRL_GPIO_ADDR2,0x01, 0xFF);
+      PWR_CTRL_write(PWR_CTRL_GPIO_ADDR3,0x01, 0xFF);
+    }
+    //else configure_in=0;
+    //Serial.print("GPIO --> Configured\n");
+    //retval=sizeof(configure_in);
+    retval=0;
+    break;
+  }
+  case eOutputsLow: {
+    uint8_t outputs_in;
+    memcpy((uint8_t * ) &outputs_in, data, len);
+    if(outputs_in){
+      RF_ON_write(RF_ON_GPIO_ADDR0,0x01, 0x00);
+      RF_ON_write(RF_ON_GPIO_ADDR1,0x01, 0x00);
+      RF_ON_write(RF_ON_GPIO_ADDR2,0x01, 0x00);
+      RF_ON_write(RF_ON_GPIO_ADDR3,0x01, 0x00);
+      PWR_CTRL_write(PWR_CTRL_GPIO_ADDR0,0x01, 0x00);
+      PWR_CTRL_write(PWR_CTRL_GPIO_ADDR1,0x01, 0x00);
+      PWR_CTRL_write(PWR_CTRL_GPIO_ADDR2,0x01, 0x00);
+      PWR_CTRL_write(PWR_CTRL_GPIO_ADDR3,0x01, 0x00);
+    }
+    //else configure_in=0;
+    //Serial.print("GPIO --> Configured\n");
+    //retval=sizeof(configure_in);
+    retval=0;
+    break;
+  }
+  case ePWRTopMuxSelect: {
+    uint8_t mux_in;
+    memcpy((uint8_t * ) &mux_in, data, len);
+    if((int)(mux_in)>=0 && (int) (mux_in) <=7){
+      PWR_ANA_mux_ctrl((int)mux_in, PWR_ANA_MUX_ADDR_TOP); // this is to point to remote high byte
+      retval=0;
+    }
+    else {
+      mux_in=0xFF;
+      memcpy((uint8_t * ) &respData, (uint8_t *) &mux_in, sizeof(mux_in));
+      retval=sizeof(mux_in);
+    }
+    break;
+  }
+  case ePWRMuxSelect: {
+    uint8_t mux_in=0xFF;
+    uint8_t addr_in=0xFF;
+    memcpy((uint8_t * ) &addr_in, data, sizeof(addr_in));
+    memcpy((uint8_t * ) &mux_in, data+1, sizeof(mux_in));
+    if((int)(mux_in)>=0 && (int) (mux_in) <=7 && (int)(addr_in)>=0 && (int) (addr_in) <=2){
+      PWR_ANA_mux_ctrl((int)(mux_in), PWR_ANA_MUX[(int)(addr_in)]);
+      retval=0;
+    }
+    else {
+      mux_in=0xFF;
+      addr_in=0xFF;
+      memcpy((uint8_t * ) &respData, (uint8_t *) &mux_in, sizeof(mux_in));
+      memcpy((uint8_t * ) &respData + sizeof(mux_in), (uint8_t *) &addr_in, sizeof(addr_in));
+      retval=sizeof(mux_in)+sizeof(addr_in);
+    }
+    break;
+  }
+  default:
+    retval=EBADCOMMAND;    
+    break;
+  }
+  return retval;
+}
+
+// Fn to handle a local command read.
+// This gets called when a local command is received
+// with no data (len == 0)
+// buffer contains the pointer to where the data
+// will be written.
+// int returns the number of bytes that were copied into
+// the buffer, or EBADCOMMAND if there's no command there
+int handleLocalRead(uint8_t localCommand, uint8_t *outbuffer) {
+  int retval = 0;
+  switch(localCommand) {
+  case ePingPong:
+    retval=0;
+    break;
+  case eSetPriority:
+    retval = EBADLEN;
+    break;
+  case eIntSensorRead: {
+    float TempC = (float)(1475 - ((2475 * TempRead) / 4096)) / 10;
+    memcpy(outbuffer,(uint8_t *) &TempC,sizeof(TempC));
+    retval=sizeof(TempC);
+    break;
+  }
+  case ePacketCount:
+    memcpy(outbuffer, (uint8_t *) &currentPacketCount, sizeof(currentPacketCount));
+    retval = sizeof(currentPacketCount);
+    break;
+  case eTimeStore: {
+    time_store=millis();
+    memcpy(outbuffer, (uint8_t *) &time_store, sizeof(time_store));
+    retval=sizeof(time_store);
+    break;
+  }
+  case eISR: {
+    float TempC = (float)(1475 - ((2475 * TempRead) / 4096)) / 10;
+    memcpy(outbuffer,(uint8_t *) &TempC,sizeof(TempC));
+    retval=sizeof(TempC);
+    break;
+  }
+  case eBigPacket: {
+    //float TempC = (float)(1475 - ((2475 * TempRead) / 4096)) / 10;
+    memcpy(outbuffer,(uint8_t *) &Bigpacket,sizeof(Bigpacket));
+    retval=sizeof(Bigpacket);
+    break;
+  }
+  case eReset: {
+    SysCtlReset();
+    retval = 0;
+    break;
+  }
+  default:
+    retval=EBADCOMMAND;
+    break;
+  }  
+  return retval;
+}
+
+// Function to call first when localcommand sent. 
+// Store the "result" as retval (which is the bytes read or written, hopefully)
+void handleLocalCommand(housekeeping_hdr_t *hdr, uint8_t * data, uint8_t * responsePacketBuffer) {
+  int retval=0;
+  housekeeping_hdr_t *respHdr = (housekeeping_hdr_t *) responsePacketBuffer;
+  uint8_t * respData = responsePacketBuffer + hdr_size;
+  respHdr->src = myID;
+  respHdr->dst = eSFC;
+  if (hdr->len) {
+    retval = handleLocalWrite(hdr->cmd, data, hdr->len, respData); // retval is negative construct the baderror hdr and send that instead. 
+    if(retval>=0) {
+//      *respData= 5;
+      respHdr->cmd = hdr->cmd;
+      respHdr->len = retval; // response bytes of the write.
+    }
+    else{
+      housekeeping_err_t *err = (housekeeping_err_t *) respData;
+      buildError(err, respHdr, hdr, retval);
+    }  
+  } 
+  else {
+    // local read. by definition these always go downstream.
+    retval = handleLocalRead(hdr->cmd, respData);
+    if (retval>=0 && retval<=249) {
+      respHdr->cmd = hdr->cmd;
+      respHdr->len = (uint8_t) retval; //bytes read
+    }
+    else {
+      housekeeping_err_t *err = (housekeeping_err_t *) respData;
+      buildError(err, respHdr, hdr, retval); // the err pointer is pointing to the data of the response packet based on the line above so this fn fills that packet. 
+    }
+  }
+  fillChecksum(responsePacketBuffer);
+  // send to SFC
+  downStream1.send(responsePacketBuffer, respHdr->len + hdr_size + 1 );
+  currentPacketCount++;
+}
 
 uint8_t RF_ON_write(uint8_t addr_I, uint8_t to_write, uint8_t to_write_2) {
   wire_RF_ON->beginTransmission(addr_I);
@@ -487,7 +646,7 @@ uint8_t PWR_ANA_mux_ctrl(int channel, uint8_t addr_mux){
 }
 
 //change type so we can return when we are done at any point in this FN
-bool PWR_ANA_read(uint8_t num_bytes, uint8_t temp_addr){
+uint8_t PWR_ANA_read(uint8_t num_bytes, uint8_t temp_addr){
   bool buffer_clear=clear_buffer_with_timeout();
   // now do a request if buffer was clear  but the problem is if we requested 2 bytes, then we can't just wait for nonzero available, need to wait for available to be 2!
   if(buffer_clear){
@@ -497,21 +656,21 @@ bool PWR_ANA_read(uint8_t num_bytes, uint8_t temp_addr){
       bool real_read_good=do_real_reads();
       if(real_read_good){
         //Serial.println("GOODREADS");
-        return true;
+        return 0x00;
       }
       else{
-        Serial.println("loopy reads");
-        return false;
+        //Serial.println("loopy reads");
+        return 0x01;
       }
     }
     else{
-      Serial.println("reads weren't available");
-      return false;
+      //Serial.println("reads weren't available");
+      return 0x02;
     }
   }
   else {
-    Serial.print("Buffer UNCLEAR");
-    return false;
+    //Serial.print("Buffer UNCLEAR");
+    return 0x03;
   }
 }
 
