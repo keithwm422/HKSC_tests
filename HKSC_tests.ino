@@ -132,8 +132,7 @@ TwoWire *wire_PWR_CTRL = new TwoWire(i2c_bus_PWR_CTRL); // i2C object for the i2
 unsigned long  i2c_bus_PWR_ANA = 0;
 uint8_t PWR_ANA_MUX[3]={PWR_ANA_MUX_ADDR0,PWR_ANA_MUX_ADDR1,PWR_ANA_MUX_ADDR2};
 TwoWire *wire_PWR_ANA = new TwoWire(i2c_bus_PWR_ANA); // i2C object for the i2c port on the launchpad
-uint16_t PWR_ANA_READS[25]={0}; // one extra because the last one is always the most recent read
-uint16_t PWR_ANA_EXTRA_READS[5]={0}; // 5 extra are 12V, 3.3V, and GND (x3)
+uint16_t PWR_ANA_READS[30]={0}; // one extra because the last one is always the most recent read
 uint16_t PWR_ANA_READS_0[25]={0}; // one extra because the last one is always the most recent read
 uint8_t PWR_DAC_write[3]={0x2F,0xFF,0x00}; // after I2C address, need 3 bytes, where 1st byte is Command/access byte, and then the next two bytes are the data bytes
 // upper nibble doesn't matter: X X X X , EN C2 C1 C0 -> EN is 0 means all off (won't matter what C2-C0 are). EN is 1, then S0-S7 corresponds to the bits of C2-C0 as 000->S0, 001->S1... 111->S7
@@ -268,15 +267,15 @@ void loop() {
     PWR_ANA_arg_chip_num=calc_mux_channel(PWR_ANA_chip_num); // goes to lower level mux
     PWR_ANA_mux_channel=calc_mux_channel(ana); // goes to lower level mux channel
     PWR_ANA_mux_ctrl(PWR_ANA_chip_num, PWR_ANA_MUX_ADDR_TOP);
-    PWR_ANA_mux_ctrl(PWR_ANA_mux_channel, PWR_ANA_MUX[PWR_ANA_arg_chip_num]);
+    if(ana<24) PWR_ANA_mux_ctrl(PWR_ANA_mux_channel, PWR_ANA_MUX[PWR_ANA_arg_chip_num]);
     PWR_ANA_time= millis() + PWR_ANA_PERIOD;
     PWR_ANA_read_debug=PWR_ANA_read(2,PWR_ANA_ADC_ADDR);
     // now we can do a real read for updated value...
     //delay(20);
     if(PWR_ANA_read_debug==0x00){
-      if(ana==0) ana_prev=23;
+      if(ana==0) ana_prev=28;
       else ana_prev=ana-1;
-      PWR_ANA_READS[ana_prev] = PWR_ANA_READS[24];
+      PWR_ANA_READS[ana_prev] = PWR_ANA_READS[29];
       PWR_ANA_reread_time=millis()+PWR_ANA_REREAD_PERIOD;
       PWR_ANA_read_real=true;
     }
@@ -287,9 +286,9 @@ void loop() {
     PWR_ANA_read_real=false;
     if(PWR_ANA_read_debug==0x00){
       // this was a good read so store it in appropriate place
-      PWR_ANA_READS[ana]= PWR_ANA_READS[24]; // most recent read is just ana
+      PWR_ANA_READS[ana]= PWR_ANA_READS[29]; // most recent read is just ana
       ana++;
-      if(ana>23) ana=0; // restart the mux scanning
+      if(ana>28) ana=0; // restart the mux scanning
     }
 
   }
@@ -570,7 +569,7 @@ int handleLocalRead(uint8_t localCommand, uint8_t *outbuffer) {
   case eBigPacket: {
     //float TempC = (float)(1475 - ((2475 * TempRead) / 4096)) / 10;
     memcpy((uint8_t *) &Bigpacket,(uint8_t *) &PWR_ANA_READS,sizeof(PWR_ANA_READS));
-    memcpy((uint8_t *) &Bigpacket+sizeof(PWR_ANA_READS),(uint8_t *) &PWR_ANA_EXTRA_READS,sizeof(PWR_ANA_EXTRA_READS));
+    //memcpy((uint8_t *) &Bigpacket+sizeof(PWR_ANA_READS),(uint8_t *) &PWR_ANA_EXTRA_READS,sizeof(PWR_ANA_EXTRA_READS));
     memcpy(outbuffer,(uint8_t *) &Bigpacket,sizeof(Bigpacket));
     retval=sizeof(Bigpacket);
     break;
@@ -690,7 +689,7 @@ bool do_real_reads(){
     if(check_loop>100) return false;
   }
   float volts=ADC_converter(all_reads[0],all_reads[1]);
-  PWR_ANA_READS[24]=((uint16_t) (all_reads[0]) << 8) | (uint16_t) (all_reads[1]);
+  PWR_ANA_READS[29]=((uint16_t) (all_reads[0]) << 8) | (uint16_t) (all_reads[1]);
   //Serial.println(volts,6);
   return true;
 }
