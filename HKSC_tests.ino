@@ -240,6 +240,7 @@ void loop() {
     PacketUpdateTime+= PACKET_UPDATE_PERIOD;
     housekeeping_hdr_t *packet_fake_hdr = (housekeeping_hdr_t *) packet_fake; // fakehdr is best way to send a packet
     hdr_out = (housekeeping_hdr_t *) outgoingPacket;
+    packet_fake_hdr->magic=MAGIC_BYTE_VALUE;
     packet_fake_hdr->len=0; // this should always be 0, especially because the array is just enough to hold the header.
     packet_fake_hdr->cmd=161;  // which command you want on the timer goes here.
     // to construct a packet, pass it a fake header
