@@ -1,0 +1,9 @@
+MODBUS TO TRY:
+
+1. Print out the bytes as they are with no memcpy
+2. Try the CRC switching highbyte and lowbyte order!
+	make sure to change both functions?
+3. Use side program to send commands that should be modbus commands
+	try reversing endianness or something and the crc bytes (big to little endian)
+4. ask eric about the 12V and -12V power thing?
+5. 

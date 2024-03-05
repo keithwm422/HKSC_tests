@@ -15,25 +15,15 @@
 #include <stdint.h>
 
 /* Standard error types */
-#define EBADDEST        -1  // Packet received for an unknown destination
 #define EBADCOMMAND     -2  // Packet contained an unknown command
 #define EBADLEN         -3  // Packet was the wrong length for the command
 #define EBADARGS        -4  // Packet's command arguments (packets of data)
-#define EBADDEBUG       -5  // debugging the errors from priority packets at high times
+#define EBADPARSE       -5  // Packet's command arguments (packets of data)
 
 
 /*******************************************************************************
 * Typedef enums
 *******************************************************************************/
-/* Src/dst definitions. 255 is illegal for source. */
-typedef enum housekeeping_id
-{
-	eSFC = 252, // Science flight computer
-	eHKSC = 1, // Main housekeeping board
-	// etc...
-	eBroadcast = 255 // Illegal as a source, but dst=255 means everyone responds
-} housekeeping_id;
-
 /* Command definitions */
 typedef enum housekeeping_cmd
 {
@@ -55,7 +45,7 @@ typedef enum housekeeping_cmd
 
 
 /* Priority definitions */
-typedef enum housekeeping_prio_type
+/*typedef enum housekeeping_prio_type
 {
 	eNoPriority = 0,
 	eLowPriority = 1,
@@ -63,34 +53,30 @@ typedef enum housekeeping_prio_type
 	eHiPriority = 3
 } housekeeping_prio_type_t;
 
-
+*/
 
 /*******************************************************************************
 * Typedef structs
 *******************************************************************************/
 typedef struct housekeeping_hdr_t
 {
-	uint8_t dst; // Destination of packet
-	uint8_t src; // Source of packet
-	uint8_t cmd; // Command (or response) type
-	uint8_t len; // Bytes to follow - 1
+	    uint8_t magic; // magic byte
+        uint8_t cmd; // Command (or response) type
+        uint16_t len; // Bytes to follow - 1
 } housekeeping_hdr_t;
-
 
 typedef struct housekeeping_err_t
 {
-	uint8_t src; // Source of the original packet that caused the error
-	uint8_t dst; // Destination of the original packet that caused the error
 	uint8_t cmd; // Command which caused the error
 	uint8_t error; // Error that occured
 } housekeeping_err_t;
 
-typedef struct housekeeping_prio_t
+/*typedef struct housekeeping_prio_t
 {
 	uint8_t command; // The command we are setting the priority of
 	uint8_t prio_type; // The priority level we are setting it to
 } housekeeping_prio_t;
-
+*/
 
 /*******************************************************************************
 * Functions
