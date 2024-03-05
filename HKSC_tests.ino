@@ -133,6 +133,7 @@ unsigned long  i2c_bus_PWR_ANA = 0;
 uint8_t PWR_ANA_MUX[3]={PWR_ANA_MUX_ADDR0,PWR_ANA_MUX_ADDR1,PWR_ANA_MUX_ADDR2};
 TwoWire *wire_PWR_ANA = new TwoWire(i2c_bus_PWR_ANA); // i2C object for the i2c port on the launchpad
 uint16_t PWR_ANA_READS[25]={0}; // one extra because the last one is always the most recent read
+uint16_t PWR_ANA_EXTRA_READS[5]={0}; // 5 extra are 12V, 3.3V, and GND (x3)
 uint16_t PWR_ANA_READS_0[25]={0}; // one extra because the last one is always the most recent read
 uint8_t PWR_DAC_write[3]={0x2F,0xFF,0x00}; // after I2C address, need 3 bytes, where 1st byte is Command/access byte, and then the next two bytes are the data bytes
 // upper nibble doesn't matter: X X X X , EN C2 C1 C0 -> EN is 0 means all off (won't matter what C2-C0 are). EN is 1, then S0-S7 corresponds to the bits of C2-C0 as 000->S0, 001->S1... 111->S7
@@ -568,7 +569,8 @@ int handleLocalRead(uint8_t localCommand, uint8_t *outbuffer) {
   }
   case eBigPacket: {
     //float TempC = (float)(1475 - ((2475 * TempRead) / 4096)) / 10;
-    memcpy((uint8_t *) &Bigpacket,(uint8_t *) &PWR_ANA_READS,sizeof(PWR_ANA_READS));    
+    memcpy((uint8_t *) &Bigpacket,(uint8_t *) &PWR_ANA_READS,sizeof(PWR_ANA_READS));
+    memcpy((uint8_t *) &Bigpacket+sizeof(PWR_ANA_READS),(uint8_t *) &PWR_ANA_EXTRA_READS,sizeof(PWR_ANA_EXTRA_READS));
     memcpy(outbuffer,(uint8_t *) &Bigpacket,sizeof(Bigpacket));
     retval=sizeof(Bigpacket);
     break;
@@ -759,6 +761,11 @@ int mux_IC_num(int In){
       if(In <=7 && In >=0) Label=7;
       else if(In <=15 && In >=8) Label=6;
       else if(In <=23 && In >=16) Label=5;
+      else if(In==24) Label=4;
+      else if(In==25) Label=3;
+      else if(In==26) Label=2;
+      else if(In==27) Label=1;
+      else if(In==28) Label=0;
       return Label;
 }
 
