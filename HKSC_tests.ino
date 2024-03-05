@@ -545,7 +545,7 @@ int handleLocalRead(uint8_t localCommand, uint8_t *outbuffer) {
     retval = EBADLEN;
     break;
   case eIntSensorRead: {
-    float TempC = (float)(1475 - ((2475 * TempRead) / 4096)) / 10;
+    float TempC = (float)(1475.0 - (float)(((2475 * TempRead) / 4096))) / 10.0;
     memcpy(outbuffer,(uint8_t *) &TempC,sizeof(TempC));
     retval=sizeof(TempC);
     break;
@@ -568,6 +568,7 @@ int handleLocalRead(uint8_t localCommand, uint8_t *outbuffer) {
   }
   case eBigPacket: {
     //float TempC = (float)(1475 - ((2475 * TempRead) / 4096)) / 10;
+    memcpy((uint8_t *) &Bigpacket,(uint8_t *) &PWR_ANA_READS,sizeof(PWR_ANA_READS));    
     memcpy(outbuffer,(uint8_t *) &Bigpacket,sizeof(Bigpacket));
     retval=sizeof(Bigpacket);
     break;
